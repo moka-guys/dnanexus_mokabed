@@ -1,0 +1,5 @@
+{
+  "home": "https://pypi.python.org/pypi/pkginfo/", 
+  "license": "PSF", 
+  "summary": "query metadatdata from sdists or bdists installed packages"
+}

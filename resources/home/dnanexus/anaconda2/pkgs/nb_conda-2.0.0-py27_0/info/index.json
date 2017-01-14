@@ -1,0 +1,15 @@
+{
+  "arch": "x86_64", 
+  "build": "py27_0", 
+  "build_number": 0, 
+  "depends": [
+    "nb_conda_kernels", 
+    "notebook >=4.2", 
+    "python 2.7*"
+  ], 
+  "license": "BSD", 
+  "name": "nb_conda", 
+  "platform": "linux", 
+  "subdir": "linux-64", 
+  "version": "2.0.0"
+}

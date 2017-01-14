@@ -1,0 +1,50 @@
+# This file created by conda-build 1.20.3
+# meta.yaml template originally from:
+# /home/ilan/anaconda/packages/astropy, last modified Wed Jun 22 14:43:29 2016
+# ------------------------------------------------
+
+package:
+    name: astropy
+    version: 1.2.1
+source:
+    fn: astropy-1.2.1.tar.gz
+    md5: a3399f67897cdb75e0efa56c463b0497
+    url: https://pypi.python.org/packages/b8/c8/13f9744d361446ad56fc9b675688f13398648e9107796f43c0594d05bb25/astropy-1.2.1.tar.gz
+build:
+    entry_points:
+        - fits2bitmap = astropy.visualization.scripts.fits2bitmap:main
+        - fitscheck = astropy.io.fits.scripts.fitscheck:main
+        - fitsdiff = astropy.io.fits.scripts.fitsdiff:main
+        - fitsheader = astropy.io.fits.scripts.fitsheader:main
+        - samp_hub = astropy.vo.samp.hub_script:hub_script
+        - volint = astropy.io.votable.volint:main
+        - wcslint = astropy.wcs.wcslint:main
+requirements:
+    build:
+        - python
+        - setuptools
+        - numpy x.x
+    run:
+        - python
+        - numpy x.x
+test:
+    commands:
+        - fitscheck --help
+        - fitsdiff --help
+        - volint --help
+    imports:
+        - astropy
+about:
+    description: 'The Astropy Project is a community effort to develop a single package
+        for
+
+        Astronomy in Python. It contains core functionality and common tools
+
+        needed for performing astronomy and astrophysics research with Python.
+
+        '
+    dev_url: https://github.com/astropy/astropy
+    doc_url: http://docs.astropy.org/en/stable/
+    home: http://www.astropy.org/
+    license: BSD
+    summary: Community-developed Python Library for Astronomy

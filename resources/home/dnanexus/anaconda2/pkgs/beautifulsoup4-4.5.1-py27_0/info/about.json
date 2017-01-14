@@ -1,0 +1,8 @@
+{
+  "description": "Beautiful Soup is a library for pulling data out of HTML and XML files.\nIt provides ways of navigating, searching, and modifying parse trees.\n", 
+  "dev_url": "https://code.launchpad.net/beautifulsoup", 
+  "doc_url": "http://www.crummy.com/software/BeautifulSoup/bs4/doc/", 
+  "home": "http://www.crummy.com/software/BeautifulSoup/", 
+  "license": "MIT", 
+  "summary": "Python library designed for screen-scraping"
+}

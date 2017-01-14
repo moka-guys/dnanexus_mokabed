@@ -1,0 +1,6 @@
+{
+  "home": "https://github.com/ipython/ipywidgets", 
+  "license": "BSD 3-clause", 
+  "license_family": "BSD", 
+  "summary": "Widgets for the Jupyter Notebook"
+}

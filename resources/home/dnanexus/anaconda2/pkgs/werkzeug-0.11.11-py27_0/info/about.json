@@ -1,0 +1,8 @@
+{
+  "description": "Werkzeug started as simple collection of various utilities for WSGI\napplications and has become one of the most advanced WSGI utility modules.\nIt includes a powerful debugger, full-featured request and response\nobjects, HTTP utilities to handle entity tags, cache control headers,\nHTTP dates, cookie handling, file uploads, a powerful URL routing system\nand a bunch of community-contributed addon modules.\n", 
+  "dev_url": "https://github.com/pallets/werkzeug", 
+  "doc_url": "http://werkzeug.pocoo.org/docs/0.11/", 
+  "home": "http://werkzeug.pocoo.org/", 
+  "license": "BSD", 
+  "summary": "A WSGI utility library for Python"
+}

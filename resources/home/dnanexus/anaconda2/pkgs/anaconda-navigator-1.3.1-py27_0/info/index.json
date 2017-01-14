@@ -1,0 +1,20 @@
+{
+  "arch": "x86_64", 
+  "build": "py27_0", 
+  "build_number": 0, 
+  "depends": [
+    "_license", 
+    "anaconda-client >=1.4.0", 
+    "pillow", 
+    "pyqt >=5.0", 
+    "python 2.7*", 
+    "pyyaml", 
+    "qtpy >=1.0"
+  ], 
+  "license": "proprietary - Continuum Analytics, Inc.", 
+  "license_family": "Proprietary", 
+  "name": "anaconda-navigator", 
+  "platform": "linux", 
+  "subdir": "linux-64", 
+  "version": "1.3.1"
+}

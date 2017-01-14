@@ -1,0 +1,11 @@
+prefix=/home/aled/Documents/DNA_Nexus_app_github/dnanexus_mokabed/resources/home/dnanexus/anaconda2
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libtiff
+Description:  Tag Image File Format (TIFF) library.
+Version: 4.0.6
+Libs: -L${libdir} -ltiff
+Libs.private: -llzma -ljbig -ljpeg -lz -lm 
+Cflags: -I${includedir}

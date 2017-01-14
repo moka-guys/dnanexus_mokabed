@@ -1,0 +1,8 @@
+{
+  "description": "Conda is an open source package management system and environment\nmanagement system for installing multiple versions of software packages\nand their dependencies and switching easily between them. It works on\nLinux, OS X and Windows, and was created for Python programs but can\npackage and distribute any software.\n", 
+  "dev_url": "https://github.com/conda/conda", 
+  "doc_url": "http://conda.pydata.org/docs/", 
+  "home": "http://conda.pydata.org/", 
+  "license": "BSD", 
+  "summary": "OS-agnostic, system-level binary package and environment manager."
+}

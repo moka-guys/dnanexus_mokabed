@@ -1,0 +1,8 @@
+{
+  "description": "Flask is a microframework for Python based on Werkzeug and Jinja2. It's\nintended for getting started very quickly and was developed with best\nintentions in mind.\n", 
+  "dev_url": "https://github.com/mitsuhiko/flask", 
+  "doc_url": "http://flask.pocoo.org/docs/0.10/", 
+  "home": "http://flask.pocoo.org/", 
+  "license": "BSD", 
+  "summary": "A microframework based on Werkzeug, Jinja2 and good intentions"
+}

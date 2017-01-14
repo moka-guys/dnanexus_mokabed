@@ -1,0 +1,28 @@
+#configuration
+CONFIG +=  shared qpa no_mocdepend release qt_no_framework
+host_build {
+    QT_ARCH = x86_64
+    QT_TARGET_ARCH = x86_64
+} else {
+    QT_ARCH = x86_64
+    QMAKE_DEFAULT_LIBDIRS = /usr/lib64 /root/qt5-x64-2.7/conda-bld_1474036701962/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac/lib /lib /usr/lib /root/qt5-x64-2.7/conda-bld_1474036701962/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac/lib/gcc/x86_64-unknown-linux-gnu/4.8.5 /root/qt5-x64-2.7/conda-bld_1474036701962/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac/lib/gcc /lib64
+    QMAKE_DEFAULT_INCDIRS = /root/qt5-x64-2.7/conda-bld_1474036701962/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include /root/qt5-x64-2.7/conda-bld_1474036701962/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include-fixed /root/qt5-x64-2.7/conda-bld_1474036701962/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac/gcc/include/c++ /root/qt5-x64-2.7/conda-bld_1474036701962/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac/gcc/include/c++/x86_64-unknown-linux-gnu /root/qt5-x64-2.7/conda-bld_1474036701962/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac/gcc/include/c++/backward /usr/local/include /root/qt5-x64-2.7/conda-bld_1474036701962/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac/gcc/include /usr/include
+}
+QT_CONFIG +=  minimal-config small-config medium-config large-config full-config fontconfig evdev xlib xrender xcb-plugin xcb-qt xcb-glx xkbcommon-qt accessibility-atspi-bridge c++11 accessibility opengl shared qpa reduce_exports clock-gettime clock-monotonic posix_fallocate mremap getaddrinfo ipv6ifname getifaddrs inotify system-jpeg system-png png system-freetype harfbuzz system-zlib nis glib dbus dbus-linked openssl xcb rpath alsa gstreamer-1.0 icu concurrent audio-backend release
+
+#versioning
+QT_VERSION = 5.6.0
+QT_MAJOR_VERSION = 5
+QT_MINOR_VERSION = 6
+QT_PATCH_VERSION = 0
+
+#namespaces
+QT_LIBINFIX = 
+QT_NAMESPACE = 
+
+QT_EDITION = OpenSource
+
+QT_COMPILER_STDCXX = 199711
+QT_GCC_MAJOR_VERSION = 4
+QT_GCC_MINOR_VERSION = 8
+QT_GCC_PATCH_VERSION = 5

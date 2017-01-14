@@ -1,0 +1,8 @@
+{
+  "description": "Anaconda Client is a command line client that provides an\ninterface to Anaconda cloud.\n", 
+  "dev_url": "https://github.com/Anaconda-Server/anaconda-client", 
+  "doc_url": "https://anaconda.org/anaconda/anaconda-client", 
+  "home": "http://anaconda.org", 
+  "license": "BSD", 
+  "summary": "anaconda.org command line client library"
+}

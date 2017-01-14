@@ -1,0 +1,31 @@
+{
+  "arch": "x86_64", 
+  "build": "py27_0", 
+  "build_number": 0, 
+  "depends": [
+    "python 2.7*"
+  ], 
+  "files": [
+    "lib/python2.7/site-packages/path.py", 
+    "lib/python2.7/site-packages/path.py-0.0.0-py2.7.egg-info/PKG-INFO", 
+    "lib/python2.7/site-packages/path.py-0.0.0-py2.7.egg-info/SOURCES.txt", 
+    "lib/python2.7/site-packages/path.py-0.0.0-py2.7.egg-info/dependency_links.txt", 
+    "lib/python2.7/site-packages/path.py-0.0.0-py2.7.egg-info/requires.txt", 
+    "lib/python2.7/site-packages/path.py-0.0.0-py2.7.egg-info/top_level.txt", 
+    "lib/python2.7/site-packages/path.pyc", 
+    "lib/python2.7/site-packages/test_path.py", 
+    "lib/python2.7/site-packages/test_path.pyc"
+  ], 
+  "installed_by": "Anaconda2-4.2.0-Linux-x86_64", 
+  "license": "MIT", 
+  "link": {
+    "source": "/home/aled/Documents/DNA_Nexus_app_github/dnanexus_mokabed/resources/home/dnanexus/anaconda2/pkgs/path.py-8.2.1-py27_0", 
+    "type": "hard-link"
+  }, 
+  "md5": "f9083a8b015b76a916de6806940eb91a", 
+  "name": "path.py", 
+  "platform": "linux", 
+  "subdir": "linux-64", 
+  "url": "https://repo.continuum.io/pkgs/free/linux-64/path.py-8.2.1-py27_0.tar.bz2", 
+  "version": "8.2.1"
+}

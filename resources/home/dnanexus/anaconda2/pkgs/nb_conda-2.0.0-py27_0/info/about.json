@@ -1,0 +1,5 @@
+{
+  "home": "https://github.com/Anaconda-Platform/nb_conda", 
+  "license": "BSD", 
+  "summary": "Launch Jupyter kernels for any installed conda environment"
+}

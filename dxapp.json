@@ -1,0 +1,113 @@
+{
+  "name": "mokabed",
+  "title": "Run Mokabed",
+  "summary": "Create BED, RefSeq and Sambamba files",
+  "tags": [
+    "coverage",
+    "Bed file"
+  ],
+  "dxapi": "1.0.0",
+  "inputSpec": [
+    {
+      "name": "coding_up",
+      "label": "coding up",
+      "help": "Number of bases upstream",
+      "class": "int",
+      "optional": true,
+      "default": 0,      
+      "group": "up/down"
+    },
+    {
+      "name": "coding_down",
+      "label": "coding down",
+      "help": "Number of bases downstream",
+      "class": "int",
+      "optional": true,
+      "default": 0,
+      "group": "up/down"
+    },
+    {
+      "name": "up",
+      "label": "up",
+      "help": "Number of bases upstream",
+      "class": "int",
+      "optional": true,
+      "group": "up/down"
+    },
+    {
+      "name": "down",
+      "label": "down",
+      "help": "Number of bases downstream",
+      "class": "int",
+      "optional": true,
+      "group": "up/down"
+    },
+    {
+      "name": "mergeboundaries",
+      "label": "Merge boundaries?",
+      "help": "",
+      "class": "boolean",
+      "optional": true,
+      "default": true,
+      "group": "Common"
+    },
+   {
+      "name": "genes_or_transcripts",
+      "label": "list of genes or transcrips?",
+      "help": "The input file is a list of gene symbols or transcripts? ",
+      "class": "string",
+      "default": "GENES",
+      "choices": [
+        "GENES",
+        "TRANSCRIPTS"
+      ],
+      "group": "Common"
+    },
+    {
+      "name": "minuschr",
+      "label": "remove Chr?",
+      "help": "",
+      "class": "boolean",
+      "optional": true,
+      "default": true,
+      "group": "Common"
+    },
+    {
+      "name": "transcript_file",
+      "label": "file to create bed file",
+      "help": "",
+      "class": "file",
+      "patterns": ["*.txt"]
+    }
+],
+  "outputSpec": [
+    {
+      "name": "Output_files",
+      "label": "Output files",
+      "help": "Bed, sambamba, refseq files and a log filem synonym and synonymno coding files",
+      "class": "array:file"
+    }
+  ],
+  "runSpec": {
+    "execDepends": [
+      {
+        "name": "openjdk-7-jre-headless"
+      },
+      {
+        "name":"git"
+      }
+    ],
+    "systemRequirements": {
+      "main": {
+        "instanceType": "mem2_hdd2_x2"
+      }
+    },
+    "file": "src/code.sh",
+    "interpreter": "bash"
+  },
+  "access": {
+  	"network": [  
+  	"*"
+  	]
+  }
+}

@@ -1,0 +1,48 @@
+# This file created by conda-build 2.0.0beta
+# meta.yaml template originally from:
+# /home/ilan/anaconda/packages/flask, last modified Mon Jun 13 15:34:04 2016
+# ------------------------------------------------
+
+package:
+    name: flask
+    version: 0.11.1
+source:
+    fn: Flask-0.11.1.tar.gz
+    md5: d2af95d8fe79cf7da099f062dd122a08
+    url: https://pypi.python.org/packages/55/8a/78e165d30f0c8bb5d57c429a30ee5749825ed461ad6c959688872643ffb3/Flask-0.11.1.tar.gz
+build:
+    entry_points:
+        - flask = flask.cli:main
+requirements:
+    build:
+        - python
+        - werkzeug >=0.7
+        - jinja2 >=2.4
+        - itsdangerous >=0.21
+        - click >=2.0
+    run:
+        - python
+        - werkzeug >=0.7
+        - jinja2 >=2.4
+        - itsdangerous >=0.21
+        - click >=2.0
+test:
+    commands:
+        - flask --help
+    imports:
+        - flask
+about:
+    description: 'Flask is a microframework for Python based on Werkzeug and Jinja2.
+        It''s
+
+        intended for getting started very quickly and was developed with best
+
+        intentions in mind.
+
+        '
+    dev_url: https://github.com/mitsuhiko/flask
+    doc_url: http://flask.pocoo.org/docs/0.10/
+    home: http://flask.pocoo.org/
+    license: BSD
+    license_file: LICENSE
+    summary: A microframework based on Werkzeug, Jinja2 and good intentions

@@ -1,0 +1,21 @@
+{
+  "arch": "x86_64", 
+  "build": "0", 
+  "build_number": 0, 
+  "depends": [], 
+  "files": [
+    "bin/patchelf"
+  ], 
+  "installed_by": "Anaconda2-4.2.0-Linux-x86_64", 
+  "license": "GPL3", 
+  "link": {
+    "source": "/home/aled/Documents/DNA_Nexus_app_github/dnanexus_mokabed/resources/home/dnanexus/anaconda2/pkgs/patchelf-0.9-0", 
+    "type": "hard-link"
+  }, 
+  "md5": "656235794faa13f6a472c39c27b1e3f8", 
+  "name": "patchelf", 
+  "platform": "linux", 
+  "subdir": "linux-64", 
+  "url": "https://repo.continuum.io/pkgs/free/linux-64/patchelf-0.9-0.tar.bz2", 
+  "version": "0.9"
+}

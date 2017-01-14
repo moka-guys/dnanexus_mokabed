@@ -1,0 +1,29 @@
+# This file created by conda-build 1.20.3+48.g09ddcfe
+# meta.yaml template originally from:
+# /home/ilan/anaconda/packages/patchelf, last modified Sat Jun  4 15:23:31 2016
+# ------------------------------------------------
+
+package:
+    name: patchelf
+    version: '0.9'
+source:
+    fn: patchelf-0.9.tar.gz
+    md5: d02687629c7e1698a486a93a0d607947
+    url: http://nixos.org/releases/patchelf/patchelf-0.9/patchelf-0.9.tar.bz2
+test:
+    commands:
+        - patchelf --help
+        - patchelf --version
+about:
+    description: 'PatchELF is a small utility to modify the dynamic linker and RPATH
+        of ELF
+
+        executables.
+
+        '
+    dev_url: https://github.com/NixOS/patchelf
+    doc_url: http://nixos.org/patchelf.html
+    home: http://nixos.org/patchelf.html
+    license: GPL3
+    license_file: COPYING
+    summary: Modify the dynamic linker and RPATH of ELF executables

@@ -1,0 +1,27 @@
+{
+  "arch": "x86_64", 
+  "build": "py27_0", 
+  "build_number": 0, 
+  "depends": [
+    "python 2.7*"
+  ], 
+  "files": [
+    "LICENSE.rst", 
+    "README.rst", 
+    "lib/python2.7/site-packages/filelock-2.0.6-py2.7.egg-info", 
+    "lib/python2.7/site-packages/filelock.py", 
+    "lib/python2.7/site-packages/filelock.pyc"
+  ], 
+  "installed_by": "Anaconda2-4.2.0-Linux-x86_64", 
+  "license": "Public-Domain", 
+  "link": {
+    "source": "/home/aled/Documents/DNA_Nexus_app_github/dnanexus_mokabed/resources/home/dnanexus/anaconda2/pkgs/filelock-2.0.6-py27_0", 
+    "type": "hard-link"
+  }, 
+  "md5": "b052b3ceae01082eaccaf392a03b8f9b", 
+  "name": "filelock", 
+  "platform": "linux", 
+  "subdir": "linux-64", 
+  "url": "https://repo.continuum.io/pkgs/free/linux-64/filelock-2.0.6-py27_0.tar.bz2", 
+  "version": "2.0.6"
+}

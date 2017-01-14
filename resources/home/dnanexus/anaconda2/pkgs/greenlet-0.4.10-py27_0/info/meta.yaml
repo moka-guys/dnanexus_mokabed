@@ -1,0 +1,36 @@
+# This file created by conda-build 2.0.0beta
+# meta.yaml template originally from:
+# /home/ilan/anaconda/packages/greenlet, last modified Wed Jun 15 13:27:11 2016
+# ------------------------------------------------
+
+package:
+    name: greenlet
+    version: 0.4.10
+source:
+    fn: greenlet-0.4.10.tar.gz
+    md5: 5351f8ac5196a00d835c2cb1faf75270
+    url: https://pypi.python.org/packages/f2/3f/09412b656067f280cf017ce5b6465e6339089129212425111117be5557d9/greenlet-0.4.10.tar.gz
+build: {}
+requirements:
+    build:
+        - python
+    run:
+        - python
+test:
+    imports:
+        - greenlet
+about:
+    description: 'A "greenlet" is a still more primitive notion of micro-thread with
+        no
+
+        implicit scheduling; coroutines, in other words. This is useful when you
+
+        want to control exactly when your code runs.
+
+        '
+    dev_url: https://github.com/python-greenlet/greenlet
+    doc_url: http://greenlet.readthedocs.org/en/latest/
+    home: https://github.com/python-greenlet/greenlet
+    license: MIT
+    license_file: LICENSE
+    summary: Lightweight in-process concurrent programming

@@ -1,0 +1,8 @@
+{
+  "description": "Sphinx is a tool that makes it easy to create intelligent and beautiful\ndocumentation.\n", 
+  "dev_url": "https://github.com/sphinx-doc/sphinx/", 
+  "doc_url": "http://www.sphinx-doc.org/en/stable/contents.html", 
+  "home": "http://sphinx-doc.org", 
+  "license": "BSD", 
+  "summary": "Documentation generator"
+}

@@ -1,0 +1,4 @@
+bin/anaconda-clean
+lib/python2.7/site-packages/anaconda_clean-1.0-py2.7.egg-info
+lib/python2.7/site-packages/anaconda_clean.py
+lib/python2.7/site-packages/anaconda_clean.pyc

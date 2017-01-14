@@ -1,0 +1,8 @@
+#!/home/aled/Documents/DNA_Nexus_app_github/dnanexus_mokabed/resources/home/dnanexus/anaconda2/bin/python
+
+def main():
+    from nbformat.sign import TrustNotebookApp
+    TrustNotebookApp.launch_instance()
+
+if __name__ == '__main__':
+    main()

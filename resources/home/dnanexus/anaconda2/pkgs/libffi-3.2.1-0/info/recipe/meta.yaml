@@ -1,0 +1,25 @@
+package:
+  name: libffi
+  version: 3.2.1
+
+source:
+  fn: libffi-3.2.1.tar.gz
+  url: ftp://sourceware.org/pub/libffi/libffi-3.2.1.tar.gz
+  md5: 83b89587607e3eb65c70d361f13bab43
+
+build:
+  features:
+    - vc9     [win and py27]
+    - vc10    [win and py34]
+    - vc14    [win and py35]
+
+requirements:
+  build:
+    - cmake       [win]
+    - python
+
+about:
+  home: https://github.com/atgreen/libffi
+  license: MIT
+  license_file: LICENSE
+  summary: portable foreign-function interface library

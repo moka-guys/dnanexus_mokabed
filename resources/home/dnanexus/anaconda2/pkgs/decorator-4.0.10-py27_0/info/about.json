@@ -1,0 +1,8 @@
+{
+  "description": "Preserve the signature of decorated functions in a consistent way\nacross Python releases.\n", 
+  "dev_url": "https://github.com/micheles/decorator", 
+  "doc_url": "http://pythonhosted.org/decorator/", 
+  "home": "http://pypi.python.org/pypi/decorator", 
+  "license": "BSD", 
+  "summary": "Better living through Python with decorators"
+}

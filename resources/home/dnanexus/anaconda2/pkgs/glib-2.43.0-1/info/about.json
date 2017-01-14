@@ -1,0 +1,8 @@
+{
+  "description": "GLib provides the core application building blocks for libraries and\napplications written in C. It provides the core object system used in\nGNOME, the main loop implementation, and a large set of utility functions\nfor strings and common data structures.\n", 
+  "dev_url": "https://github.com/GNOME/glib", 
+  "doc_url": "https://help.gnome.org/", 
+  "home": "https://developer.gnome.org/glib/", 
+  "license": "LGPL", 
+  "summary": "Core application building blocks for libraries and applications in C"
+}

@@ -1,0 +1,38 @@
+# This file created by conda-build 1.20.3+48.g09ddcfe
+# meta.yaml template originally from:
+# /home/ilan/anaconda/packages/mkl-service, last modified Thu Jun  2 16:05:47 2016
+# ------------------------------------------------
+
+package:
+    name: mkl-service
+    version: 1.1.2
+source:
+    git_rev: 1.1.2
+    git_url: git@github.com:ContinuumIO/mkl-service.git
+build:
+    number: '2'
+requirements:
+    build:
+        - python
+        - mkl-devel 11.3.3
+    run:
+        - python
+        - mkl >=11.0
+test:
+    imports:
+        - mkl
+        - mkl.service
+about:
+    description: 'This package exposes a few functions which are declared in mkl_service.h.
+
+        The main purpose of the package is to allow the user to change the number
+
+        of CPU''s MKL is using at runtime.
+
+        '
+    dev_url: https://github.com/ContinuumIO/mkl-service
+    home: https://github.com/ContinuumIO/mkl-service
+    license: 3-clause BSD
+    license_family: BSD
+    license_file: LICENSE.txt
+    summary: Python bindings to MKL service functions

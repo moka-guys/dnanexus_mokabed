@@ -1,0 +1,9 @@
+{
+  "description": "Conda-build contains commands and tools to allow you to build your own\npackages for conda.\n", 
+  "dev_url": "https://github.com/conda/conda-build", 
+  "doc_url": "http://conda.pydata.org/docs/", 
+  "home": "https://github.com/conda/conda-build", 
+  "license": "BSD 3-clause", 
+  "license_family": "BSD", 
+  "summary": "Commands and tools for building conda packages"
+}

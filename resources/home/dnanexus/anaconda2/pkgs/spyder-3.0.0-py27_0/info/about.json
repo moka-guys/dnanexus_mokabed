@@ -1,0 +1,8 @@
+{
+  "description": "Spyder is a powerful interactive development environment for the Python\nlanguage with advanced editing, interactive testing, debugging and\nintrospection features. Additionally, Spyder is a numerical computing\nenvironment thanks to the support of IPython and popular Python libraries\nsuch as NumPy, SciPy, or matplotlib.\n", 
+  "dev_url": "https://github.com/spyder-ide/spyder", 
+  "doc_url": "http://pythonhosted.org/spyder/", 
+  "home": "https://github.com/spyder-ide/spyder", 
+  "license": "MIT", 
+  "summary": "Scientific PYthon Development EnviRonment"
+}

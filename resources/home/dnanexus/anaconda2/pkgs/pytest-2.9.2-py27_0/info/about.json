@@ -1,0 +1,8 @@
+{
+  "description": "The pytest framework makes it easy to write small tests, yet scales to\nsupport complex functional testing for applications and libraries.\n", 
+  "dev_url": "https://github.com/pytest-dev/pytest/", 
+  "doc_url": "http://pytest.org/latest/contents.html#toc", 
+  "home": "http://pytest.org/", 
+  "license": "MIT", 
+  "summary": "Simple and powerful testing with Python"
+}

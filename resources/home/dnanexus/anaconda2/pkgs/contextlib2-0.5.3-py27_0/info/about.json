@@ -1,0 +1,8 @@
+{
+  "description": "Contextlib2 provides backports of features in the latest version of the\nstandard library's contextlib module to earlier Python versions. It also\nserves as a real world proving ground for potential future enhancements\nto that module.\n", 
+  "dev_url": "https://bitbucket.org/ncoghlan/contextlib2", 
+  "doc_url": "http://contextlib2.readthedocs.org/", 
+  "home": "http://contextlib2.readthedocs.org/", 
+  "license": "PSF", 
+  "summary": "backports and enhancements for the contextlib module"
+}

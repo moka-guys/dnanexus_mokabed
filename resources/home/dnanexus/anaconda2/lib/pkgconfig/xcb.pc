@@ -1,0 +1,13 @@
+prefix=/home/aled/Documents/DNA_Nexus_app_github/dnanexus_mokabed/resources/home/dnanexus/anaconda2
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+xcbproto_version=1.12
+
+Name: XCB
+Description: X-protocol C Binding
+Version: 1.12
+Requires.private: pthread-stubs xau >= 0.99.2 xdmcp
+Libs: -L${libdir} -lxcb
+Libs.private: 
+Cflags: -I${includedir}

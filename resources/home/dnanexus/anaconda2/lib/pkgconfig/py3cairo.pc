@@ -1,0 +1,8 @@
+prefix=/home/aled/Documents/DNA_Nexus_app_github/dnanexus_mokabed/resources/home/dnanexus/anaconda2
+
+Name: Pycairo
+Description: Python bindings for cairo
+Version: 1.10.0
+Requires: cairo
+Cflags: -I${prefix}/include/pycairo
+Libs:

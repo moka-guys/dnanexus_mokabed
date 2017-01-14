@@ -1,0 +1,8 @@
+{
+  "description": "pytz brings the Olson tz database into Python. This library allows\naccurate and cross platform timezone calculations using Python 2.4 or\nhigher. It also solves the issue of ambiguous times at the end of daylight\nsaving time.\n", 
+  "dev_url": "https://github.com/newvem/pytz", 
+  "doc_url": "http://pytz.sourceforge.net/", 
+  "home": "http://pytz.sourceforge.net/", 
+  "license": "MIT", 
+  "summary": "World timezone definitions, modern and historical"
+}

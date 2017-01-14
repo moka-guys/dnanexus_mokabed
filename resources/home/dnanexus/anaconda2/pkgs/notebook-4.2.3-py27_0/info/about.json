@@ -1,0 +1,8 @@
+{
+  "description": "The Jupyter Notebook is a web application that allows you to create and\nshare documents that contain live code, equations, visualizations and\nexplanatory text. Uses include: data cleaning and transformation, numerical\nsimulation, statistical modeling, machine learning and much more.\n", 
+  "dev_url": "https://github.com/jupyter/notebook", 
+  "doc_url": "https://jupyter-notebook.readthedocs.org/en/latest/", 
+  "home": "http://jupyter.org", 
+  "license": "BSD", 
+  "summary": "web-based notebook environment for interactive computing"
+}

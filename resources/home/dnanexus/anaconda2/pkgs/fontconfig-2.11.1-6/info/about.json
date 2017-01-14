@@ -1,0 +1,8 @@
+{
+  "description": "Fontconfig is a library designed to provide system-wide font configuration,\ncustomization and application access.\n", 
+  "dev_url": "https://cgit.freedesktop.org/fontconfig/", 
+  "doc_url": "https://www.freedesktop.org/software/fontconfig/fontconfig-user.html", 
+  "home": "http://www.freedesktop.org/wiki/Software/fontconfig/", 
+  "license": "BSD", 
+  "summary": "A library for configuring and customizing font access"
+}

@@ -1,0 +1,8 @@
+{
+  "description": "Gevent is a coroutine -based Python networking library that uses greenlet\nto provide a high-level synchronous API on top of the libev event loop.\n", 
+  "dev_url": "https://github.com/gevent/gevent", 
+  "doc_url": "http://www.gevent.org/contents.html", 
+  "home": "http://www.gevent.org/", 
+  "license": "MIT", 
+  "summary": "Coroutine-based Python network library"
+}

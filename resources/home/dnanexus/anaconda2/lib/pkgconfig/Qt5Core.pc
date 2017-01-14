@@ -1,0 +1,15 @@
+prefix=/home/aled/Documents/DNA_Nexus_app_github/dnanexus_mokabed/resources/home/dnanexus/anaconda2
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include/qt
+
+host_bins=${prefix}/bin
+qt_config=minimal-config small-config medium-config large-config full-config fontconfig evdev xlib xrender xcb-plugin xcb-qt xcb-glx xkbcommon-qt accessibility-atspi-bridge c++11 accessibility opengl shared qpa reduce_exports clock-gettime clock-monotonic posix_fallocate mremap getaddrinfo ipv6ifname getifaddrs inotify system-jpeg system-png png system-freetype harfbuzz system-zlib nis glib dbus dbus-linked openssl xcb rpath alsa gstreamer-1.0 icu concurrent audio-backend release
+
+Name: Qt5 Core
+Description: Qt Core module
+Version: 5.6.0
+Libs: -L${libdir} -lQt5Core 
+Libs.private: -L/home/aled/Documents/DNA_Nexus_app_github/dnanexus_mokabed/resources/home/dnanexus/anaconda2/lib -lpthread -lz -licui18n -licuuc -licudata -L/home/aled/Documents/DNA_Nexus_app_github/dnanexus_mokabed/resources/home/dnanexus/anaconda2/lib -lqtpcre -L/home/aled/Documents/DNA_Nexus_app_github/dnanexus_mokabed/resources/home/dnanexus/anaconda2/lib -lm -ldl -pthread -lgthread-2.0 -lrt -lglib-2.0  
+Cflags: -I${includedir}/QtCore -I${includedir}
+

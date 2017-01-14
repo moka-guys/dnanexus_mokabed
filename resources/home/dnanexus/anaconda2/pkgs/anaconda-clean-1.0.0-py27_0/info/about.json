@@ -1,0 +1,6 @@
+{
+  "dev_url": "https://github.com/ContinuumIO/anaconda-clean", 
+  "home": "https://github.com/ContinuumIO/anaconda-clean", 
+  "license": "BSD", 
+  "summary": "Delete Anaconda configuration files"
+}

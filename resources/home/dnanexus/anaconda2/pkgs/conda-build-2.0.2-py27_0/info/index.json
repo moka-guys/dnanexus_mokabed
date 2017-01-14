@@ -1,0 +1,21 @@
+{
+  "arch": "x86_64", 
+  "build": "py27_0", 
+  "build_number": 0, 
+  "depends": [
+    "conda >=4.1", 
+    "filelock", 
+    "jinja2", 
+    "patchelf", 
+    "pkginfo", 
+    "pycrypto", 
+    "python 2.7*", 
+    "pyyaml"
+  ], 
+  "license": "BSD 3-clause", 
+  "license_family": "BSD", 
+  "name": "conda-build", 
+  "platform": "linux", 
+  "subdir": "linux-64", 
+  "version": "2.0.2"
+}

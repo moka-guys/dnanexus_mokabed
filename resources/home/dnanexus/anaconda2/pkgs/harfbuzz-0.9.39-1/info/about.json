@@ -1,0 +1,8 @@
+{
+  "description": "HarfBuzz is a text shaping library. New Harbuzz targets various font\ntechnologies while Old HarfBuzz targets only OpenType fonts.\n",
+  "dev_url": "https://github.com/behdad/harfbuzz",
+  "doc_url": "https://www.freedesktop.org/wiki/Software/HarfBuzz/",
+  "home": "http://www.freedesktop.org/wiki/Software/HarfBuzz/",
+  "license": "MIT",
+  "summary": "An OpenType text shaping engine"
+}

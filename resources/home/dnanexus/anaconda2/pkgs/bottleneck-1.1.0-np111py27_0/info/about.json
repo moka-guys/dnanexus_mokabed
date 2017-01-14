@@ -1,0 +1,9 @@
+{
+  "description": "Bottleneck is a collection of fast NumPy array functions written in\nCython.\n", 
+  "dev_url": "https://github.com/kwgoodman/bottleneck", 
+  "doc_url": "http://berkeleyanalytics.com/bottleneck", 
+  "home": "http://berkeleyanalytics.com/bottleneck", 
+  "license": "Simplified BSD", 
+  "license_family": "BSD", 
+  "summary": "Fast NumPy array functions written in Cython."
+}

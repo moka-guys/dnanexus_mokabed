@@ -1,0 +1,15 @@
+{
+  "arch": "x86_64", 
+  "build": "6", 
+  "build_number": 6, 
+  "depends": [
+    "freetype 2.5.*", 
+    "libpng 1.6.*", 
+    "libxml2 2.9.*"
+  ], 
+  "license": "BSD", 
+  "name": "fontconfig", 
+  "platform": "linux", 
+  "subdir": "linux-64", 
+  "version": "2.11.1"
+}

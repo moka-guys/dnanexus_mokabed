@@ -1,0 +1,41 @@
+# This file created by conda-build 2.0.0beta
+# meta.yaml template originally from:
+# /home/ilan/anaconda/packages/pytest, last modified Mon Jun 13 16:40:54 2016
+# ------------------------------------------------
+
+package:
+    name: pytest
+    version: 2.9.2
+source:
+    fn: pytest-2.9.2.tar.gz
+    md5: b65c2944dfaa0efb62c0239afb424f5b
+    url: https://pypi.python.org/packages/f0/ee/6e2522c968339dca7d9abfd5e71312abeeb5ee902e09b4daf44f07b2f907/pytest-2.9.2.tar.gz
+build:
+    entry_points:
+        - py.test = py.test:main
+requirements:
+    build:
+        - python
+        - py
+        - setuptools
+    run:
+        - python
+        - py >=1.4.29
+test:
+    commands:
+        - py.test -h
+    imports:
+        - pytest
+about:
+    description: 'The pytest framework makes it easy to write small tests, yet scales
+        to
+
+        support complex functional testing for applications and libraries.
+
+        '
+    dev_url: https://github.com/pytest-dev/pytest/
+    doc_url: http://pytest.org/latest/contents.html#toc
+    home: http://pytest.org/
+    license: MIT
+    license_file: LICENSE
+    summary: Simple and powerful testing with Python
