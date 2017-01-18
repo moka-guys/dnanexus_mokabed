@@ -1,0 +1,27 @@
+# This file created by conda-build 1.20.3
+# meta.yaml template originally from:
+# /home/ilan/anaconda/packages/nbpresent, last modified Tue Jun 21 14:16:59 2016
+# ------------------------------------------------
+
+package:
+    name: nbpresent
+    version: 3.0.2
+source:
+    git_rev: 3.0.2
+    git_url: git@github.com:Anaconda-Platform/nbpresent.git
+requirements:
+    build:
+        - python
+        - setuptools
+        - notebook >=4.2.0
+    run:
+        - python
+        - notebook >=4.2.0
+test:
+    imports:
+        - nbpresent
+about:
+    home: https://github.com/Anaconda-Platform/nbpresent
+    license: BSD
+    license_file: LICENSE
+    summary: Next generation slides for Jupyter Notebooks

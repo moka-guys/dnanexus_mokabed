@@ -1,0 +1,44 @@
+# This file created by conda-build 1.20.3+48.g09ddcfe
+# meta.yaml template originally from:
+# /home/ilan/anaconda/packages/freetype, last modified Thu Jun  2 17:47:14 2016
+# ------------------------------------------------
+
+package:
+    name: freetype
+    version: 2.5.5
+source:
+    fn: freetype-2.5.5.tar.bz2
+    patches:
+        - subpixel.patch
+    sha1: 7b7460ef51a8fdb17baae53c6658fc1ad000a1c2
+    url: http://download.savannah.gnu.org/releases/freetype/freetype-2.5.5.tar.bz2
+build:
+    features: ''
+    number: '1'
+requirements:
+    build:
+        - cmake
+        - zlib 1.2.*
+        - libpng 1.6.*
+        - bzip2 1.0.6
+    run:
+        - zlib 1.2.*
+        - libpng 1.6.*
+about:
+    description: 'FreeType 2 is a software font engine that is designed to be small,
+
+        efficient, highly customizable, and portable while capable of producing
+
+        high-quality output (glyph images). It can be used in graphics libraries,
+
+        display servers, font conversion tools, text image generation tools, and
+
+        many other products as well.
+
+        '
+    dev_url: http://git.savannah.gnu.org/cgit/freetype/
+    doc_url: http://freetype.sourceforge.net/freetype2/documentation.html
+    home: http://freetype.sourceforge.net/index2.html
+    license: FreeType License (http://freetype.sourceforge.net/FTL.TXT)
+    license_family: Other
+    summary: A Free, High-Quality, and Portable Font Engine

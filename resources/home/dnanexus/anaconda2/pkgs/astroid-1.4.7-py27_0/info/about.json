@@ -1,0 +1,8 @@
+{
+  "description": "Asteroid provides a common base representation of Python\nsource code for various projects. It provides a compatible representation\nwhich comes from the _ast module. It includes support for static inference\nand local name scopes.\n", 
+  "dev_url": "https://github.com/pycqa/astroid", 
+  "doc_url": "https://pypi.python.org/pypi/astroid/1.4.7", 
+  "home": "https://www.astroid.org/", 
+  "license": "LGPL", 
+  "summary": "abstract syntax tree for Python with inference support"
+}

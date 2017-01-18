@@ -1,0 +1,34 @@
+# This file created by conda-build 2.0.0beta
+# meta.yaml template originally from:
+# /home/ilan/anaconda/packages/xlwt, last modified Mon Jun 13 15:44:27 2016
+# ------------------------------------------------
+
+package:
+    name: xlwt
+    version: 1.1.2
+source:
+    fn: xlwt-1.1.2.tar.gz
+    md5: fadf8d1be8c5f071561c4145ed5f5b89
+    url: https://pypi.python.org/packages/0b/69/644313df86e6375ec2c6b34ec8ac544b9cc7803b7d943223d32811860f3d/xlwt-1.1.2.tar.gz
+build: {}
+requirements:
+    build:
+        - python
+        - setuptools
+    run:
+        - python
+test:
+    imports:
+        - xlwt
+about:
+    description: 'Xlwt is a library for developers to use to generate spreadsheet
+        files
+
+        compatible with Microsoft Excel versions 95 to 2003.
+
+        '
+    dev_url: https://github.com/python-excel/xlwt
+    doc_url: http://xlwt.readthedocs.org/en/latest/
+    home: http://www.python-excel.org/
+    license: BSD
+    summary: Writing data and formatting information to Excel files

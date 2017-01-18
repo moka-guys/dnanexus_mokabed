@@ -1,0 +1,8 @@
+{
+  "description": "Cryptography is a Python library which exposes cryptographic recipes and\nprimitives. The goal is for it to be your \"cryptographic standard library\".\n", 
+  "dev_url": "https://github.com/pyca/cryptography", 
+  "doc_url": "https://cryptography.io", 
+  "home": "https://cryptography.io", 
+  "license": "Apache", 
+  "summary": "Provides cryptographic recipes and primitives to Python developers"
+}

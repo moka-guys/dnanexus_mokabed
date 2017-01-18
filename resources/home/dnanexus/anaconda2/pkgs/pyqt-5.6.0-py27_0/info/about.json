@@ -1,0 +1,5 @@
+{
+  "home": "http://www.riverbankcomputing.co.uk/software/pyqt", 
+  "license": "GPL", 
+  "summary": "Python bindings of the cross-platform GUI toolkit Qt"
+}

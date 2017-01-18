@@ -1,0 +1,8 @@
+{
+  "description": "psutil (process and system utilities) is a cross-platform library for\nretrieving information on running processes and system utilization (CPU,\nmemory, disks, network) in Python. It is useful mainly for system\nmonitoring, profiling and limiting process resources and management of\nrunning processes.\n", 
+  "dev_url": "https://github.com/giampaolo/psutil", 
+  "doc_url": "http://pythonhosted.org/psutil/", 
+  "home": "https://github.com/giampaolo/psutil", 
+  "license": "BSD", 
+  "summary": "A cross-platform process and system utilities module for Python"
+}

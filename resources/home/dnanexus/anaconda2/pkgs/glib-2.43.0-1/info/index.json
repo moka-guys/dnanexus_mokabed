@@ -1,0 +1,14 @@
+{
+  "arch": "x86_64", 
+  "build": "1", 
+  "build_number": 1, 
+  "depends": [
+    "libffi >=3.0.0", 
+    "zlib"
+  ], 
+  "license": "LGPL", 
+  "name": "glib", 
+  "platform": "linux", 
+  "subdir": "linux-64", 
+  "version": "2.43.0"
+}

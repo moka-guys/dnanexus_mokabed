@@ -1,0 +1,43 @@
+# This file created by conda-build 1.21.7
+# meta.yaml template originally from:
+# /home/dev/var/numba-py2_7-np1_11-x86_64/build/buildscripts/condarecipe.local, last modified Tue Aug 30 17:22:57 2016
+# ------------------------------------------------
+
+package:
+    name: numba
+    version: 0.28.1
+source:
+    path: ../..
+build:
+    entry_points:
+        - pycc = numba.pycc:main
+        - numba = numba.numba_entry:main
+    number: '0'
+requirements:
+    build:
+        - python
+        - numpy x.x
+        - setuptools
+        - llvmlite 0.13.*
+        - funcsigs
+        - singledispatch
+    run:
+        - python
+        - numpy x.x
+        - llvmlite 0.13.*
+        - funcsigs
+        - singledispatch
+test:
+    commands:
+        - pycc -h
+        - numba -h
+        - python -m numba.tests.test_runtests
+        - python -m numba.runtests -m -b
+    files:
+        - mandel.py
+    requires:
+        - jinja2
+        - cffi
+        - scipy
+        - ipython
+        - setuptools

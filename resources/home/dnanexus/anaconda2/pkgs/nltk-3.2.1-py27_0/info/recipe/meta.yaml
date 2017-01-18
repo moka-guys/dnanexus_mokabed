@@ -1,0 +1,25 @@
+package:
+  name: nltk
+  version: 3.2.1
+
+source:
+  fn: nltk-3.2.1.tar.gz
+  url: https://pypi.python.org/packages/source/n/nltk/nltk-3.2.1.tar.gz
+  md5: 27d84d2d11449d709ccd1deac18deb05
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+
+test:
+  imports:
+    - nltk
+
+about:
+  home: http://nltk.org/
+  license: Apache
+  license_file: LICENSE.txt
+  summary: Natural Language Toolkit

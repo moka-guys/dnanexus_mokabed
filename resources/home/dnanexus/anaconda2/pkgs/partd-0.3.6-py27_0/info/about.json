@@ -1,0 +1,7 @@
+{
+  "description": "Key-value byte store with appendable values. Partd excels at shuffling\noperations.\n", 
+  "dev_url": "https://github.com/dask/partd", 
+  "home": "https://github.com/dask/partd", 
+  "license": "BSD", 
+  "summary": "Appendable key-value byte store"
+}

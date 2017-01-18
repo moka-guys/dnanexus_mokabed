@@ -1,0 +1,6 @@
+#!/home/aled/Documents/DNA_Nexus_app_github/dnanexus_mokabed/resources/home/dnanexus/anaconda2/bin/python
+if __name__ == '__main__':
+    import sys
+    import tables.scripts.pttree
+
+    sys.exit(tables.scripts.pttree.main())

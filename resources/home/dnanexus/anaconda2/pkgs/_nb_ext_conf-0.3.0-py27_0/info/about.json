@@ -1,0 +1,5 @@
+{
+  "home": "https://github.com/ContinuumIO/anaconda-nb-extensions-meta-config", 
+  "license": "BSD", 
+  "summary": "A configuration metapackage for enabling Anaconda-bundled jupyter extensions"
+}

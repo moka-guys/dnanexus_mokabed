@@ -1,0 +1,8 @@
+{
+  "description": "This package defines the core common functionality of Jupyter projects.\n", 
+  "dev_url": "https://github.com/jupyter/jupyter_core", 
+  "doc_url": "http://jupyter-core.readthedocs.org/", 
+  "home": "http://jupyter.org", 
+  "license": "BSD", 
+  "summary": "core Jupyter functionality"
+}

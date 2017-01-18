@@ -1,0 +1,28 @@
+# This file created by conda-build 1.21.7
+# meta.yaml template originally from:
+# /home/dev/var/llvmlite-py2_7-x86_64/build/conda-recipes/llvmlite, last modified Thu Aug 11 14:43:00 2016
+# ------------------------------------------------
+
+package:
+    name: llvmlite
+    version: 0.13.0
+source:
+    path: ../..
+build:
+    number: '0'
+requirements:
+    build:
+        - python
+        - llvmdev 3.8*
+        - enum34
+    run:
+        - python
+        - enum34
+test:
+    imports:
+        - llvmlite
+        - llvmlite.binding
+about:
+    home: https://github.com/numba/llvmlite
+    license: New BSD License
+    summary: A lightweight LLVM python binding for writing JIT compilers

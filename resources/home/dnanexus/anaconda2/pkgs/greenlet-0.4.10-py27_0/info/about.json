@@ -1,0 +1,8 @@
+{
+  "description": "A \"greenlet\" is a still more primitive notion of micro-thread with no\nimplicit scheduling; coroutines, in other words. This is useful when you\nwant to control exactly when your code runs.\n", 
+  "dev_url": "https://github.com/python-greenlet/greenlet", 
+  "doc_url": "http://greenlet.readthedocs.org/en/latest/", 
+  "home": "https://github.com/python-greenlet/greenlet", 
+  "license": "MIT", 
+  "summary": "Lightweight in-process concurrent programming"
+}

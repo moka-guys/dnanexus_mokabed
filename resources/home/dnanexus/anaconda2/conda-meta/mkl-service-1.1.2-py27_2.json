@@ -1,0 +1,29 @@
+{
+  "arch": "x86_64", 
+  "build": "py27_2", 
+  "build_number": 2, 
+  "depends": [
+    "mkl >=11.0", 
+    "python 2.7*"
+  ], 
+  "files": [
+    "lib/python2.7/site-packages/mkl/__init__.py", 
+    "lib/python2.7/site-packages/mkl/__init__.pyc", 
+    "lib/python2.7/site-packages/mkl/service.so", 
+    "lib/python2.7/site-packages/mkl/test.py", 
+    "lib/python2.7/site-packages/mkl/test.pyc"
+  ], 
+  "installed_by": "Anaconda2-4.2.0-Linux-x86_64", 
+  "license": "3-clause BSD", 
+  "license_family": "BSD", 
+  "link": {
+    "source": "/home/aled/Documents/DNA_Nexus_app_github/dnanexus_mokabed/resources/home/dnanexus/anaconda2/pkgs/mkl-service-1.1.2-py27_2", 
+    "type": "hard-link"
+  }, 
+  "md5": "44c25ed9743b8a309a0784e5d4748000", 
+  "name": "mkl-service", 
+  "platform": "linux", 
+  "subdir": "linux-64", 
+  "url": "https://repo.continuum.io/pkgs/free/linux-64/mkl-service-1.1.2-py27_2.tar.bz2", 
+  "version": "1.1.2"
+}

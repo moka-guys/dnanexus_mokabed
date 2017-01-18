@@ -1,0 +1,7 @@
+#!/home/aled/Documents/DNA_Nexus_app_github/dnanexus_mokabed/resources/home/dnanexus/anaconda2/bin/python
+
+import sys
+
+from bokeh.command.bootstrap import main
+
+main(sys.argv)

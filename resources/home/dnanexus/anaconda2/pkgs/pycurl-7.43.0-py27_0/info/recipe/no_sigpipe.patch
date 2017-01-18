@@ -1,0 +1,18 @@
+diff --git python/curl/__init__.py python/curl/__init__.py
+index e5aa40f..51eda26 100644
+--- python/curl/__init__.py
++++ python/curl/__init__.py
+@@ -1,4 +1,4 @@
+-'''A high-level interface to the pycurl extension'''
++﻿'''A high-level interface to the pycurl extension'''
+ 
+ # ** mfx NOTE: the CGI class uses "black magic" using COOKIEFILE in
+ #    combination with a non-existant file name. See the libcurl docs
+@@ -23,7 +23,6 @@ else:
+ 
+ try:
+     import signal
+-    signal.signal(signal.SIGPIPE, signal.SIG_IGN)
+ except ImportError:
+     pass
+ 

@@ -1,0 +1,7 @@
+platform:  Linux-4.1.19-boot2docker-x86_64-with-redhat-5.11-Final
+system:    Linux
+node:      769dcf35ec22
+release:   4.1.19-boot2docker
+version:   #1 SMP Thu Apr 7 02:41:05 UTC 2016
+machine:   x86_64
+processor: x86_64

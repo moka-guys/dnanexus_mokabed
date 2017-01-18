@@ -1,0 +1,9 @@
+{
+  "description": "Pillow is he friendly PIL fork. PIL is the Python Imaging Library. If you\nhave ever worried or wondered about the future of PIL, please stop. We're\nhere to save the day.\n", 
+  "dev_url": "https://github.com/python-pillow/Pillow", 
+  "doc_url": "http://pillow.readthedocs.org/en/3.2.x/", 
+  "home": "http://python-pillow.github.io/", 
+  "license": "PIL license", 
+  "license_family": "Other", 
+  "summary": "The friendly Python Imaging Library(PIL) fork"
+}

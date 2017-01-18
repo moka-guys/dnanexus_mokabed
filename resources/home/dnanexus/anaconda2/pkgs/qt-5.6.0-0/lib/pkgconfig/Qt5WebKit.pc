@@ -1,0 +1,14 @@
+prefix=/opt/anaconda1anaconda2anaconda3
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include/qt
+
+
+Name: Qt5 WebKit
+Description: Qt WebKit module
+Version: 5.6.0
+Libs: -L${libdir} -lQt5WebKit 
+Libs.private: -L/opt/anaconda1anaconda2anaconda3/lib -lQt5Gui -lQt5Network -lQt5Core -lpthread -L/opt/anaconda1anaconda2anaconda3/lib -Wl,-whole-archive -lWebKit1 -Wl,-no-whole-archive -L/root/qt5-x64-2.7/conda-bld/._1474036701962/work/qt-everywhere-opensource-src-5.6.0/qtwebkit/Source/WebKit/ -Wl,-whole-archive -lWebKit2 -Wl,-no-whole-archive -L/root/qt5-x64-2.7/conda-bld/._1474036701962/work/qt-everywhere-opensource-src-5.6.0/qtwebkit/Source/WebKit2/ -lrt -Wl,-whole-archive -lWebCore -Wl,-no-whole-archive -L/root/qt5-x64-2.7/conda-bld/._1474036701962/work/qt-everywhere-opensource-src-5.6.0/qtwebkit/Source/WebCore/ -lz -ljpeg -lpng -Wl,-whole-archive -lANGLE -Wl,-no-whole-archive -L/root/qt5-x64-2.7/conda-bld/._1474036701962/work/qt-everywhere-opensource-src-5.6.0/qtwebkit/Source/ThirdParty/ANGLE/ -Wl,-whole-archive -lleveldb -Wl,-no-whole-archive -L/root/qt5-x64-2.7/conda-bld/._1474036701962/work/qt-everywhere-opensource-src-5.6.0/qtwebkit/Source/ThirdParty/leveldb/ -Wl,-whole-archive -lJavaScriptCore -Wl,-no-whole-archive -L/root/qt5-x64-2.7/conda-bld/._1474036701962/work/qt-everywhere-opensource-src-5.6.0/qtwebkit/Source/JavaScriptCore/ -Wl,-whole-archive -lWTF -Wl,-no-whole-archive -L/root/qt5-x64-2.7/conda-bld/._1474036701962/work/qt-everywhere-opensource-src-5.6.0/qtwebkit/Source/WTF/ -lxml2 -lglib-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -lgstapp-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -lgstpbutils-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -lgstvideo-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -lgstaudio-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -lsqlite3 -licui18n -licuuc -licudata -L/opt/anaconda1anaconda2anaconda3/lib -lQt5Quick -lQt5Qml -lQt5Network -lQt5Gui -L/opt/anaconda1anaconda2anaconda3/lib -lQt5WebChannel -lQt5Sql -lQt5Core -lGL  
+Cflags: -I${includedir}/QtWebKit -I${includedir}
+Requires: Qt5Core Qt5Gui Qt5Network
+

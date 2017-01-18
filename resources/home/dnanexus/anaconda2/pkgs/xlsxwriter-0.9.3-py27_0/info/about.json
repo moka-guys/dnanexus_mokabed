@@ -1,0 +1,8 @@
+{
+  "description": "XlsxWriter is a Python module for writing files in the Excel 2007+ XLSX\nfile format. XlsxWriter can be used to write text, numbers, formulas and\nhyperlinks to multiple worksheets and it supports features such as\nformatting and more.\n", 
+  "dev_url": "https://github.com/jmcnamara/XlsxWriter", 
+  "doc_url": "https://xlsxwriter.readthedocs.org/", 
+  "home": "https://github.com/jmcnamara/XlsxWriter", 
+  "license": "BSD", 
+  "summary": "A Python module for creating Excel XLSX files"
+}

@@ -1,0 +1,8 @@
+{
+  "description": "Xlwt is a library for developers to use to generate spreadsheet files\ncompatible with Microsoft Excel versions 95 to 2003.\n", 
+  "dev_url": "https://github.com/python-excel/xlwt", 
+  "doc_url": "http://xlwt.readthedocs.org/en/latest/", 
+  "home": "http://www.python-excel.org/", 
+  "license": "BSD", 
+  "summary": "Writing data and formatting information to Excel files"
+}

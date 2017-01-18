@@ -1,0 +1,40 @@
+{
+  "arch": "x86_64", 
+  "build": "py27_0", 
+  "build_number": 0, 
+  "depends": [
+    "python 2.7*"
+  ], 
+  "files": [
+    "lib/python2.7/site-packages/idna-2.1-py2.7.egg-info/PKG-INFO", 
+    "lib/python2.7/site-packages/idna-2.1-py2.7.egg-info/SOURCES.txt", 
+    "lib/python2.7/site-packages/idna-2.1-py2.7.egg-info/dependency_links.txt", 
+    "lib/python2.7/site-packages/idna-2.1-py2.7.egg-info/top_level.txt", 
+    "lib/python2.7/site-packages/idna/__init__.py", 
+    "lib/python2.7/site-packages/idna/__init__.pyc", 
+    "lib/python2.7/site-packages/idna/codec.py", 
+    "lib/python2.7/site-packages/idna/codec.pyc", 
+    "lib/python2.7/site-packages/idna/compat.py", 
+    "lib/python2.7/site-packages/idna/compat.pyc", 
+    "lib/python2.7/site-packages/idna/core.py", 
+    "lib/python2.7/site-packages/idna/core.pyc", 
+    "lib/python2.7/site-packages/idna/idnadata.py", 
+    "lib/python2.7/site-packages/idna/idnadata.pyc", 
+    "lib/python2.7/site-packages/idna/intranges.py", 
+    "lib/python2.7/site-packages/idna/intranges.pyc", 
+    "lib/python2.7/site-packages/idna/uts46data.py", 
+    "lib/python2.7/site-packages/idna/uts46data.pyc"
+  ], 
+  "installed_by": "Anaconda2-4.2.0-Linux-x86_64", 
+  "license": "BSD", 
+  "link": {
+    "source": "/home/aled/Documents/DNA_Nexus_app_github/dnanexus_mokabed/resources/home/dnanexus/anaconda2/pkgs/idna-2.1-py27_0", 
+    "type": "hard-link"
+  }, 
+  "md5": "f936e2a7ff6b5dec2e7390d85e74b42d", 
+  "name": "idna", 
+  "platform": "linux", 
+  "subdir": "linux-64", 
+  "url": "https://repo.continuum.io/pkgs/free/linux-64/idna-2.1-py27_0.tar.bz2", 
+  "version": "2.1"
+}

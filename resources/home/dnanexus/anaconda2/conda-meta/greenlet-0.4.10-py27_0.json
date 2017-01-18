@@ -1,0 +1,25 @@
+{
+  "arch": "x86_64", 
+  "build": "py27_0", 
+  "build_number": 0, 
+  "depends": [
+    "python 2.7*"
+  ], 
+  "files": [
+    "include/python2.7/greenlet/greenlet.h", 
+    "lib/python2.7/site-packages/greenlet-0.4.10-py2.7.egg-info", 
+    "lib/python2.7/site-packages/greenlet.so"
+  ], 
+  "installed_by": "Anaconda2-4.2.0-Linux-x86_64", 
+  "license": "MIT", 
+  "link": {
+    "source": "/home/aled/Documents/DNA_Nexus_app_github/dnanexus_mokabed/resources/home/dnanexus/anaconda2/pkgs/greenlet-0.4.10-py27_0", 
+    "type": "hard-link"
+  }, 
+  "md5": "d5fde4fc871f483088c4ae46b1013e26", 
+  "name": "greenlet", 
+  "platform": "linux", 
+  "subdir": "linux-64", 
+  "url": "https://repo.continuum.io/pkgs/free/linux-64/greenlet-0.4.10-py27_0.tar.bz2", 
+  "version": "0.4.10"
+}

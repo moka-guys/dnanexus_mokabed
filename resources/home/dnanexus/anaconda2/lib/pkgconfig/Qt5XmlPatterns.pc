@@ -1,0 +1,14 @@
+prefix=/home/aled/Documents/DNA_Nexus_app_github/dnanexus_mokabed/resources/home/dnanexus/anaconda2
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include/qt
+
+
+Name: Qt5 XmlPatterns
+Description: Qt XmlPatterns module
+Version: 5.6.0
+Libs: -L${libdir} -lQt5XmlPatterns 
+Libs.private: -L/home/aled/Documents/DNA_Nexus_app_github/dnanexus_mokabed/resources/home/dnanexus/anaconda2/lib -L/home/aled/Documents/DNA_Nexus_app_github/dnanexus_mokabed/resources/home/dnanexus/anaconda2/lib -lQt5Network -lQt5Core -lpthread   
+Cflags: -I${includedir}/QtXmlPatterns -I${includedir}
+Requires: Qt5Core Qt5Network
+

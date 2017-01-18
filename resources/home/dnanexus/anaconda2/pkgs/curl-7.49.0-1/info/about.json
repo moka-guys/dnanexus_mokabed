@@ -1,0 +1,10 @@
+{
+  "description": "Curl is an open source command line tool and library for transferring data\nwith URL syntax. It is used in command lines or scripts to transfer data.\n", 
+  "dev_url": "https://github.com/curl/curl", 
+  "doc_url": "https://curl.haxx.se/docs/", 
+  "home": "http://curl.haxx.se/", 
+  "license": "MIT/X derivate", 
+  "license_family": "MIT", 
+  "license_url": "http://curl.haxx.se/docs/copyright.html", 
+  "summary": "Tool and library for transferring data with URL syntax"
+}

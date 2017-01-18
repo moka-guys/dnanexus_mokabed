@@ -1,0 +1,8 @@
+{
+  "description": "Cython is an optimising static compiler for both the Python programming\nlanguage and the extended Cython programming language. It makes writing C\nextensions for Python as easy as Python itself.\n", 
+  "dev_url": "https://github.com/cython/cython", 
+  "doc_url": "http://cython.org/#documentation", 
+  "home": "http://www.cython.org/", 
+  "license": "Apache", 
+  "summary": "The Cython compiler for writing C extensions for the Python language"
+}

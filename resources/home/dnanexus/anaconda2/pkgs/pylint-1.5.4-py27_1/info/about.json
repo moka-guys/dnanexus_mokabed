@@ -1,0 +1,9 @@
+{
+  "description": "Pylint is a tool that checks for errors in Python code, tries to enforce a\ncoding standard and looks for bad code smells. This is similar but\nnevertheless different from what pychecker provides, especially since\npychecker explicitly does not bother with coding style.\n", 
+  "dev_url": "https://github.com/PyCQA/pylint/", 
+  "doc_url": "https://docs.pylint.org/", 
+  "home": "http://www.pylint.org/", 
+  "license": "GPL", 
+  "license_family": "GPL2", 
+  "summary": "Python code static checker"
+}
