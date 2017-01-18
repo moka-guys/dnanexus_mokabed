@@ -9,6 +9,29 @@ dx-download-all-inputs
 
 mv /home/dnanexus/in/transcript_file/$transcript_file_prefix.txt /home/dnanexus/$transcript_file_prefix.txt
 
+#eval "$(ssh-agent -s)"
+#ssh-add ~/.ssh/id_rsa
+#git clone git@github.com:woook/mokabed.git
+ 
+#cat /home/dnanexus/.ssh/id_rsa.pub | sudo tee -a /home/dnanexus/.ssh/authorized_keys
+#sudo cp ~/.ssh/* /root/.ssh/
+#chmod 600 /home/dnanexus/.ssh/id_rsa 
+#ssh-keyscan -t rsa github.com 2>&1 >> /home/dnanexus/.ssh/known_hosts
+
+#ssh -vT git@github.com
+
+
+#git clone git@github.com:woook/mokabed.git
+
+GITHUB_KEY=$(cat '/home/dnanexus/github_key')
+
+git clone https://$GITHUB_KEY@github.com/woook/mokabed.git
+
+cd mokabed
+
+git checkout production 
+ls
+
 #bash ~/Anaconda2-4.2.0-Linux-x86_64.sh -b -p $HOME/Anaconda
 #export PATH="$HOME/Anaconda/bin:$PATH"
 
@@ -50,7 +73,7 @@ fi
 if [ "$genes_or_transcripts" == "GENES" ]; then
   opts="$opts --genes /home/dnanexus/$transcript_file_prefix.txt"
 elif [ "$genes_or_transcripts" == "TRANSCRIPTS" ]; then
-opts="$opts --useaccesions --transcripts /home/dnanexus/$transcript_file_prefix.txt"
+opts="$opts --useaccessions --transcripts /home/dnanexus/$transcript_file_prefix.txt"
 fi
 
 if [ "$minuschr" == "true" ]; then
