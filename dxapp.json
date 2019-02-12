@@ -1,5 +1,5 @@
 {
-  "name": "mokabed",
+  "name": "mokabed_v1.2",
   "title": "Run Mokabed",
   "summary": "v1.2 - Create BED, RefSeq and Sambamba files",
   "tags": [
@@ -111,6 +111,7 @@
     "interpreter": "bash"
   },
   "access": {
+    "allProjects":"VIEW",
   	"network": [  
   	"*"
   	]

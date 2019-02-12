@@ -23,7 +23,8 @@ mv /home/dnanexus/in/transcript_file/$transcript_file_prefix.txt /home/dnanexus/
 
 #git clone git@github.com:woook/mokabed.git
 
-GITHUB_KEY=$(cat '/home/dnanexus/github_key')
+# capture github API key
+GITHUB_KEY=$(dx cat project-FQqXfYQ0Z0gqx7XG9Z2b4K43:mokabed_github_key)
 
 git clone https://$GITHUB_KEY@github.com/woook/mokabed.git
 
