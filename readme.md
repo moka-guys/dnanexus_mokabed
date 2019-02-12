@@ -1,4 +1,4 @@
-# dnanexus_mokabed - v1.1
+# dnanexus_mokabed - v1.2
 
 ## What does this app do?
 This app utilises the MokaBED code to generate BED files.

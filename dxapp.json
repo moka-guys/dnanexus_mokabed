@@ -1,13 +1,13 @@
 {
-  "name": "mokabed",
+  "name": "mokabed_v1.2",
   "title": "Run Mokabed",
-  "summary": "Create BED, RefSeq and Sambamba files",
+  "summary": "v1.2 - Create BED, RefSeq and Sambamba files",
   "tags": [
     "coverage",
     "Bed file"
   ],
   "properties": {
-    "github release": "v1.1"
+    "github release": "v1.2"
   },
   "dxapi": "1.0.0",
   "inputSpec": [
@@ -105,10 +105,13 @@
         "instanceType": "mem1_ssd1_x2"
       }
     },
+    "distribution" : "Ubuntu",
+    "release" : "14.04",
     "file": "src/code.sh",
     "interpreter": "bash"
   },
   "access": {
+    "allProjects":"VIEW",
   	"network": [  
   	"*"
   	]
