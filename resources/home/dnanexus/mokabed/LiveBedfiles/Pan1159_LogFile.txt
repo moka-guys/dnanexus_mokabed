@@ -1,0 +1,58 @@
+Time Stamp:2017-11-29 11:18:14.790653
+Command arguments executed:
+RefSeq table format version generated as /home/dnanexus/out/Output_files/Pan1159dataRefSeqFormat.txt
+/home/dnanexus/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/OOBed7_uses_mirrored_database_.py --codingup 10 --codingdown 10 --useaccessions --transcripts /home/dnanexus/Pan1159.txt --minuschr --outputfile /home/dnanexus/out/Output_files/Pan1159data.bed --logfile /home/dnanexus/out/Output_files/Pan1159_LogFile.txt 
+
+ Python version: 2.7.12 |Anaconda 4.2.0 (64-bit)| (default, Jul  2 2016, 17:42:40) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-1)]
+
+ getopt module file path: /home/dnanexus/anaconda2/lib/python2.7/getopt.py
+
+ os module file path: /home/dnanexus/anaconda2/lib/python2.7/os.py
+
+ pd class file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/pandas/__init__.py
+
+ cruzdb module file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/cruzdb/__init__.py
+
+version as defined by git tag = v1.0-204-g5ab2be3
+
+# ========== Manual modifications
+4 SNVs are to be included into the bedfile. These are:
+rs111033640 - 9:34646583-34646586
+rs199473684 - X:100654735
+rs3027584 - X:100662921
+rs6151429 - 22:51063477
+
+1. Pan1159data.bed
+A line for each SNV was created in Pan1159_rsID.bed
+
+combined the bed files
+#add non-header lines from Pan1159_rsID.bed
+sed '/^#/ d' < Pan1159_rsID.bed >> Pan1159data.bed
+
+# add the header lines to a sorted bed file. 
+# Then sort the combined Pan1159data.bed on chr and then start in numerical order and append to the sorted.bed file
+# rename the combined Pan1159data.bed to notsorted
+# rename the sorted bedfile to Pan1159data.bed
+sed '/^[^#]/ d' Pan1159data.bed > Pan1159data.sorted.bed; sed '/#/ d' Pan1159data.bed | sort -k1,1V -k2,2n >> Pan1159data.sorted.bed ; mv Pan1159data.bed Pan1159data.notsorted.bed; mv Pan1159data.sorted.bed Pan1159data.bed
+
+2. Pan1159dataSambamba.bed
+A line for each SNV was created in Pan1159_rsID_Sambamba.bed
+
+#add non-header lines from Pan1159_rsID.bed
+sed '/^#/ d' < Pan1159_rsID_Sambamba.bed >> Pan1159dataSambamba.bed
+
+sort the combined bedfile inplace 
+sort -k1,1V -k2,2n -o Pan1159dataSambamba.bed Pan1159dataSambamba.bed
+
+3. Pan1159dataRefSeqFormat.txt
+A line for each SNV was created in Pan1159_rsID_dataRefSeqFormat.bed
+
+These were copied and pasted in the same order as the above bed files
+
+# ============== Missing gene
+It was noticed that due to the missing header in the input file the first gene (ACVRL1) was missing from the output.
+The header line was added to the input file and mokabed re-run.
+The newly created bed files have the suffix _temporary (these were commited in commit https://github.com/woook/mokabed/pull/82/commits/3651f3210cc8e3c9e061cfff3b8b8f83d621260b).
+The lines for ACVRL1 were copied and pasted to the correct position in the bed file to avoid having to repeat the steps described above.
+The difference in https://github.com/woook/mokabed/pull/82/commits/c20b49cd93187411a6ab7411fd110d5cdfdf54c9 show that only lines relating to ACVRL1 were affected.

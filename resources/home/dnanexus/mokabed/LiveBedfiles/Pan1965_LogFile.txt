@@ -1,0 +1,67 @@
+Time Stamp:2018-02-01 13:25:31.115721
+Command arguments executed:
+RefSeq table format version generated as /home/dnanexus/out/Output_files/Pan1965dataRefSeqFormat.txt
+/home/dnanexus/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/OOBed7_uses_mirrored_database_.py --codingup 10 --codingdown 10 --useaccessions --transcripts /home/dnanexus/Pan1965.txt --minuschr --outputfile /home/dnanexus/out/Output_files/Pan1965data.bed --logfile /home/dnanexus/out/Output_files/Pan1965_LogFile.txt 
+
+ Python version: 2.7.12 |Anaconda 4.2.0 (64-bit)| (default, Jul  2 2016, 17:42:40) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-1)]
+
+ getopt module file path: /home/dnanexus/anaconda2/lib/python2.7/getopt.py
+
+ os module file path: /home/dnanexus/anaconda2/lib/python2.7/os.py
+
+ pd class file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/pandas/__init__.py
+
+ cruzdb module file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/cruzdb/__init__.py
+
+version as defined by git tag = v1.0-260-g32d2a72
+
+# ================= Manual modifications
+All genes plus LDLR 5'UTR +10
+APOB ex26 only (chr2:21227942-21235533) - These coordinates include +/- 10bp padding and are 1 based
+plus missing exons from COL4A5 chrX: 107913458-107913466 (+/-10) and chrX:107917975-107917983 (+/-10) - These coordinates do NOT include padding and are 1 based 
+
+Bedfiles were created for APOB (Pan1965_APOB*.bed) using Mokabed. The files were then edited to remove all exons except ex26.
+
+Mokabed does not create the bedfile for LDLR extending UTR correctly :
+If the LDLR UTR is included the output is many copies of the UTR region. Therefore the LDLR bedfile was made once with the UTR extended (Pan1965LDLR_UTR) and one without the UTR (Pan1965LDLR) 
+The line relating to the UTR is copied from Pan1965LDLR_UTR into Pan1965LDLR.
+
+1. Pan1965data.bed
+#add non-header lines from Pan1965_APOBdata.bed
+sed '/^#/ d' < Pan1965_APOBdata.bed >> Pan1965data.bed
+#add non-header lines from Pan1965_LDLRdata.bed
+sed '/^#/ d' < Pan1965_LDLRdata.bed >> Pan1965data.bed
+
+Additional COL4A5 exons added (converting to 0 based and adding 10bp padding)
+
+#sort
+( head -n2 Pan1965data.bed && tail -n+3 Pan1965data.bed | sort -k1,1V -k2,2n -k3,3n ) > Pan1965data.sorted.bed
+#rename (overwriting unsorted bed file)
+mv Pan1965data.sorted.bed Pan1965data.bed
+
+
+
+2. Pan1965dataSambamba.bed
+# add non-header lines from Pan1965_APOBdataSambamba.bed
+sed '/^#/ d' < Pan1965_APOBdataSambamba.bed >> Pan1965dataSambamba.bed
+# add non-header lines from Pan1965_LDLRdataSambamba.bed
+sed '/^#/ d' < Pan1965_LDLRdataSambamba.bed >> Pan1965dataSambamba.bed
+#Additional COL4A5 exons added (converting to 0 based and adding 10bp padding)
+
+#sort
+sort Pan1965dataSambamba.bed -k1,1V -k2,2n -k3,3n > Pan1965dataSambamba.sorted.bed
+#rename (overwriting unsorted bed file)
+mv Pan1965dataSambamba.sorted.bed Pan1965dataSambamba.bed
+
+
+3. Pan1965dataRefSeqFormat.txt
+# add non-header lines from Pan1965_APOBdataRefSeqFormat.txt
+sed '/^#/ d' < Pan1965_APOBdataRefSeqFormat.txt >> Pan1965dataRefSeqFormat.txt
+# add non-header lines from Pan1965_LDLRdataRefSeqFormat.txt
+sed '/^#/ d' < Pan1965_LDLRdataRefSeqFormat.txt >> Pan1965dataRefSeqFormat.txt
+#Additional COL4A5 exons added (converting to 0 based and adding 10bp padding)
+
+#sort
+Moved APOB and LDLR rows so that they were in same order as sorted bed files
+

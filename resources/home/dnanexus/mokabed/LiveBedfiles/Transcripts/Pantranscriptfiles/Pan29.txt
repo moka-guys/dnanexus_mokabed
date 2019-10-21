@@ -1,0 +1,2 @@
+RNAAccession	ApprovedSymbol
+NM_006662	SRCAP

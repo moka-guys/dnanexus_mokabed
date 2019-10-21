@@ -1,0 +1,28 @@
+Time Stamp:2016-12-09 15:56:07.219390
+Command arguments executed:
+RefSeq table format version generated as /home/ryank/mokabed/LiveBedfiles/Pan617dataRefSeqFormat.txt
+OOBed7_uses_mirrored_database_.py --codingup 10 --codingdown 10 --genes /home/ryank/mokabed/LiveBedfiles/Transcripts/Pantranscriptfiles/Pan617.txt --outputfile /home/ryank/mokabed/LiveBedfiles/Pan617data.bed --logfile /home/ryank/mokabed/LiveBedfiles/Pan617_LogFile.txt --mergeboundaries --minuschr 
+
+ Python version: 2.7 (r27:82500, Oct 25 2012, 12:29:43) 
+[GCC 4.4.6 20110731 (Red Hat 4.4.6-3)]
+
+ getopt module file path: /apps/python/2.7/lib/python2.7/getopt.pyc
+
+ os module file path: /apps/python/2.7/lib/python2.7/os.pyc
+
+ pd class file path: /apps/python/2.7/lib/python2.7/site-packages/pandas/__init__.pyc
+
+ cruzdb module file path: /apps/python/2.7/lib/python2.7/site-packages/cruzdb/__init__.pyc
+
+ Querying Live UCSC database: Genome('mysql://genome@genome-mysql.cse.ucsc.edu/hg19') and table: <class 'cruzdb.sqlsoup.refGene'>
+
+version as defined by git tag = v1.1-30-gb6ce0e2
+
+1) On the cluster move to  /home/ryank/mokabed/LiveBedfiles/
+
+2) rename the Pan617data.bed to  Pan617data_NoSNPcheckdata.bed
+
+3)append the snpcheck sites to the bedfile
+awk 'FNR==1 { while (/^#Chr/) getline; } { print }' Pan617data_NoSNPcheckdata.bed SNP_identity_check_sites.bed > Pan617data.bed
+
+4) remove chr from the snpcheck bedfile entries

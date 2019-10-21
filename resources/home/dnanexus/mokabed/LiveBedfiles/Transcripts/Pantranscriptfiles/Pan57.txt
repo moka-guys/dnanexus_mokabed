@@ -1,0 +1,3 @@
+RNAAccession	ApprovedSymbol
+NM_001110556	FLNA
+NM_001456	FLNA

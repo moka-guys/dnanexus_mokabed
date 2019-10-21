@@ -1,0 +1,36 @@
+Command issued to generate Pan493data.bed.
+
+## Concatante the raw bed files 
+
+cat <(tail -n +3 /home/ryank/mokabed/LiveBedfiles/Pan468data.bed) <(tail -n +3 /home/ryank/mokabed/LiveBedfiles/Pan492data.bed) > /home/ryank/mokabed/LiveBedfiles/Pan493dataunsorted.bed
+
+## Sort the concatanated bed file
+
+cat /home/ryank/mokabed/LiveBedfiles/Pan493dataunsorted.bed | sort -n -k1,1V -k2,2n -k3,3n > /home/ryank/mokabed/LiveBedfiles/Pan493data.bed
+
+## Add bed file headers
+
+sed -i "1 i #Chr\tStart\tStop\tEntrexID\t\t\t\t\t\t\t\t\t\tGeneAccession" /home/ryank/mokabed/LiveBedfiles/Pan493data.bed
+
+sed -i "1 i #`date`" /home/ryank/mokabed/LiveBedfiles/Pan493data.bed
+
+## Delete intemediate file
+
+rm /home/ryank/mokabed/LiveBedfiles/Pan493dataunsorted.bed
+
+
+## Concatante the sambamba bed files 
+
+cat /home/ryank/mokabed/LiveBedfiles/Pan468dataSambamba.bed /home/ryank/mokabed/LiveBedfiles/Pan492dataSambamba.bed > /home/ryank/mokabed/LiveBedfiles/Pan493sambambadataunsorted.bed
+
+## Sort the concatanated sambamba bed file
+
+cat /home/ryank/mokabed/LiveBedfiles/Pan493sambambadataunsorted.bed | sort -n -k1,1V -k2,2n -k3,3n > /home/ryank/mokabed/LiveBedfiles/Pan493dataSambamba.bed
+
+## Delete intemediate file
+
+rm /home/ryank/mokabed/LiveBedfiles/Pan493sambambadataunsorted.bed
+
+
+Ran concatenaterefseqfiles function from refgenelist.py to concatenate Pan492dataRefSeqFormat.txt and Pan468dataRefSeqFormat.txt files to generate Pan493dataRefSeqFormat.txt.
+Ran concatenaterefseqfilescheck function to ensure the RefSeq file has been concatenated correctly by checking against an orthogonal method of generating the file

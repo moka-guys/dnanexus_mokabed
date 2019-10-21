@@ -1,0 +1,3 @@
+RNAAccession	ApprovedSymbol
+NM_054027	ANKH
+NM_000165	GJA1

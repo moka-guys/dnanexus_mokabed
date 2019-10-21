@@ -1,0 +1,15 @@
+Command arguments executed:
+OOBed7_uses_mirrored_database_.py --codingup 30 --codingdown 20 --transcripts /home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/Pan71_truthset.txt --logfile ./160715krunittest_NewRefGene_GbCdnaInfo_OldTruthSet//Pan71test_live_Logfile.txt --useaccessions --outputfile ./160715krunittest_NewRefGene_GbCdnaInfo_OldTruthSet//liveoutput.bed 
+
+ Python version: 2.7 (r27:82500, Oct 25 2012, 12:29:43) 
+[GCC 4.4.6 20110731 (Red Hat 4.4.6-3)]
+
+ getopt module file path: /apps/python/2.7/lib/python2.7/getopt.pyc
+
+ os module file path: /apps/python/2.7/lib/python2.7/os.pyc
+
+ pd class file path: /apps/python/2.7/lib/python2.7/site-packages/pandas/__init__.pyc
+
+ cruzdb module file path: /apps/python/2.7/lib/python2.7/site-packages/cruzdb/__init__.pyc
+
+version as defined by git tag = v1.0-7-g123ad31

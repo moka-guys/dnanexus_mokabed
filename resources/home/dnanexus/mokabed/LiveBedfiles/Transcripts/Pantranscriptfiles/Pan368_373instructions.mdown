@@ -1,0 +1,370 @@
+
+
+Instructions for generating bed files Pan 368, 370, 371, 372 and 373
+
+1) Convert CNV control sites.xls to a bed file
+	- Open email from Wook on 18/07/2016 subject "Bed files & CNV control sites" and open attachement "CNV control sites-1.xls"
+	- Capitalise chromosome X notations
+	- Copy CNV control sites column into libre calc and separate string using ":" and "-" as delimiters. This will separate the field into chr, start and stop columns.
+	Then pasted the MLPA site column in column 14. Saved file as a .txt file (saved file using tab as the delimiter). Saved file as /home/ryank/mokabed/LiveBedfiles/Transcripts/Pantranscriptfiles/160719CNVcontrolsites.txt
+
+2) Open Pan368.txt, Pan370.txt, Pan371.txt, Pan372.txt, Pan373.txt (found in email from Wook on 18/07/2016 subject "Bed files & CNV control sites") in libre calc and move GuysAccession column to the first column position (select column, select column with mouse and then press alt and move column to correct position). Save files into /home/ryank/mokabed/LiveBedfiles/Transcripts/Pantranscriptfiles folder (libre calc saves as .csv instead of .txt but will not affect python script usage)
+
+3) Run python script OOBed7_uses_mirrored_database_newtest.py located in /home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script which relates to script pointing to latest RefGene and GbCdnaInfo tables (downloaded on 16062016)
+
+	- Open interactive session on cluster and cd to 
+	/home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script
+
+	- Load python module 
+	module load python/2.7
+
+	# Pan368
+
+	python OOBed7_uses_mirrored_database_newtest.py \
+	--codingup 30 \
+	--codingdown 20 \
+	--transcripts /home/ryank/mokabed/LiveBedfiles/Transcripts/Pantranscriptfiles/Pan368_genes.csv \
+	--logfile /home/ryank/mokabed/LiveBedfiles/Pan368_NoCNVsites_LogFile.txt \
+	--outputfile /home/ryank/mokabed/LiveBedfiles/Pan368_NoCNVsites_data.bed \
+	--useaccessions
+
+	# Pan370
+
+	python OOBed7_uses_mirrored_database_newtest.py \
+	--codingup 30 \
+	--codingdown 20 \
+	--transcripts /home/ryank/mokabed/LiveBedfiles/Transcripts/Pantranscriptfiles/Pan370_genes.csv \
+	--logfile /home/ryank/mokabed/LiveBedfiles/Pan370_NoCNVsites_LogFile.txt \
+	--outputfile /home/ryank/mokabed/LiveBedfiles/Pan370_NoCNVsites_data.bed \
+	--useaccessions
+
+	# Pan371
+
+	python OOBed7_uses_mirrored_database_newtest.py \
+	--codingup 30 \
+	--codingdown 20 \
+	--transcripts /home/ryank/mokabed/LiveBedfiles/Transcripts/Pantranscriptfiles/Pan371_genes.csv \
+	--logfile /home/ryank/mokabed/LiveBedfiles/Pan371_NoCNVsites_LogFile.txt \
+	--outputfile /home/ryank/mokabed/LiveBedfiles/Pan371_NoCNVsites_data.bed \
+	--useaccessions
+
+	# Pan372
+
+	python OOBed7_uses_mirrored_database_newtest.py \
+	--codingup 30 \
+	--codingdown 20 \
+	--transcripts /home/ryank/mokabed/LiveBedfiles/Transcripts/Pantranscriptfiles/Pan372_genes.csv \
+	--logfile /home/ryank/mokabed/LiveBedfiles/Pan372_NoCNVsites_LogFile.txt \
+	--outputfile /home/ryank/mokabed/LiveBedfiles/Pan372_NoCNVsites_data.bed \
+	--useaccessions
+
+	# Pan373
+
+	python OOBed7_uses_mirrored_database_newtest.py \
+	--codingup 30 \
+	--codingdown 20 \
+	--transcripts /home/ryank/mokabed/LiveBedfiles/Transcripts/Pantranscriptfiles/Pan373_genes.csv \
+	--logfile /home/ryank/mokabed/LiveBedfiles/Pan373_NoCNVsites_LogFile.txt \
+	--outputfile /home/ryank/mokabed/LiveBedfiles/Pan373_NoCNVsites_data.bed \
+	--useaccessions
+
+4) Append 160719CNVcontrolsites.txt to each of the bed file generated above:
+
+
+	## ###Pan368#####
+
+	## Generate bed file adding in CNV sites
+	sed 1d /home/ryank/mokabed/LiveBedfiles/Transcripts/Pantranscriptfiles/160719CNVcontrolsites.txt | awk '{print $0}' >> /home/ryank/mokabed/LiveBedfiles/Pan368_NoCNVsites_data.bed
+
+	## Rename bed file to PlusCNVsites
+	mv /home/ryank/mokabed/LiveBedfiles/Pan368_NoCNVsites_data.bed /home/ryank/mokabed/LiveBedfiles/Pan368_PlusCNVsites_data.bed 
+
+	## Generate log file
+
+	cat  /home/ryank/mokabed/LiveBedfiles/Pan368_NoCNVsites_LogFile.txt > /home/ryank/mokabed/LiveBedfiles/Pan368_PlusCNVsites_LogFile.txt
+
+	echo -e "\n## Generate bed file adding in CNV sites
+	sed 1d /home/ryank/mokabed/LiveBedfiles/Transcripts/Pantranscriptfiles/160719CNVcontrolsites.txt | awk '{print $0}' >> /home/ryank/mokabed/LiveBedfiles/Pan368_NoCNVsites_data.bed
+	##Rename the bed file
+	mv /home/ryank/mokabed/LiveBedfiles/Pan368_NoCNVsites_data.bed /home/ryank/mokabed/LiveBedfiles/Pan368_PlusCNVsites_data.bed
+	##Rename the log file
+	This log file has been renamed from /home/ryank/mokabed/LiveBedfiles/Pan368_NoCNVsites_LogFile.txt to /home/ryank/mokabed/LiveBedfiles/Pan368_PlusCNVsites_LogFile.txt
+	 " >> /home/ryank/mokabed/LiveBedfiles/Pan368_PlusCNVsites_LogFile.txt
+
+	## Remove previous logfile
+	rm  /home/ryank/mokabed/LiveBedfiles/Pan368_NoCNVsites_LogFile.txt
+
+	mv /home/ryank/mokabed/LiveBedfiles/Pan368_PlusCNVsites_data.bed /home/ryank/mokabed/LiveBedfiles/Pan368data.bed 
+	mv /home/ryank/mokabed/LiveBedfiles/Pan368_PlusCNVsites_LogFile.txt /home/ryank/mokabed/LiveBedfiles/Pan368_LogFile.txt
+
+	echo -e "\n\n## Rename to final name of bed file and log file
+	mv /home/ryank/mokabed/LiveBedfiles/Pan368_PlusCNVsites_data.bed /home/ryank/mokabed/LiveBedfiles/Pan368data.bed 
+	mv /home/ryank/mokabed/LiveBedfiles/Pan368_PlusCNVsites_LogFile.txt /home/ryank/mokabed/LiveBedfiles/Pan368_LogFile.txt
+	" >> /home/ryank/mokabed/LiveBedfiles/Pan368_LogFile.txt
+
+
+	### ## Pan370 #####
+
+	## Generate bed file adding in CNV sites
+	sed 1d /home/ryank/mokabed/LiveBedfiles/Transcripts/Pantranscriptfiles/160719CNVcontrolsites.txt | awk '{print $0}' >> /home/ryank/mokabed/LiveBedfiles/Pan370_NoCNVsites_data.bed
+
+	## Rename bed file to PlusCNVsites
+	mv /home/ryank/mokabed/LiveBedfiles/Pan370_NoCNVsites_data.bed /home/ryank/mokabed/LiveBedfiles/Pan370_PlusCNVsites_data.bed 
+
+	## Generate log file
+
+	cat  /home/ryank/mokabed/LiveBedfiles/Pan370_NoCNVsites_LogFile.txt > /home/ryank/mokabed/LiveBedfiles/Pan370_PlusCNVsites_LogFile.txt
+
+	echo -e "\n##Generate bed file adding in CNV sites
+	sed 1d /home/ryank/mokabed/LiveBedfiles/Transcripts/Pantranscriptfiles/160719CNVcontrolsites.txt | awk '{print $0}' >> /home/ryank/mokabed/LiveBedfiles/Pan370_NoCNVsites_data.bed
+	##Rename the bed file
+	mv /home/ryank/mokabed/LiveBedfiles/Pan370_NoCNVsites_data.bed /home/ryank/mokabed/LiveBedfiles/Pan370_PlusCNVsites_data.bed 
+	##Rename the log file
+	This log file has been renamed from /home/ryank/mokabed/LiveBedfiles/Pan370_NoCNVsites_LogFile.txt to /home/ryank/mokabed/LiveBedfiles/Pan370_PlusCNVsites_LogFile.txt
+	" >> /home/ryank/mokabed/LiveBedfiles/Pan370_PlusCNVsites_LogFile.txt
+
+	## Remove previous logfile
+	rm  /home/ryank/mokabed/LiveBedfiles/Pan370_NoCNVsites_LogFile.txt
+
+	mv /home/ryank/mokabed/LiveBedfiles/Pan370_PlusCNVsites_data.bed /home/ryank/mokabed/LiveBedfiles/Pan370data.bed 
+	mv /home/ryank/mokabed/LiveBedfiles/Pan370_PlusCNVsites_LogFile.txt /home/ryank/mokabed/LiveBedfiles/Pan370_LogFile.txt
+
+	echo -e "\n\n## Rename to final name of bed file and log file
+	mv /home/ryank/mokabed/LiveBedfiles/Pan370_PlusCNVsites_data.bed /home/ryank/mokabed/LiveBedfiles/Pan370data.bed 
+	mv /home/ryank/mokabed/LiveBedfiles/Pan370_PlusCNVsites_LogFile.txt /home/ryank/mokabed/LiveBedfiles/Pan370_LogFile.txt
+	" >> /home/ryank/mokabed/LiveBedfiles/Pan370_LogFile.txt
+
+	In Sublime text editor 
+	Find: NM_000235.3 Repalce: NM_000235.2
+	Find: NM_002626.5 Replace: NM_002626.4
+
+	echo -e "\n\n## Find replace the following - check was performed to ensure no difference exists between the versions for the coding regions
+	In Sublime text editor 
+	Find: NM_000235.3 Repalce: NM_000235.2
+	Find: NM_002626.5 Replace: NM_002626.4
+	" >> /home/ryank/mokabed/LiveBedfiles/Pan370_LogFile.txt
+
+
+	##### Pan371 #####
+
+	## Generate bed file adding in CNV sites
+	sed 1d /home/ryank/mokabed/LiveBedfiles/Transcripts/Pantranscriptfiles/160719CNVcontrolsites.txt | awk '{print $0}' >> /home/ryank/mokabed/LiveBedfiles/Pan371_NoCNVsites_data.bed
+
+	## Rename bed file to PlusCNVsites
+	mv /home/ryank/mokabed/LiveBedfiles/Pan371_NoCNVsites_data.bed /home/ryank/mokabed/LiveBedfiles/Pan371_PlusCNVsites_data.bed 
+
+	## Generate log file
+
+	cat  /home/ryank/mokabed/LiveBedfiles/Pan371_NoCNVsites_LogFile.txt > /home/ryank/mokabed/LiveBedfiles/Pan371_PlusCNVsites_LogFile.txt
+
+	echo -e "\n## Generate bed file adding in CNV sites
+	sed 1d /home/ryank/mokabed/LiveBedfiles/Transcripts/Pantranscriptfiles/160719CNVcontrolsites.txt | awk '{print $0}' >> /home/ryank/mokabed/LiveBedfiles/Pan371_NoCNVsites_data.bed
+	##Rename the bed file
+	mv /home/ryank/mokabed/LiveBedfiles/Pan371_NoCNVsites_data.bed /home/ryank/mokabed/LiveBedfiles/Pan371_PlusCNVsites_data.bed
+	##Rename the log file
+	This log file has been renamed from /home/ryank/mokabed/LiveBedfiles/Pan371_NoCNVsites_LogFile.txt to /home/ryank/mokabed/LiveBedfiles/Pan371_PlusCNVsites_LogFile.txt
+	 " >> /home/ryank/mokabed/LiveBedfiles/Pan371_PlusCNVsites_LogFile.txt
+
+	## Remove previous logfile
+	rm  /home/ryank/mokabed/LiveBedfiles/Pan371_NoCNVsites_LogFile.txt
+
+	mv /home/ryank/mokabed/LiveBedfiles/Pan371_PlusCNVsites_data.bed /home/ryank/mokabed/LiveBedfiles/Pan371data.bed 
+	mv /home/ryank/mokabed/LiveBedfiles/Pan371_PlusCNVsites_LogFile.txt /home/ryank/mokabed/LiveBedfiles/Pan371_LogFile.txt
+
+	echo -e "\n\n## Rename to final name of bed file and log file
+	mv /home/ryank/mokabed/LiveBedfiles/Pan371_PlusCNVsites_data.bed /home/ryank/mokabed/LiveBedfiles/Pan371data.bed 
+	mv /home/ryank/mokabed/LiveBedfiles/Pan371_PlusCNVsites_LogFile.txt /home/ryank/mokabed/LiveBedfiles/Pan371_LogFile.txt
+	" >> /home/ryank/mokabed/LiveBedfiles/Pan371_LogFile.txt
+
+	In Sublime text editor 
+	Find: NM_001127214.3  Replace: NM_001127214.2
+	Find: NM_080669.5   Replace: NM_080669.4
+
+	echo -e "\n\n## Find replace the following - check was performed to ensure no difference exists between the versions for the coding regions
+	In Sublime text editor 
+	Find: NM_001127214.3  Replace: NM_001127214.2
+	Find: NM_080669.5   Replace: NM_080669.4
+	" >> /home/ryank/mokabed/LiveBedfiles/Pan371_LogFile.txt
+
+	##### Pan372 #####
+
+	## Generate bed file adding in CNV sites
+	sed 1d /home/ryank/mokabed/LiveBedfiles/Transcripts/Pantranscriptfiles/160719CNVcontrolsites.txt | awk '{print $0}' >> /home/ryank/mokabed/LiveBedfiles/Pan372_NoCNVsites_data.bed
+
+	## Rename bed file to PlusCNVsites
+	mv /home/ryank/mokabed/LiveBedfiles/Pan372_NoCNVsites_data.bed /home/ryank/mokabed/LiveBedfiles/Pan372_PlusCNVsites_data.bed 
+
+	## Generate log file
+
+	cat  /home/ryank/mokabed/LiveBedfiles/Pan372_NoCNVsites_LogFile.txt > /home/ryank/mokabed/LiveBedfiles/Pan372_PlusCNVsites_LogFile.txt
+
+	echo -e "\n## Generate bed file adding in CNV sites
+	sed 1d /home/ryank/mokabed/LiveBedfiles/Transcripts/Pantranscriptfiles/160719CNVcontrolsites.txt | awk '{print $0}' >> /home/ryank/mokabed/LiveBedfiles/Pan372_NoCNVsites_data.bed
+	##Rename the bed file
+	mv /home/ryank/mokabed/LiveBedfiles/Pan372_NoCNVsites_data.bed /home/ryank/mokabed/LiveBedfiles/Pan372_PlusCNVsites_data.bed
+	##Rename the log file
+	This log file has been renamed from /home/ryank/mokabed/LiveBedfiles/Pan372_NoCNVsites_LogFile.txt to /home/ryank/mokabed/LiveBedfiles/Pan372_PlusCNVsites_LogFile.txt
+	 " >> /home/ryank/mokabed/LiveBedfiles/Pan372_PlusCNVsites_LogFile.txt
+
+	## Remove previous logfile
+	rm  /home/ryank/mokabed/LiveBedfiles/Pan372_NoCNVsites_LogFile.txt
+
+	mv /home/ryank/mokabed/LiveBedfiles/Pan372_PlusCNVsites_data.bed /home/ryank/mokabed/LiveBedfiles/Pan372data.bed 
+	mv /home/ryank/mokabed/LiveBedfiles/Pan372_PlusCNVsites_LogFile.txt /home/ryank/mokabed/LiveBedfiles/Pan372_LogFile.txt
+
+	echo -e "\n\n## Rename to final name of bed file and log file
+	mv /home/ryank/mokabed/LiveBedfiles/Pan372_PlusCNVsites_data.bed /home/ryank/mokabed/LiveBedfiles/Pan372data.bed 
+	mv /home/ryank/mokabed/LiveBedfiles/Pan372_PlusCNVsites_LogFile.txt /home/ryank/mokabed/LiveBedfiles/Pan372_LogFile.txt
+	" >> /home/ryank/mokabed/LiveBedfiles/Pan372_LogFile.txt
+
+	In Sublime text editor 
+	Find: NM_000152.4 Replace: NM_000152.3
+	Find: NM_006241.7 Replace: NM_006241.4
+	Find: NM_005609.3 Replace: NM_005609.2
+
+	echo -e "\n\n## Find replace the following - check was performed to ensure no difference exists between the versions for the coding regions
+	In Sublime text editor
+	Find: NM_000152.4 Replace: NM_000152.3
+	Find: NM_006241.7 Replace: NM_006241.4
+	Find: NM_005609.3 Replace: NM_005609.2
+	" >> /home/ryank/mokabed/LiveBedfiles/Pan372_LogFile.txt
+
+
+	##### Pan373 #####
+
+	## Generate bed file adding in CNV sites
+	sed 1d /home/ryank/mokabed/LiveBedfiles/Transcripts/Pantranscriptfiles/160719CNVcontrolsites.txt | awk '{print $0}' >> /home/ryank/mokabed/LiveBedfiles/Pan373_NoCNVsites_data.bed
+
+	## Rename bed file to PlusCNVsites
+	mv /home/ryank/mokabed/LiveBedfiles/Pan373_NoCNVsites_data.bed /home/ryank/mokabed/LiveBedfiles/Pan373_PlusCNVsites_data.bed 
+
+	## Generate log file
+
+	cat  /home/ryank/mokabed/LiveBedfiles/Pan373_NoCNVsites_LogFile.txt > /home/ryank/mokabed/LiveBedfiles/Pan373_PlusCNVsites_LogFile.txt
+
+	echo -e "\n## Generate bed file adding in CNV sites
+	sed 1d /home/ryank/mokabed/LiveBedfiles/Transcripts/Pantranscriptfiles/160719CNVcontrolsites.txt | awk '{print $0}' >> /home/ryank/mokabed/LiveBedfiles/Pan373_NoCNVsites_data.bed
+	##Rename the bed file
+	mv /home/ryank/mokabed/LiveBedfiles/Pan373_NoCNVsites_data.bed /home/ryank/mokabed/LiveBedfiles/Pan373_PlusCNVsites_data.bed 
+	##Rename the log file
+	This log file has been renamed from /home/ryank/mokabed/LiveBedfiles/Pan373_NoCNVsites_LogFile.txt to /home/ryank/mokabed/LiveBedfiles/Pan373_PlusCNVsites_LogFile.txt
+	" >> /home/ryank/mokabed/LiveBedfiles/Pan373_PlusCNVsites_LogFile.txt
+
+	## Remove previous logfile
+	rm  /home/ryank/mokabed/LiveBedfiles/Pan373_NoCNVsites_LogFile.txt
+
+	mv /home/ryank/mokabed/LiveBedfiles/Pan373_PlusCNVsites_data.bed /home/ryank/mokabed/LiveBedfiles/Pan373data.bed 
+	mv /home/ryank/mokabed/LiveBedfiles/Pan373_PlusCNVsites_LogFile.txt /home/ryank/mokabed/LiveBedfiles/Pan373_LogFile.txt
+
+	echo -e "\n\n## Rename to final name of bed file and log file
+	mv /home/ryank/mokabed/LiveBedfiles/Pan373_PlusCNVsites_data.bed /home/ryank/mokabed/LiveBedfiles/Pan373data.bed 
+	mv /home/ryank/mokabed/LiveBedfiles/Pan373_PlusCNVsites_LogFile.txt /home/ryank/mokabed/LiveBedfiles/Pan373_LogFile.txt
+	" >> /home/ryank/mokabed/LiveBedfiles/Pan373_LogFile.txt
+
+	In Sublime text editor 
+	Find: NM_000152.4 Replace: NM_000152.3
+	Find: NM_000235.3 Replace: NM_000235.2
+	Find: NM_002626.5 Replace: NM_002626.4
+	Find: NM_006241.7 Replace: NM_006241.4 
+	Find: NM_005609.3 Replace: NM_005609.2
+
+	echo -e "\n\n## Find replace the following - check was performed to ensure no difference exists between the versions for the coding regions
+	In Sublime text editor
+	Find: NM_000152.4 Replace: NM_000152.3
+	Find: NM_000235.3 Replace: NM_000235.2
+	Find: NM_002626.5 Replace: NM_002626.4
+	Find: NM_006241.7 Replace: NM_006241.4 
+	Find: NM_005609.3 Replace: NM_005609.2
+	" >> /home/ryank/mokabed/LiveBedfiles/Pan373_LogFile.txt
+
+
+
+5) Add in intronic region to Pan372 and 373
+
+Manually added  
+chr17	78078340	78078341	intronic										GAA;NM_000152.3	
+
+which relates to an intronic position chr17:78078341
+
+
+
+#####Performed diff with bed file generated by Wook in email dated 09/08/2016 18:16 subject: BED files #######################
+Saved bed files generated by Wook in /home/ryank/Pan368_370_371_372/Wook_generated_bed_files
+
+Performed diff comparing the Chr Start and Stop columns of Wook's Pan368,370,371,372 and 373 with the versions of these bed files generated above
+
+###Pan368 ###
+#Remove hidden white space
+dos2unix /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan368data4columns.bed
+#Remove white space from end of each line
+sed 's/ *$//' /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan368data4columns.bed > /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan368data4columnsformatted.bed
+#Rename file to original
+mv /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan368data4columnsformatted.bed /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan368data4columns.bed
+
+# Check Chr,Start,Stop
+diff <(bedtools sort -i /home/ryank/mokabed/LiveBedfiles/Pan368data.bed | awk 'BEGIN{FS="\t"}{print $1,$2,$3}') <(bedtools sort -i /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan368data4columns.bed | awk 'BEGIN{FS="\t"}{print $1,$2,$3}')
+
+# Check NM accessions used
+diff <(bedtools sort -i /home/ryank/mokabed/LiveBedfiles/Pan368data.bed | sed -n -e 's/^.*;//p' -e 's/^.*MLPA/MLPA/p') <(bedtools sort -i /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan368data4columns.bed | awk 'BEGIN{FS="\t"}{print $4}')
+
+###Pan370 ###
+#Remove hidden white space
+dos2unix /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan370data4columns.bed
+#Remove white space from end of each line
+sed 's/ *$//' /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan370data4columns.bed > /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan370data4columnsformatted.bed
+#Rename file to original
+mv /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan370data4columnsformatted.bed /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan370data4columns.bed
+
+# Check Chr,Start,Stop
+diff <(bedtools sort -i /home/ryank/mokabed/LiveBedfiles/Pan370data.bed | awk 'BEGIN{FS="\t"}{print $1,$2,$3}') <(bedtools sort -i /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan370data4columns.bed | awk 'BEGIN{FS="\t"}{print $1,$2,$3}')
+
+# Check NM accessions used
+diff <(bedtools sort -i /home/ryank/mokabed/LiveBedfiles/Pan370data.bed | sed -n -e 's/^.*;//p' -e 's/^.*MLPA/MLPA/p' ) <(bedtools sort -i /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan370data4columns.bed | awk 'BEGIN{FS="\t"}{print $4}')
+
+###Pan371 ###
+#Remove hidden white space
+dos2unix /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan371data4columns.bed
+#Remove white space from end of each line
+sed 's/ *$//' /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan371data4columns.bed > /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan371data4columnsformatted.bed
+#Rename file to original
+mv /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan371data4columnsformatted.bed /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan371data4columns.bed
+
+# Check Chr,Start,Stop
+diff <(bedtools sort -i /home/ryank/mokabed/LiveBedfiles/Pan371data.bed | awk 'BEGIN{FS="\t"}{print $1,$2,$3}') <(bedtools sort -i /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan371data4columns.bed | awk 'BEGIN{FS="\t"}{print $1,$2,$3}')
+
+# Check NM accessions used
+diff <(bedtools sort -i /home/ryank/mokabed/LiveBedfiles/Pan371data.bed | sed -n -e 's/^.*;//p' -e 's/^.*MLPA/MLPA/p' ) <(bedtools sort -i /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan371data4columns.bed | awk 'BEGIN{FS="\t"}{print $4}')
+
+###Pan372 ###
+#Remove hidden white space
+dos2unix /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan372data4columns.bed
+#Remove white space from end of each line
+sed 's/ *$//' /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan372data4columns.bed > /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan372data4columnsformatted.bed
+#Rename file to original
+mv /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan372data4columnsformatted.bed /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan372data4columns.bed
+
+# Check Chr,Start,Stop
+diff <(bedtools sort -i /home/ryank/mokabed/LiveBedfiles/Pan372data.bed | awk 'BEGIN{FS="\t"}{print $1,$2,$3}') <(bedtools sort -i /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan372data4columns.bed | awk 'BEGIN{FS="\t"}{print $1,$2,$3}')
+
+# Check NM accessions used
+diff <(bedtools sort -i /home/ryank/mokabed/LiveBedfiles/Pan372data.bed | sed -n -e 's/^.*;//p' -e 's/^.*MLPA/MLPA/p' ) <(bedtools sort -i /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan372data4columns.bed | awk 'BEGIN{FS="\t"}{print $4}')
+
+###Pan373 ###
+#Remove hidden white space
+dos2unix /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan373data4columns.bed
+#Remove white space from end of each line
+sed 's/ *$//' /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan373data4columns.bed > /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan373data4columnsformatted.bed
+#Rename file to original
+mv /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan373data4columnsformatted.bed /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan373data4columns.bed
+
+# Check Chr,Start,Stop
+diff <(bedtools sort -i /home/ryank/mokabed/LiveBedfiles/Pan373data.bed | awk 'BEGIN{FS="\t"}{print $1,$2,$3}') <(bedtools sort -i /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan373data4columns.bed | awk 'BEGIN{FS="\t"}{print $1,$2,$3}')
+
+# Check NM accessions used
+diff <(bedtools sort -i /home/ryank/mokabed/LiveBedfiles/Pan373data.bed | sed -n -e 's/^.*;//p' -e 's/^.*MLPA/MLPA/p' ) <(bedtools sort -i /home/ryank/Pan368_370_371_372/Wook_generated_bed_files/Pan373data4columns.bed | awk 'BEGIN{FS="\t"}{print $4}')
+
+##Conclusion -  No difference was seen in the regions between the bed files amended by Wook and those generated by the new bed script
+
+
+
+

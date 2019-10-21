@@ -1,0 +1,65 @@
+Time Stamp:2016-10-26 09:48:03.937445
+Command arguments executed:
+RefSeq table format version generated as /home/ryank/mokabed/LiveBedfiles/Pan310NoCNV_NoSNPcheckdataRefSeqFormat.txt
+OOBed7_uses_mirrored_database_.py --codingup 10 --codingdown 10 --genes /home/ryank/mokabed/LiveBedfiles/Transcripts/Pantranscriptfiles/Pan310.txt --outputfile /home/ryank/mokabed/LiveBedfiles/Pan310NoCNV_NoSNPcheckdata.bed --logfile /home/ryank/mokabed/LiveBedfiles/Pan310NoCNV_NoSNPcheck_LogFile.txt --mergeboundaries --minuschr 
+
+ Python version: 2.7 (r27:82500, Oct 25 2012, 12:29:43) 
+[GCC 4.4.6 20110731 (Red Hat 4.4.6-3)]
+
+ getopt module file path: /apps/python/2.7/lib/python2.7/getopt.pyc
+
+ os module file path: /apps/python/2.7/lib/python2.7/os.pyc
+
+ pd class file path: /apps/python/2.7/lib/python2.7/site-packages/pandas/__init__.pyc
+
+ cruzdb module file path: /apps/python/2.7/lib/python2.7/site-packages/cruzdb/__init__.pyc
+
+ Querying Live UCSC database: Genome('mysql://genome@genome-mysql.cse.ucsc.edu/hg19') and table: <class 'cruzdb.sqlsoup.refGene'>
+
+version as defined by git tag = v1.1-22-g064acfd
+
+#### Addition of  CNV MLPA and SNPcheck regions to bed file
+
+CNV control sites and SNPcheck regions were manually added to the bed file.
+
+1)
+Both the CNV control sites and the SNP check regions were supplied by DNA lab in 1 based format. Therefore the sites needed to be translated to 0-based format which is compatible with inputting into a bed file.
+
+Two separate text files one containing the CNV control sites and the other the SNPcheck regions were open as a spreadsheet in libre calc using colon (':') characters and dashes ('-) as delimiters in order to separate out chromosome, start and stop regions in the text file into separate columns.
+
+eg text file shows genomic coordinates as chr:start-stop.
+
+By setting the delimiters to colon and dash we can translate:
+
+chr1:100001-102345
+to
+
+chr1	100001	102345
+
+2)
+Within the spreadsheet 1 was subtracted from each of the start position values in order to convert them to 0-based format
+
+3)
+Any lower case x values in the chromosome column were converted to upper case using a find replace of chrx for chrX
+
+4)
+Columns were re-fomatted so that the order of the columns in the text file read as:
+
+Col number
+1	2	3	4			5-13	14
+#Chr	Start	Stop	TargetID/MLPAsite	Blank	-
+
+5)
+Text files were re-saved as bed files CNV_control_sites.bed and SNP_identity_check_sites.bed
+
+6)
+Coordinates in the two bed files CNV_control_sites.bed and SNP_identity_check_sites.bed were then appended to the Pan310NoCNV_NoSNPcheckdata.bed file and this new file is then saved as Pan310data.bed.
+
+Appending these two files to Pan310NoCNV_NoSNPcheckdata.bed was performed by the following command
+
+awk 'FNR==1 { while (/^#Chr/) getline; } { print }' /home/ryank/mokabed/LiveBedfiles/Pan310NoCNV_NoSNPcheckdata.bed /home/ryank/mokabed/LiveBedfiles/SNP_identity_check_sites.bed /home/ryank/mokabed/LiveBedfiles/CNV_control_sites.bed > /home/ryank/mokabed/LiveBedfiles/Pan310data.bed
+
+7) Remove Pan310NoCNV_NoSNPcheckdata.bed
+
+rm /home/ryank/mokabed/LiveBedfiles/Pan310NoCNV_NoSNPcheckdata.bed
+

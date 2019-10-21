@@ -1,0 +1,2 @@
+RNAAccession	ApprovedSymbol
+NM_015634	KIAA1279

@@ -1,0 +1,39 @@
+This documents the generation of the Pan1190 (swift EGFR) bed files.
+
+The kit design is available from the manufacturers - see Accel-Amplicon_EGFR_masterfile_170113.txt
+This masterfile contains the coordinates of the target of the amplicon (the region between the primers), and the coordinates and sequence of the forward and reverse primers.
+The coordinates stated in this file are zero based and half open (ie the stop coordinate is not included). This is inline with the coordinates stated in the UCSC database tables and in line with the expectations of the UCSC browser (http://genome.ucsc.edu/blog/the-ucsc-genome-browser-coordinate-counting-systems/).
+
+Some fields used in the BED files below required some annotations of the coordinates stated in the masterfile. 
+Creation of these annotations are described in the repository https://github.com/moka-guys/swift_amplicon_annotations.
+
+Pan1190.bed
+This BED file is used to generate QC and was used to create the bed files described below.
+
+This bedfile contains 14 columns.
+The first three columns are chr, start and stop (taken from the masterfile). 
+The fourth column is the EntrezgeneID. These were manually curated from the HGNC snapshot in Moka.
+After some empty columns, the fourteenth column is the informative name, created from the output of the annotations (eg NRAS;NM_002524_c.408-450_p.137-150). 
+The semi colon ensures consistency between bedfiles and that the sambamba bedfile is compatibile with the sambamba coverage app.
+
+NB there must only be a single empty new line at the end of the file.
+
+Pan1190_flat.bed
+The varscan and lofreq variant callers require flattened bedfiles, as any variants called within overlapping regions are called once for each region.
+This bedfile was created using the command `bedtools merge -i Pan2684.bed > Pan2684_flat.bed`
+
+This only contains three columns chr,start and stop as the name column cannot easily be merged.
+
+Pan1190_Sambamba.bed
+This file is used by sambamba/chanjo for variant calling. It is based on Pan1190.bed and contains:
+
+chr,start,stop - taken from Pan1190.bed
+Name - in format chr-start-stop
+Score - default value of 0
+Strand - taken from the annotations.
+informative name - in format gene;transcript_c.1-2_p.1-2 (as described above).
+EntrezGeneID - Manually curated from the HGNC snapshot in Moka.
+
+Pan1190_PE.bed
+This is used by BAMclipper to soft clip primers. It defines the primer pairs and is in the format chr start stop chr start stop
+The relevant columns were taken from the master file

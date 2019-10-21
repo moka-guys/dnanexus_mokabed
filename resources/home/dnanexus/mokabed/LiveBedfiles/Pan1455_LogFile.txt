@@ -1,0 +1,52 @@
+Time Stamp:2017-11-30 09:42:16.598899
+Command arguments executed:
+RefSeq table format version generated as /home/dnanexus/out/Output_files/Pan1455dataRefSeqFormat.txt
+/home/dnanexus/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/OOBed7_uses_mirrored_database_.py --codingup 50 --codingdown 50 --useaccessions --transcripts /home/dnanexus/Pan1455.txt --minuschr --outputfile /home/dnanexus/out/Output_files/Pan1455data.bed --logfile /home/dnanexus/out/Output_files/Pan1455_LogFile.txt 
+
+ Python version: 2.7.12 |Anaconda 4.2.0 (64-bit)| (default, Jul  2 2016, 17:42:40) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-1)]
+
+ getopt module file path: /home/dnanexus/anaconda2/lib/python2.7/getopt.py
+
+ os module file path: /home/dnanexus/anaconda2/lib/python2.7/os.py
+
+ pd class file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/pandas/__init__.py
+
+ cruzdb module file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/cruzdb/__init__.py
+
+version as defined by git tag = v1.0-204-g5ab2be3
+
+# ================= Manual modifications
+All genes plus LDLR 5'UTR +50
+Do not include APOB exon 22
+
+Mokabed does not create the bedfile for LDLR extending UTR correctly :
+If the LDLR UTR is included the output is many copies of the UTR region. Therefore the LDLR bedfile was made once with the UTR extended (Pan1455LDLRUTR) and one without the UTR (Pan1455LDLR) 
+The line relating to the UTR is copied from Pan1455LDLRUTR into Pan1455LDLR.
+
+1. Pan1455data.bed
+The LDLR bedfile described above (Pan1455LDLRdata.bed) contains the required regiosn of LDLR
+All other genes (excluding APOB) with +/-50 bp are in Pan1455data.bed
+
+#add non-header lines from Pan1455LDLRdata.bed
+sed '/^#/ d' < Pan1455LDLRdata.bed >> Pan1455data.bed
+
+
+# add the header lines to a sorted bed file. 
+# Then sort the combined Pan1455data.bed on chr and then start in numerical order and append to the sorted.bed file
+# rename the combined Pan1455data.bed to notsorted
+# rename the sorted bedfile to Pan1455data.bed
+sed '/^[^#]/ d' Pan1455data.bed > Pan1455data.sorted.bed; sed '/#/ d' Pan1455data.bed | sort -k1,1V -k2,2n >> Pan1455data.sorted.bed ; mv Pan1455data.bed Pan1455data.notsorted.bed; mv Pan1455data.sorted.bed Pan1455data.bed
+
+
+2. Pan1455dataSambamba.bed
+# A sambamba bedfile was created for LDLR (Pan1455LDLRSambamba.bed)
+
+#add non-header lines from Pan1455LDLRdata.bed
+sed '/^#/ d' < Pan1455LDLRdataSambamba.bed >> Pan1455dataSambamba.bed
+
+#sort the combined bedfile inplace 
+sort -k1,1V -k2,2n -o Pan1455dataSambamba.bed Pan1455dataSambamba.bed
+
+3. Pan1455dataRefSeqFormat.bed
+The lines from Pan1455LDLRdataRefSeqFormat.bed were copied and pasted into the bedfile using the same order as found in Pan1455data.bed

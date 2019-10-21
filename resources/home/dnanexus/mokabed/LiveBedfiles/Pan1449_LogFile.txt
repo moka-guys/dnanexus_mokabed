@@ -1,0 +1,51 @@
+Time Stamp:2017-07-25 11:47:22.024149
+Command arguments executed:
+RefSeq table format version generated as /home/dnanexus/out/Output_files/Pan1449dataRefSeqFormat.txt
+/home/dnanexus/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/OOBed7_uses_mirrored_database_.py --codingup 10 --codingdown 10 --useaccessions --transcripts /home/dnanexus/Pan1449.txt --minuschr --outputfile /home/dnanexus/out/Output_files/Pan1449data.bed --logfile /home/dnanexus/out/Output_files/Pan1449_LogFile.txt 
+
+ Python version: 2.7.12 |Anaconda 4.2.0 (64-bit)| (default, Jul  2 2016, 17:42:40) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-1)]
+
+ getopt module file path: /home/dnanexus/anaconda2/lib/python2.7/getopt.py
+
+ os module file path: /home/dnanexus/anaconda2/lib/python2.7/os.py
+
+ pd class file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/pandas/__init__.py
+
+ cruzdb module file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/cruzdb/__init__.py
+
+version as defined by git tag = v1.0-112-g1e58d89
+
+-------------------Manual addition of TP53 5' UTR and CHEK2 regions to Pan1449data.bed--------------------------
+A bed file was created with up, codingup/down all = 10 for TP53. Using this file:
+
+The line 
+17	7579828	7579922	7157										TP53;NM_000546.5
+was replaced with the line below to reflect the UTR region immediately next to exon1.
+17	7579828	7579950	7157										TP53;NM_000546.5
+
+A further region consiting of a UTR region +/-10 was also added:
+17	7590684	7590878	7157										TP53;NM_000546.5
+
+A further region was added for CHEK2 - This was to cover Chr22:29091857DelC
+22	29091856	29091857	11200										CHEK2;NM_007194.3
+
+---------------------------------Manual addition of TP53 5' UTR and CHEK2 regions to Pan1449dataSambamba.bed--------------------------
+Using the TP53Sambamba file:
+
+The line 
+17	7579828	7579922	17-7579828-7579922	0	+	TP53;NM_000546.5	7157
+was replaced with the line below to reflect the UTR region immediately next to exon1.
+17	7579828	7579950	17-7579828-7579950	0	+	TP53;NM_000546.5	7157
+
+A further region consiting of a UTR region +/-10 was also added:
+17	7590684	7590878	17-7590684-7590878	0	+	TP53;NM_000546.5	7157
+
+A further region was added for CHEK2 - This was to cover Chr22:29091857DelC
+22	29091856	29091857	22-29091856-29091857	0	+	CHEK2;NM_007194.3	11200
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+The bed files have been checked in IGV and tested using sambamba and MokaVendor DNA Nexus apps.
+
+A Jones 170725

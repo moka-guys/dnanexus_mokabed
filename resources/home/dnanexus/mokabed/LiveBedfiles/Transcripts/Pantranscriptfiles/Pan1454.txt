@@ -1,0 +1,4 @@
+GuysAccession	Symbol	GuysAccessionVersion
+NM_000527	LDLR	0
+NM_174936	PCSK9	0
+NM_015627	LDLRAP1	0

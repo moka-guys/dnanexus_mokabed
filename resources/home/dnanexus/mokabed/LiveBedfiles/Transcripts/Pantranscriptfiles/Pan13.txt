@@ -1,0 +1,2 @@
+RNAAccession	ApprovedSymbol
+NM_001999	FBN2

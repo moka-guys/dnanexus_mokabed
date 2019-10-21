@@ -1,0 +1,36 @@
+Command arguments executed:
+OOBed7_uses_mirrored_database_newtest.py --codingup 30 --codingdown 20 --transcripts /home/ryank/mokabed/LiveBedfiles/Transcripts/Pantranscriptfiles/Pan371_genes.csv --logfile /home/ryank/mokabed/LiveBedfiles/Pan371_NoCNVsites_LogFile.txt --outputfile /home/ryank/mokabed/LiveBedfiles/Pan371_NoCNVsites_data.bed --useaccessions 
+
+ Python version: 2.7 (r27:82500, Jul 30 2013, 16:39:58) 
+[GCC 4.4.6 20110731 (Red Hat 4.4.6-3)]
+
+ getopt module file path: /apps/python/2.7_b/lib/python2.7/getopt.pyc
+
+ os module file path: /apps/python/2.7_b/lib/python2.7/os.pyc
+
+ pd class file path: /apps/python/2.7_b/lib/python2.7/site-packages/pandas-0.14.0-py2.7-linux-x86_64.egg/pandas/__init__.pyc
+
+ cruzdb module file path: /apps/python/2.7_b/lib/python2.7/site-packages/cruzdb/__init__.pyc
+
+version as defined by git tag = v1.0-24-g5ca4379
+## Generate bed file adding in CNV sites
+sed 1d /home/ryank/mokabed/LiveBedfiles/Transcripts/Pantranscriptfiles/160719CNVcontrolsites.txt | awk '{print -bash}' >> /home/ryank/mokabed/LiveBedfiles/Pan371_NoCNVsites_data.bed
+##Rename the bed file
+mv /home/ryank/mokabed/LiveBedfiles/Pan371_NoCNVsites_data.bed /home/ryank/mokabed/LiveBedfiles/Pan371_PlusCNVsites_data.bed
+##Rename the log file
+This log file has been renamed from /home/ryank/mokabed/LiveBedfiles/Pan371_NoCNVsites_LogFile.txt to /home/ryank/mokabed/LiveBedfiles/Pan371_PlusCNVsites_LogFile.txt
+ 
+
+
+## Rename to final name of bed file and log file
+mv /home/ryank/mokabed/LiveBedfiles/Pan371_PlusCNVsites_data.bed /home/ryank/mokabed/LiveBedfiles/Pan371data.bed 
+mv /home/ryank/mokabed/LiveBedfiles/Pan371_PlusCNVsites_LogFile.txt /home/ryank/mokabed/LiveBedfiles/Pan371_LogFile.txt
+
+
+
+## Find replace the following - check was performed to ensure no difference exists between the versions for the coding regions
+In Sublime text editor 
+Find: NM_001127214.3  Replace: NM_001127214.2
+Find: NM_080669.5   Replace: NM_080669.4
+
+

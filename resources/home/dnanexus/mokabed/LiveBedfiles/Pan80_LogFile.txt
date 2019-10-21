@@ -1,0 +1,15 @@
+Tables IEMplusClinEx from the Validation database and sangervariantregions from the variants_database were joined using the command below.
+
+Validation database and variants_database located in /home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/Transcripts/Pantranscriptfiles folder
+
+CREATE TABLE SangerConfirmedbed AS
+SELECT Validation.IEMplusClinEx.* 
+FROM Validation.IEMplusClinEx
+JOIN variants_database.sangervariantregions
+ON variants_database.sangervariantregions.chrCHR = Validation.IEMplusClinEx.Chr
+AND variants_database.sangervariantregions.ChromosomePosition BETWEEN Validation.IEMplusClinEx.Start AND Validation.IEMplusClinEx.Stop
+
+This bed file extracts the exons from the IEM and Pan81 concatanated bed file called Pan81plusIEMdata.bed which is saved in the Validation and variants_database folders in the /home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/Transcripts/Pantranscriptfiles folder containing the 123 Sanger-confirmed validation variants
+
+15-07-22 Ammended Pan80data.bed file to include regions encompassing Sanger confirmed variants sequenced in sample NGS6_1_C0090_Normal (originally sequenced by NGS using the original Clinical exome bed file). These regions are shown in the Pan80data.bed file  and relate to ammended lines from Pan81data.bed (Clinical Research exome). The relevant rows contain the string 'Ammended' in the Accession column entry in Pan80data.bed. 
+

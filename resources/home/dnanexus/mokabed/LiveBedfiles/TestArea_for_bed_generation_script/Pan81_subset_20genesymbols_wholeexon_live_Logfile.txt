@@ -1,0 +1,13 @@
+Command arguments executed:
+OOBed7_uses_mirrored_database_.py --up 30 --down 20 --codingup 30 --codingdown 20 --genes /home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/TestArea_for_bed_generation_script/Pan81_subset_20genesymbols.txt --logfile /home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/TestArea_for_bed_generation_script/Pan81_subset_20genesymbols_wholeexon_live_Logfile.txt --mergeboundaries --outputfile /home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/TestArea_for_bed_generation_script/Pan81_subset_20genesymbols_wholeexon_live.bed 
+
+ Python version: 2.7 (r27:82500, Oct 25 2012, 12:29:43) 
+[GCC 4.4.6 20110731 (Red Hat 4.4.6-3)]
+
+ getopt module file path: /apps/python/2.7/lib/python2.7/getopt.pyc
+
+ os module file path: /apps/python/2.7/lib/python2.7/os.pyc
+
+ pd class file path: /apps/python/2.7/lib/python2.7/site-packages/pandas/__init__.pyc
+
+ cruzdb module file path: /apps/python/2.7/lib/python2.7/site-packages/cruzdb/__init__.pyc

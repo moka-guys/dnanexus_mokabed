@@ -1,0 +1,18 @@
+The file agilent_sureselect_human_all_exon_v5_b37_targets.bed was used for variant calling but only contains the coordinates of the capture baits.
+Dragen does not pad the targets for variant calling, therefore we have used the file S04380110_Padded.bed from suredesign, which contains the same regions +/-100bp.
+
+1. remove 'chr'
+This was done is a text editor, replacing "/nchr" with "/n"
+
+2. remove header
+This was done is a text editor
+
+3. remove 4th column
+cut '/home/aled/mokabed/LiveBedfiles/S04380110_Padded.bed'  --fields=1,2,3 > '/home/aled/mokabed/LiveBedfiles/S04380110_Padded_3col.bed'
+
+4. merge overlapping targets
+bedtools merge -i LiveBedfiles/S04380110_Padded_3col.bed > LiveBedfiles/S04380110_Padded_3col_merged.bed 
+
+5. rename file and delete all intermediate files
+mv LiveBedfiles/S04380110_Padded_3col_merged.bed LiveBedfiles/agilent_sureselect_human_all_exon_v5_b37_padded.bed
+rm LiveBedfiles/S04380110_Padded*

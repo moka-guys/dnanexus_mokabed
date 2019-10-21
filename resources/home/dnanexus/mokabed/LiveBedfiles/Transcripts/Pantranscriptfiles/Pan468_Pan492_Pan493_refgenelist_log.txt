@@ -1,0 +1,8 @@
+Total number of coding gene entries (counts number of NM accessions) in RefGene table = 19288
+Alternative method to generate total number of coding gene entries (counts number cdsEndStat entries = cmpl) of cds in RefGene table = 19288
+Total number of non-coding gene entries (counts number of NR accessions) in RefGene table = 10062
+Alternative method to generate total number of non-coding gene entries (counts number cdsEndStat entries = unk) in RefGene table = 10062
+Breakdown of gene symbols with NR accessions 
+.Total number of coding gene entries in RefGene table with a non-coding accession = 2249
+Total number of gene entries in RefGene table with a non-coding accession and no corresponding NM accession = 7813
+The number of NR related genes tally: 7813 + 2249 = 10062

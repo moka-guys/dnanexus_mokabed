@@ -1,0 +1,18 @@
+Creating bedfile for RPKM analysis for Pan1450
+Removing header line with command:
+sed -i '/^#/ d' /home/dnanexus/in/bedfile/Pan1450data.bed
+Taking first four columns only:
+awk '{ print $1\t$2\t$3\t$4 }' /home/dnanexus/in/bedfile/Pan1450data.bed > Pan1450_RPKM.bed
+Appending additional bedfiles to bedfile:
+cat /home/dnanexus/in/CNV_control_regions/0/Pan657.bed >> Pan1450_RPKM.bed
+cat /home/dnanexus/in/CNV_control_regions/1/Pan663.bed >> Pan1450_RPKM.bed
+
+
+---------------manual sorting of bedfile------------------------
+The following commands were issued to sort the bedfile into the order  Pan657 and then Pan663 and Pan1450 in genomic coordinate order
+# Put Pan657 first
+awk -F'\t' '$4~/NGS CNV*/' Pan1450_RPKM.bed > Pan1450_RPKM_sorted.bed
+# sort and add the rest of the RPKM bed files 
+~/mokabed/LiveBedfiles $ awk -F'\t' '$4^/NGS CNV*/' Pan1450_RPKM.bed | sort -k 1 -k 2 >> Pan1450_RPKM_sorted.bed 
+# rename the bedfile
+~/mokabed/LiveBedfiles $ mv Pan1450_RPKM_sorted.bed Pan1450_RPKM.bed

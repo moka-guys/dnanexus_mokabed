@@ -1,0 +1,38 @@
+#### Check to compare bed files generated in February 2016 which used scripts that pointed to the UCSC tables RefGene (pulled from UCSC on 20 November 2014 RefSeq Release 68) to generate exon boundaries and gbCdnaInfo (pulled from UCSC on 4 January 2016 coincides with RefSeq Release 73) 
+####vs
+#### bed files generated using the scripts  which point to our most recently pulled versions of these tables pulled 16 June 2016 corresponding to RefSeq Release 74) 
+
+# cd to TEST directory where comparison is carried out.
+# Comparing the generation of bed files for Pan283.bed, Pan284.bed, Pan285.bed, Pan300.bed, Pan307.bed and Pan308.bed
+# The above bed files were made using the UCSC RefGene table located at /home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/Cruzdb/cruzdb_refGene.db to generate exon boundaries and using the UCSC gbCdnaInfo table located at /home/ryank/LiveReferenceSequencs/gbCdnaInfo.db to generate the version numbers for the associated NM accessions
+# /home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/TEST/OOBed7_uses_mirrored_database_.py was the version used to generate these bed files and points to the refGene table /home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/Cruzdb/cruzdb_refGene.db.
+# /home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/TEST/OOBed7_uses_mirrored_database_.py imported the module /home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/TEST/versionnumber.py which points to the table /home/ryank/LiveReferenceSequencs/gbCdnaInfo.db
+
+#The most recent download of the above tables on 16-06-2016 will be used to generate the same bed files to see whether there is any difference in the bed files generated for the above Pan numbers
+# The refGene table is located at /home/ryank/LiveReferenceSequencs/160612/refGene.db
+# The gbCdnaInfo table is located at home/ryank/LiveReferenceSequencs/160612/gbCdnaInfo.db
+
+# Alternative scripts were generated which point to the 16-06-2016 tables located in the /home/ryank/LiveReferenceSequencs/160612 folder
+#/home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/TEST/OOBed7_uses_mirrored_database_currentdb.py
+# /home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/TEST/versionnumber_currentdb.py
+
+# Generate a TEST environment for the scripts  
+cd /home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/TEST
+
+# Generated bed files for Pan283, Pan284, Pan285, Pan300, Pan307 and Pan308 using the script which points to the 16-06-2016 tables /home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/TEST/OOBed7_uses_mirrored_database_currentdb.py named:
+# /home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/TEST/Pan283_160616.bed
+# /home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/TEST/Pan284_160616.bed
+# /home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/TEST/Pan285_160616.bed
+# /home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/TEST/Pan300_160616.bed
+# /home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/TEST/Pan307_160616.bed
+# /home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/TEST/Pan308_160616.bed
+
+# Performed diff of the above files with the original bed files generated:
+# diff /home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/TEST/Pan283_160616.bed /home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/Pan283data.bed
+# diff /home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/TEST/Pan284_160616.bed /home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/Pan284data.bed
+# diff /home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/TEST/Pan285_160616.bed /home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/Pan285data.bed
+# diff /home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/TEST/Pan300_160616.bed /home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/Pan300data.bed
+# diff /home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/TEST/Pan307_160616.bed /home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/Pan307data.bed
+# diff /home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/TEST/Pan308_160616.bed /home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/Pan308data.bed 
+
+# Results showed there are no differences between any of the bed files compared

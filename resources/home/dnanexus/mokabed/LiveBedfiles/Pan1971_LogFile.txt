@@ -1,0 +1,33 @@
+Time Stamp:2018-02-09 15:21:03.471992
+Command arguments executed:
+RefSeq table format version generated as /home/dnanexus/out/Output_files/Pan1971dataRefSeqFormat.txt
+/home/dnanexus/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/OOBed7_uses_mirrored_database_.py --codingup 50 --codingdown 50 --up 50 --down 50 --useaccessions --transcripts /home/dnanexus/Pan1971.txt --minuschr --outputfile /home/dnanexus/out/Output_files/Pan1971data.bed --logfile /home/dnanexus/out/Output_files/Pan1971_LogFile.txt 
+
+ Python version: 2.7.12 |Anaconda 4.2.0 (64-bit)| (default, Jul  2 2016, 17:42:40) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-1)]
+
+ getopt module file path: /home/dnanexus/anaconda2/lib/python2.7/getopt.py
+
+ os module file path: /home/dnanexus/anaconda2/lib/python2.7/os.py
+
+ pd class file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/pandas/__init__.py
+
+ cruzdb module file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/cruzdb/__init__.py
+
+version as defined by git tag = v1.0-260-g32d2a72
+
+# ================= Manual modifications
+Add missing exons from COL4A5 chrX: 107913458-107913466 (+/-50) and chrX:107917975-107917983 (+/-50) - These coordinates do NOT include padding and are 1 based 
+The coordinates added are:
+X-107913407-107913516
+X-107917924-107918033
+
+
+1. Pan1965data.bed
+Additional COL4A5 exons added (converting to 0 based and adding 50bp padding)
+
+2. Pan1965dataSambamba.bed
+Additional COL4A5 exons added (converting to 0 based and adding 50bp padding)
+
+3. Pan1965dataRefSeqFormat.txt
+Additional COL4A5 exons added (converting to 0 based and adding 50bp padding)

@@ -1,0 +1,7 @@
+Creating bedfile for RPKM analysis for Pan1651
+Removing header line with command:
+sed -i '/^#/ d' /home/dnanexus/in/bedfile/Pan1651data.bed
+Taking first four columns only:
+awk '{ print $1\t$2\t$3\t$4 }' /home/dnanexus/in/bedfile/Pan1651data.bed > Pan1651_RPKM.bed
+Appending additional bedfiles to bedfile:
+cat /home/dnanexus/in/CNV_control_regions/0/Pan657.bed >> Pan1651_RPKM.bed

@@ -1,0 +1,6 @@
+# Picard requires a file with three columns, chrom, start and stop
+# chromosome must not have 'chr' therefore sed is used to remove 'chr' from the chromosome column
+# Then cut is used to take only the first three columns
+# finally this is sorted on chromosome (taking into account mix of numbers and X&Y so it's not 1,10,11...19,2,20) and then start pos
+# this is written to a new file named UK_focused_exome_3_col.bed
+sed 's/chr//' UK_focused_exome.bed | cut -f1,2,3 | sort -k1,1V -k2,2n > UK_focused_exome_3_col.bed

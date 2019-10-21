@@ -1,0 +1,33 @@
+Mokabed failed when making this bedfile. As there is only 5 genes the bed file for each gene was made and combined as described below.
+
+The log files for each individual gene bed file can be found in github
+
+The refseqformat file was not created.
+
+==============Pan1450data.bed===============
+# copy the first gene into the bed file with headers
+cp ATMdata.bed Pan1450data.bed
+
+#append other genes into bedfile without headers.
+grep -hv '#' '/home/aled/mokabed/LiveBedfiles/BRCA2data.bed' '/home/aled/mokabed/LiveBedfiles/PALB2data.bed' '/home/aled/mokabed/LiveBedfiles/TP53data.bed' '/home/aled/mokabed/LiveBedfiles/BRCA1data.bed' >> '/home/aled/mokabed/LiveBedfiles/Pan1450data.bed
+
+#check line count of two files match
+cat '/home/aled/mokabed/LiveBedfiles/ATMdata.bed'  '/home/aled/mokabed/LiveBedfiles/BRCA2data.bed' '/home/aled/mokabed/LiveBedfiles/PALB2data.bed' '/home/aled/mokabed/LiveBedfiles/TP53data.bed' '/home/aled/mokabed/LiveBedfiles/BRCA1data.bed' | grep -v "^[#]" | wc -l 
+137
+
+cat '/home/aled/mokabed/LiveBedfiles/Pan1450data.bed' | grep -v "^[#]" | wc -l
+137
+
+============Pan1450dataSambamba.bed=============
+copy first gene into bedfile with headers
+cp ATMdataSambamba.bed Pan1450dataSambamba.bed
+
+#append other genes into bedfile without headers.
+grep -hv '#' '/home/aled/mokabed/LiveBedfiles/BRCA2dataSambamba.bed' '/home/aled/mokabed/LiveBedfiles/PALB2dataSambamba.bed' '/home/aled/mokabed/LiveBedfiles/TP53dataSambamba.bed' '/home/aled/mokabed/LiveBedfiles/BRCA1dataSambamba.bed' >> '/home/aled/mokabed/LiveBedfiles/Pan1450dataSambamba.bed' 
+
+#check line count of two files match
+cat '/home/aled/mokabed/LiveBedfiles/ATMdataSambamba.bed'  '/home/aled/mokabed/LiveBedfiles/BRCA2dataSambamba.bed' '/home/aled/mokabed/LiveBedfiles/PALB2dataSambamba.bed' '/home/aled/mokabed/LiveBedfiles/TP53dataSambamba.bed' '/home/aled/mokabed/LiveBedfiles/BRCA1dataSambamba.bed' | grep -v "^[#]" | wc -l
+137
+cat '/home/aled/mokabed/LiveBedfiles/Pan1450dataSambamba.bed' | grep -v "^[#]" | wc -l
+137
+

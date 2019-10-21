@@ -1,0 +1,2 @@
+Accession	ApprovedSymbol	GuysAccessionVersion
+NM_004006	DMD	0

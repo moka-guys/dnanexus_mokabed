@@ -1,0 +1,45 @@
+Time Stamp:2017-11-23 15:57:07.630389
+Command arguments executed:
+RefSeq table format version generated as /home/dnanexus/out/Output_files/Pan1158dataRefSeqFormat.txt
+/home/dnanexus/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/OOBed7_uses_mirrored_database_.py --codingup 10 --codingdown 10 --useaccessions --transcripts /home/dnanexus/Pan1158.txt --minuschr --outputfile /home/dnanexus/out/Output_files/Pan1158data.bed --logfile /home/dnanexus/out/Output_files/Pan1158_LogFile.txt 
+
+ Python version: 2.7.12 |Anaconda 4.2.0 (64-bit)| (default, Jul  2 2016, 17:42:40) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-1)]
+
+ getopt module file path: /home/dnanexus/anaconda2/lib/python2.7/getopt.py
+
+ os module file path: /home/dnanexus/anaconda2/lib/python2.7/os.py
+
+ pd class file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/pandas/__init__.py
+
+ cruzdb module file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/cruzdb/__init__.py
+
+version as defined by git tag = v1.0-204-g5ab2be3
+
+===================manual modifications============
+ AJ 171123
+ DMD requires the 5' UTR to be included
+ Pan1158 contains all genes except DMD
+ Pan1158DMD contains only DMD
+
+ bedfiles have been generated for each bedfile and have been combined using the below commands
+ 
+ 1. Pan1158data.bed
+#add non-header lines from Pan1158DMDdata.bed
+sed '/^#/ d' < Pan1158DMDdata.bed >> Pan1158data.bed
+
+# add the header lines to a sorted bed file. 
+# Then sort the combined Pan1158data.bed on chr and then start in numerical order and append to the sorted.bed file
+# rename the combined Pan1158data.bed to notsorted
+# rename the sorted bedfile to pan1158data.bed
+sed '/^[^#]/ d' Pan1158data.bed > Pan1158data.sorted.bed; sed '/#/ d' Pan1158data.bed | sort -k1,1V -k2,2n >> Pan1158data.sorted.bed ; mv Pan1158data.bed Pan1158data.notsorted.bed; mv Pan1158data.sorted.bed Pan1158data.bed
+
+
+2. Pan1158dataSambamba.bed
+ # add non-header lines from Pan1158DMDdataSambamba.bed
+ sed '/^#/ d' < Pan1158DMDdataSambamba.bed >> Pan1158dataSambamba.bed
+ #sort the combined bedfile inplace 
+ sort -k1,1V -k2,2n -o Pan1158dataSambamba.bed Pan1158dataSambamba.bed
+
+ 3.  Pan1158dataRefSeqFormat.txt
+ # Using the sorting order of genes when sorting previous files this line was copied and pasted from Pan1158DMDdataRefSeqFormat.txt to Pan1158dataRefSeqFormat.txt

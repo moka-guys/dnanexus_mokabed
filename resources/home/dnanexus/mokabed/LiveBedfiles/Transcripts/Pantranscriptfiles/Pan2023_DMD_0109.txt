@@ -1,0 +1,3 @@
+GuysAccession	Symbol	GuysAccessionVersion
+NM_000109	DMD	0
+

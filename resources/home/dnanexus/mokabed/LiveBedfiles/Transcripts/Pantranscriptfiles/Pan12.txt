@@ -1,0 +1,3 @@
+RNAAccession	ApprovedSymbol
+NM_001145527	EHMT1
+NM_024757	EHMT1
