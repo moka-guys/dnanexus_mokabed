@@ -1,0 +1,27 @@
+Time Stamp:2017-07-26 17:27:55.490200
+Command arguments executed:
+RefSeq table format version generated as /home/dnanexus/out/Output_files/Pan1464dataRefSeqFormat.txt
+/home/dnanexus/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/OOBed7_uses_mirrored_database_.py --codingup 10 --codingdown 10 --useaccessions --transcripts /home/dnanexus/Pan1464.txt --minuschr --outputfile /home/dnanexus/out/Output_files/Pan1464data.bed --logfile /home/dnanexus/out/Output_files/Pan1464_LogFile.txt 
+
+ Python version: 2.7.12 |Anaconda 4.2.0 (64-bit)| (default, Jul  2 2016, 17:42:40) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-1)]
+
+ getopt module file path: /home/dnanexus/anaconda2/lib/python2.7/getopt.py
+
+ os module file path: /home/dnanexus/anaconda2/lib/python2.7/os.py
+
+ pd class file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/pandas/__init__.py
+
+ cruzdb module file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/cruzdb/__init__.py
+
+version as defined by git tag = v1.0-118-g6d0763a
+
+========================================
+Addition of single base ( COL6A1 chr21:47409881C>T)
+The line below was added into the Pan1464data.bed file, using another COL6A1 line as a template.
+21	47409880	47409881	1291										COL6A1;NM_001848.2
+
+The below line was added to the sambamba bed file, using the line inserted to the Pa1464data.bedfile as a template
+21	47409880	47409881	21-47409880-47409881	0	+	COL6A1;NM_001848.2	1291
+
+AJ 170726

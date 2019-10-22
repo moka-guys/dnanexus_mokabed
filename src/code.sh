@@ -5,41 +5,7 @@
 # and to output each line as it is executed -- useful for debugging
 set -e -x -o pipefail
 
-dx-download-all-inputs
-
-mv /home/dnanexus/in/transcript_file/$transcript_file_prefix.txt /home/dnanexus/$transcript_file_prefix.txt
-
-#eval "$(ssh-agent -s)"
-#ssh-add ~/.ssh/id_rsa
-#git clone git@github.com:woook/mokabed.git
- 
-#cat /home/dnanexus/.ssh/id_rsa.pub | sudo tee -a /home/dnanexus/.ssh/authorized_keys
-#sudo cp ~/.ssh/* /root/.ssh/
-#chmod 600 /home/dnanexus/.ssh/id_rsa 
-#ssh-keyscan -t rsa github.com 2>&1 >> /home/dnanexus/.ssh/known_hosts
-
-#ssh -vT git@github.com
-
-
-#git clone git@github.com:woook/mokabed.git
-
-# capture github API key
-GITHUB_KEY=$(dx cat project-FQqXfYQ0Z0gqx7XG9Z2b4K43:mokabed_github_key)
-
-git clone https://$GITHUB_KEY@github.com/woook/mokabed.git
-
-cd mokabed
-
-git checkout production 
-ls
-
-#bash ~/Anaconda2-4.2.0-Linux-x86_64.sh -b -p $HOME/Anaconda
-#export PATH="$HOME/Anaconda/bin:$PATH"
-
-#cp /usr/local/lib/python2.7/dist-packages/*  /home/dnanexus/Anaconda/lib/python2.7/site-packages/
-#conda list
-
-#--up 5 --down 5 --codingup 5 --codingdown 5 --outputfile /home/ryank/mokabed/LiveBedfiles/Pan492data.bed --logfile /home/ryank/mokabed/LiveBedfiles/Pan492_LogFile.txt --minuschr --mergeboundaries --genes /home/ryank/mokabed/LiveBedfiles/Transcripts/Pantranscriptfiles/Pan492.txt 
+dx-download-all-inputs --parallel
 
 echo $down
 echo $up
@@ -72,9 +38,9 @@ if [ "$down" != "" ]; then
 fi
 
 if [ "$genes_or_transcripts" == "GENES" ]; then
-  opts="$opts --genes /home/dnanexus/$transcript_file_prefix.txt"
+  opts="$opts --genes $transcript_file_path"
 elif [ "$genes_or_transcripts" == "TRANSCRIPTS" ]; then
-opts="$opts --useaccessions --transcripts /home/dnanexus/$transcript_file_prefix.txt"
+opts="$opts --useaccessions --transcripts $transcript_file_path"
 fi
 
 if [ "$minuschr" == "true" ]; then

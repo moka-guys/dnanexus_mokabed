@@ -1,0 +1,98 @@
+==============Pan1452data.bed + Pan1452dataSambamba.bed===============
+
+For this panel the 5' UTRs +/-50bp were requested in addition to cds +/-50bp.
+Mokabed failed when asked to include the 5' UTRs only, however it did work when asked to include both the 5' and 3' UTRs.
+Therefore mokabed was run twice, once to produce bed files with no UTRs, and a second time to include both 5' and 3' UTRs (+/-50bp) (see Mokabed logs below).
+The 5' UTRs from Pan1452_5+3UTR_data.bed + Pan1452_5+3UTR_dataSambamba.bed were then copied and pasted into Pan1452data.bed + Pan1452dataSambamba.bed (see Manual Changes below).
+The Pan1452dataRefSeqFormat.txt file was used to find the strand of each gene, necessary to determine the location of the 5' end of the gene. 
+
+
+Mokabed logs:
+
+==============Pan1452_LogFile.txt (+/-50bp no UTRs)===============
+
+Time Stamp:2017-07-27 12:06:47.459368
+Command arguments executed:
+RefSeq table format version generated as /home/dnanexus/out/Output_files/Pan1452dataRefSeqFormat.txt
+/home/dnanexus/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/OOBed7_uses_mirrored_database_.py --codingup 50 --codingdown 50 --useaccessions --transcripts /home/dnanexus/Pan1452.txt --minuschr --outputfile /home/dnanexus/out/Output_files/Pan1452data.bed --logfile /home/dnanexus/out/Output_files/Pan1452_LogFile.txt 
+
+ Python version: 2.7.12 |Anaconda 4.2.0 (64-bit)| (default, Jul  2 2016, 17:42:40) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-1)]
+
+ getopt module file path: /home/dnanexus/anaconda2/lib/python2.7/getopt.py
+
+ os module file path: /home/dnanexus/anaconda2/lib/python2.7/os.py
+
+ pd class file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/pandas/__init__.py
+
+ cruzdb module file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/cruzdb/__init__.py
+
+version as defined by git tag = v1.0-118-g6d0763a
+
+
+==============Pan1452_5+3UTR_LogFile.txt (+/-50bp with 5'+3' UTRs (also +/-50bp))===============
+
+Time Stamp:2017-07-27 12:05:57.357728
+Command arguments executed:
+RefSeq table format version generated as /home/dnanexus/out/Output_files/Pan1452dataRefSeqFormat.txt
+/home/dnanexus/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/OOBed7_uses_mirrored_database_.py --codingup 50 --codingdown 50 --up 50 --down 50 --useaccessions --transcripts /home/dnanexus/Pan1452.txt --minuschr --outputfile /home/dnanexus/out/Output_files/Pan1452data.bed --logfile /home/dnanexus/out/Output_files/Pan1452_LogFile.txt 
+
+ Python version: 2.7.12 |Anaconda 4.2.0 (64-bit)| (default, Jul  2 2016, 17:42:40) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-1)]
+
+ getopt module file path: /home/dnanexus/anaconda2/lib/python2.7/getopt.py
+
+ os module file path: /home/dnanexus/anaconda2/lib/python2.7/os.py
+
+ pd class file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/pandas/__init__.py
+
+ cruzdb module file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/cruzdb/__init__.py
+
+version as defined by git tag = v1.0-118-g6d0763a
+
+
+Manual Changes:
+
+==============Pan1452data.bed==============
+
+< 1	179544675	179545049	7827										NPHS2;NM_014625.3
+> 1	179544675	179545137	7827										NPHS2;NM_014625.3
+
+< 2	228012078	228012249	1286										COL4A4;NM_000092.4
+> 2	228012078	228012350	1286										COL4A4;NM_000092.4
+> 2	228028672	228029325	1286										COL4A4;NM_000092.4
+
+< 2	228029392	228029579	1285										COL4A3;NM_000091.4
+> 2	228029230	228029579	1285										COL4A3;NM_000091.4
+
+< X	107682537	107682651	1288										COL4A6;NM_001847.3
+> X	107682537	107682777	1288										COL4A6;NM_001847.3
+
+< X	107683305	107683486	1287										COL4A5;NM_033380.2
+> X	107683023	107683486	1287										COL4A5;NM_033380.2
+
+==============Pan1452dataSambamba.bed==============
+
+< 1	179544675	179545049	1-179544675-179545049	0	+	NPHS2;NM_014625.3	7827
+> 1	179544675	179545137	1-179544675-179545137	0	+	NPHS2;NM_014625.3	7827
+
+< 2	228012078	228012249	2-228012078-228012249	0	+	COL4A4;NM_000092.4	1286
+> 2	228012078	228012350	2-228012078-228012350	0	+	COL4A4;NM_000092.4	1286
+> 2	228028672	228029325	2-228028672-228029325	0	+	COL4A4;NM_000092.4	1286
+
+< 2	228029392	228029579	2-228029392-228029579	0	+	COL4A3;NM_000091.4	1285
+> 2	228029230	228029579	2-228029230-228029579	0	+	COL4A3;NM_000091.4	1285
+
+< X	107682537	107682651	X-107682537-107682651	0	+	COL4A6;NM_001847.3	1288
+> X	107682537	107682777	X-107682537-107682777	0	+	COL4A6;NM_001847.3	1288
+
+< X	107683305	107683486	X-107683305-107683486	0	+	COL4A5;NM_033380.2	1287
+> X	107683023	107683486	X-107683023-107683486	0	+	COL4A5;NM_033380.2	1287
+
+
+============= Subsequent Maunal Addition of 2 exons ================
+
+An additional two exons (42 & 43) for COL4A5 were requested that are found in the UCSC gene but not the RefSeq transcripts.
+The UCSC table browser was used to download a bed file with +/- 50bp exons for transcript uc022ccg.2.
+The two lines corresponding to the missing exons were pasted into Pan1452data.bed and Pan1452dataSambamba.bed.
+The added coordinates were then viewed in the UCSC genome browser to check they covered the correct exons.

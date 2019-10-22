@@ -1,13 +1,13 @@
 {
-  "name": "mokabed_v1.2",
+  "name": "mokabed_v1.3",
   "title": "Run Mokabed",
-  "summary": "v1.2 - Create BED, RefSeq and Sambamba files",
+  "summary": "v1.3 - Create BED, RefSeq and Sambamba files",
   "tags": [
     "coverage",
     "Bed file"
   ],
   "properties": {
-    "github release": "v1.2"
+    "github release": "v1.3"
   },
   "dxapi": "1.0.0",
   "inputSpec": [

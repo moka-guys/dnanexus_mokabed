@@ -1,0 +1,3 @@
+RNAAccession	ApprovedSymbol
+NM_001197104	KMT2A
+NM_005933	KMT2A

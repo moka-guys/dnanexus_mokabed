@@ -1,0 +1,49 @@
+Time Stamp:2016-12-28 14:36:47.979866
+Command arguments executed:
+RefSeq table format version generated as /home/ryank/mokabed/LiveBedfiles/Pan492dataRefSeqFormat.txt
+/home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/OOBed7_uses_mirrored_database_.py --up 5 --down 5 --codingup 5 --codingdown 5 --outputfile /home/ryank/mokabed/LiveBedfiles/Pan492data.bed --logfile /home/ryank/mokabed/LiveBedfiles/Pan492_LogFile.txt --minuschr --mergeboundaries --genes /home/ryank/mokabed/LiveBedfiles/Transcripts/Pantranscriptfiles/Pan492.txt 
+
+ Python version: 2.7 (r27:82500, Oct 25 2012, 12:29:43) 
+[GCC 4.4.6 20110731 (Red Hat 4.4.6-3)]
+
+ getopt module file path: /apps/python/2.7/lib/python2.7/getopt.pyc
+
+ os module file path: /apps/python/2.7/lib/python2.7/os.pyc
+
+ pd class file path: /apps/python/2.7/lib/python2.7/site-packages/pandas/__init__.pyc
+
+ cruzdb module file path: /apps/python/2.7/lib/python2.7/site-packages/cruzdb/__init__.pyc
+
+ Querying Live UCSC database: Genome('mysql://genome@genome-mysql.cse.ucsc.edu/hg19') and table: <class 'cruzdb.sqlsoup.refGene'>
+
+version as defined by git tag = v1.1-40-g34640ca
+
+
+# List of genes in the Pan492data_Synonym.txt file. All of these genes no output was generated in the outputted bed files
+genes = ["MIR6724-3", "MIR6724-2", "FLJ43315", "MGC70870", "HYDIN2", "CH17-408M7.1", "LINC01667", "MAFIP", "MIR6724-1", "MIR6724-4", "LOC102723780", "LOC105379477", "FAM230C", "FRG1CP", "LOC100233156", "LOC389834", "LOC283788", "LOC100507412", "RNA45S5", "RNA5-8S5", "LOC100505874", "RNR1", "RNR2"]
+
+This is because all of these genes align to alternative haplotype chromosomes.
+
+[refGene(chrUn_gl000220:MIR6724-3:148703-148795), refGene(chrUn_gl000220:MIR6724-3:104731-104823)]
+[refGene(chrUn_gl000220:MIR6724-2:104731-104823), refGene(chrUn_gl000220:MIR6724-2:148703-148795)]
+[refGene(chrUn_gl000211:FLJ43315:48502-93165)]
+[refGene(chr17_gl000205_random:MGC70870:116622-119732)]
+[refGene(chr1_gl000192_random:HYDIN2:132568-407510)]
+[refGene(chr1_gl000192_random:CH17-408M7.1:429709-468683)]
+[refGene(chr4_gl000193_random:LINC01667:49162-88375)]
+[refGene(chr4_gl000194_random:MAFIP:53588-115073), refGene(chr4_gl000194_random:MAFIP:53588-115073), refGene(chr4_gl000194_random:MAFIP:53588-115073), refGene(chr4_gl000194_random:MAFIP:61659-115073)]
+[refGene(chrUn_gl000220:MIR6724-1:104731-104823), refGene(chrUn_gl000220:MIR6724-1:148703-148795)]
+[refGene(chrUn_gl000220:MIR6724-4:104731-104823), refGene(chrUn_gl000220:MIR6724-4:148703-148795)]
+[refGene(chrUn_gl000241:LOC102723780:16024-36957)]
+[refGene(chrUn_gl000219:LOC105379477:45396-57412)]
+[refGene(chrUn_gl000212:FAM230C:24048-60768)]
+[refGene(chrUn_gl000241:FRG1CP:14738-36767)]
+[refGene(chrUn_gl000218:LOC100233156:38785-97454), refGene(chrUn_gl000218:LOC100233156:38785-97454)]
+[refGene(chrUn_gl000218:LOC389834:46844-55049)]
+[refGene(chrUn_gl000219:LOC283788:56348-99642)]
+[refGene(chrUn_gl000220:LOC100507412:97128-126696)]
+[refGene(chrUn_gl000220:RNA45S5:105423-118780)]
+[refGene(chrUn_gl000220:RNA5-8S5:112024-112180), refGene(chrUn_gl000220:RNA5-8S5:155996-156152)]
+[refGene(chrUn_gl000224:LOC100505874:102502-109538), refGene(chrUn_gl000224:LOC100505874:102502-110268)]
+[refGene(chrM:RNR1:649-1603)]
+[refGene(chrM:RNR2:1672-3230)]

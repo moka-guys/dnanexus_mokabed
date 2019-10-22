@@ -1,0 +1,4 @@
+GeneSymbol	Accession
+MIR17HG
+RMRP
+RNU4ATAC

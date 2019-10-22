@@ -1,0 +1,3 @@
+RNAAccession	ApprovedSymbol
+NM_001163817	DHCR7
+NM_001360	DHCR7

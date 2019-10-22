@@ -1,0 +1,13 @@
+Tables IEMplusClinEx from the Validation database and sangervariantregions from the variants_database were joined using the command below.
+
+Validation database and variants_database located in /home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/Transcripts/Pantranscriptfiles folder
+
+CREATE TABLE SangerConfirmedbed AS
+SELECT Validation.IEMplusClinEx.* 
+FROM Validation.IEMplusClinEx
+JOIN variants_database.sangervariantregions
+ON variants_database.sangervariantregions.chrCHR = Validation.IEMplusClinEx.Chr
+AND variants_database.sangervariantregions.ChromosomePosition BETWEEN Validation.IEMplusClinEx.Start AND Validation.IEMplusClinEx.Stop
+
+This bed file extracts the exons from the IEM and Pan81 concatanated bed file called Pan81plusIEMdata.bed which is saved in the Validation and variants_database folders in the /home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/Transcripts/Pantranscriptfiles folder containing the 123 Sanger-confirmed validation variants
+

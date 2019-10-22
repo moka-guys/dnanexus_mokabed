@@ -1,0 +1,3 @@
+RNAAccession	ApprovedSymbol
+NM_001171653	ZEB2
+NM_014795	ZEB2

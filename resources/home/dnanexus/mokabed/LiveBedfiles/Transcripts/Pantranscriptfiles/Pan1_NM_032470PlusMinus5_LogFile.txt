@@ -1,0 +1,13 @@
+Command arguments executed:
+/home/kevin/Documents/NGS_Pipeline/BedFiles/OOBed5.py --logfile /home/kevin/Documents/NGS_Pipeline/BedFiles/WholeExomeAnalysis/NM_032470PlusMinus5_LogFile.txt --coordinatefile /home/kevin/Documents/NGS_Pipeline/BedFiles/Transcripts/Pantranscriptfiles/NM_032470Coordinates.txt --coordup 5 --coorddown 5 --outputfile /home/kevin/Documents/NGS_Pipeline/BedFiles/NM_032470PlusMinus5BedFile.csv 
+
+ Python version: 2.7.4 (default, Sep 26 2013, 03:20:26) 
+[GCC 4.7.3]
+
+ getopt module file path: /usr/lib/python2.7/getopt.pyc
+
+ os module file path: /usr/lib/python2.7/os.pyc
+
+ pd class file path: /usr/local/lib/python2.7/dist-packages/pandas-0.12.0-py2.7-linux-x86_64.egg/pandas/__init__.pyc
+
+ cruzdb module file path: /usr/local/lib/python2.7/dist-packages/cruzdb/__init__.pyc

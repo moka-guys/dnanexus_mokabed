@@ -1,0 +1,2 @@
+RNAAccession	ApprovedSymbol
+NM_030665	RAI1

@@ -1,0 +1,57 @@
+Time Stamp:2016-12-21 17:18:23.774392
+Command arguments executed:
+RefSeq table format version generated as /home/ryank/161221_Coverage_for_reports/Coverage_dataRefSeqFormat.txt
+/home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/OOBed7_uses_mirrored_database_.py --codingup 5 --codingdown 5 --genes /home/ryank/161221_Coverage_for_reports/Coverage_genes.txt --outputfile /home/ryank/161221_Coverage_for_reports/Coverage_data.bed --minuschr --mergeboundaries --logfile /home/ryank/161221_Coverage_for_reports/Coverage_LogFile.txt 
+
+ Python version: 2.7 (r27:82500, Oct 25 2012, 12:29:43) 
+[GCC 4.4.6 20110731 (Red Hat 4.4.6-3)]
+
+ getopt module file path: /apps/python/2.7/lib/python2.7/getopt.pyc
+
+ os module file path: /apps/python/2.7/lib/python2.7/os.pyc
+
+ pd class file path: /apps/python/2.7/lib/python2.7/site-packages/pandas/__init__.pyc
+
+ cruzdb module file path: /apps/python/2.7/lib/python2.7/site-packages/cruzdb/__init__.pyc
+
+ Querying Live UCSC database: Genome('mysql://genome@genome-mysql.cse.ucsc.edu/hg19') and table: <class 'cruzdb.sqlsoup.refGene'>
+
+version as defined by git tag = v1.1-37-gb503ba8
+
+Time Stamp:2016-12-21 17:34:23.057747
+Command arguments executed:
+RefSeq table format version generated as /home/ryank/161221_Coverage_for_reports/Coverage_noncoding_dataRefSeqFormat.txt
+/home/ryank/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/OOBed7_uses_mirrored_database_.py --codingup 5 --codingdown 5 --up 5 --down 5 --genes /home/ryank/161221_Coverage_for_reports/Coverage_noncoding_genes.txt --outputfile /home/ryank/161221_Coverage_for_reports/Coverage_noncoding_data.bed --minuschr --mergeboundaries --logfile /home/ryank/161221_Coverage_for_reports/Coverage_noncoding_LogFile.txt 
+
+ Python version: 2.7 (r27:82500, Oct 25 2012, 12:29:43) 
+[GCC 4.4.6 20110731 (Red Hat 4.4.6-3)]
+
+ getopt module file path: /apps/python/2.7/lib/python2.7/getopt.pyc
+
+ os module file path: /apps/python/2.7/lib/python2.7/os.pyc
+
+ pd class file path: /apps/python/2.7/lib/python2.7/site-packages/pandas/__init__.pyc
+
+ cruzdb module file path: /apps/python/2.7/lib/python2.7/site-packages/cruzdb/__init__.pyc
+
+ Querying Live UCSC database: Genome('mysql://genome@genome-mysql.cse.ucsc.edu/hg19') and table: <class 'cruzdb.sqlsoup.refGene'>
+
+version as defined by git tag = v1.1-37-gb503ba8
+
+cat /home/ryank/161221_Coverage_for_reports/Coverage_dataSambamba.bed /home/ryank/161221_Coverage_for_reports/Coverage_noncoding_dataSambamba.bed | sort -n -k1,1V -k2,2n -k3,3n > /home/ryank/161221_Coverage_for_reports/Pan881dataSambamba.bed
+
+
+
+ cat /home/ryank/161221_Coverage_for_reports/Coverage_genes.txt > /home/ryank/161221_Coverage_for_reports/Pan881.txt 
+
+ cat /home/ryank/161221_Coverage_for_reports/Coverage_noncoding_genes.txt > /home/ryank/161221_Coverage_for_reports/Pan881_noncoding.txt
+
+
+
+
+cat /home/ryank/161221_Coverage_for_reports/Coverage_data_Synonym.txt > /home/ryank/161221_Coverage_for_reports/Pan881_Synonym.txt
+
+
+
+
+cat /home/ryank/161221_Coverage_for_reports/Coverage_data_Synonymnocoding.txt > /home/ryank/161221_Coverage_for_reports/Pan881_Synonymnocoding.txt

@@ -1,0 +1,24 @@
+Time Stamp:2017-07-27 10:37:44.828189
+Command arguments executed:
+RefSeq table format version generated as /home/dnanexus/out/Output_files/Pan1451dataRefSeqFormat.txt
+/home/dnanexus/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/OOBed7_uses_mirrored_database_.py --codingup 10 --codingdown 10 --useaccessions --transcripts /home/dnanexus/Pan1451.txt --minuschr --outputfile /home/dnanexus/out/Output_files/Pan1451data.bed --logfile /home/dnanexus/out/Output_files/Pan1451_LogFile.txt 
+
+ Python version: 2.7.12 |Anaconda 4.2.0 (64-bit)| (default, Jul  2 2016, 17:42:40) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-1)]
+
+ getopt module file path: /home/dnanexus/anaconda2/lib/python2.7/getopt.py
+
+ os module file path: /home/dnanexus/anaconda2/lib/python2.7/os.py
+
+ pd class file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/pandas/__init__.py
+
+ cruzdb module file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/cruzdb/__init__.py
+
+version as defined by git tag = v1.0-118-g6d0763a
+
+============= Manual Additions ================
+
+An additional two exons (42 & 43) for COL4A5 were requested that are found in the UCSC gene but not the RefSeq transcripts.
+The UCSC table browser was used to download a bed file with +/- 10bp exons for transcript uc022ccg.2.
+The two lines corresponding to the missing exons were pasted into Pan1451data.bed and Pan1451dataSambamba.bed.
+The added coordinates were then viewed in the UCSC genome browser to check they covered the correct exons.

@@ -1,0 +1,2 @@
+RNAAccession	ApprovedSymbol
+NM_004260	RECQL4

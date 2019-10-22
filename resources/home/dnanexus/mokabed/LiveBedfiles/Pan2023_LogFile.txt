@@ -1,0 +1,66 @@
+Time Stamp:2018-04-19 12:02:49.403036
+Command arguments executed:
+RefSeq table format version generated as /home/dnanexus/out/Output_files/Pan2023dataRefSeqFormat.txt
+/home/dnanexus/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/OOBed7_uses_mirrored_database_.py --codingup 50 --codingdown 50 --useaccessions --transcripts /home/dnanexus/Pan2023.txt --minuschr --outputfile /home/dnanexus/out/Output_files/Pan2023data.bed --logfile /home/dnanexus/out/Output_files/Pan2023_LogFile.txt 
+
+ Python version: 2.7.12 |Anaconda 4.2.0 (64-bit)| (default, Jul  2 2016, 17:42:40) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-1)]
+
+ getopt module file path: /home/dnanexus/anaconda2/lib/python2.7/getopt.py
+
+ os module file path: /home/dnanexus/anaconda2/lib/python2.7/os.py
+
+ pd class file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/pandas/__init__.py
+
+ cruzdb module file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/cruzdb/__init__.py
+
+version as defined by git tag = v1.0-260-g32d2a72
+
+Manual modifications.
+There are two DMD transcripts, both of which require the 5' UTR to be included.
+Seperate bed files were created for these two transcripts.
+These two transcrips are identical apart from the 5' UTR, only differing in one row. Therefore all rows except this line was removed from one of the transcripts(0109).
+
+In addition to the MTM1 requires the 5' UTR to be added. The UTR is split across two regions.
+The first region was obtained with padding by running Mokabed for the MTM1 gene, specifying 50bp padding of the UTR.
+The second region is 10bp adjoining exon 1 (chrX:149,761,067-149,761,076)
+Therefore for each bedfile the addional exon must be added and the start position for exon1 changed by 10bp to accomodate the UTR (X:149761026 changed to X:149761016)
+
+1. Pan2023data.bed
+All exons of Pan2023_DMD_0109data.bed were removed except for the line of interest
+
+# add non-header lines from the two DMD bed files to Pan2023data.bed
+sed '/^#/ d' < Pan2023_DMD_0109data.bed >> Pan2023data.bed
+sed '/^#/ d' < Pan2023_DMD_4006data.bed >> Pan2023data.bed
+
+The MTM1 regions were then added manually:
+X	149761026	149761189	4534										MTM1;NM_000252.2 
+changed to
+X	149736996	149737162	4534										MTM1;NM_000252.2
+X	149761016	149761189	4534										MTM1;NM_000252.2
+
+# add the header lines to a sorted bed file. 
+# Then sort the combined Pan2023data.bed on chr and then start in numerical order and append to the sorted.bed file
+# remove the unsorted, combined Pan2023data.bed
+# rename the sorted bedfile to Pan2023data.bed
+sed '/^[^#]/ d' Pan2023data.bed > Pan2023data.sorted.bed; sed '/#/ d' Pan2023data.bed | sort -k1,1V -k2,2n >> Pan2023data.sorted.bed ; rm Pan2023data.bed; mv Pan2023data.sorted.bed Pan2023data.bed
+
+2. Pan2023dataSambamba
+All exons of Pan2023_DMD_0109dataSambamba.bed were removed except for the line of interest
+
+# add non-header lines from DMD sambamba bed files
+sed '/^#/ d' < Pan2023_DMD_0109dataSambamba.bed >> Pan2023dataSambamba.bed
+sed '/^#/ d' < Pan2023_DMD_4006dataSambamba.bed >> Pan2023dataSambamba.bed
+
+# manually add the MTM1 5' UTR 
+X	149761026	149761189	X-149761026-149761189	0	+	MTM1;NM_000252.2	4534
+changed to
+X	149736996	149737162	X-149736996-149737162	0	+	MTM1;NM_000252.2	4534
+X	149761016	149761189	X-149761016-149761189	0	+	MTM1;NM_000252.2	4534
+
+
+#sort the combined bedfile inplace 
+sort -k1,1V -k2,2n -o Pan2023dataSambamba.bed Pan2023dataSambamba.bed
+
+3. Pan1456dataRefSeqFormat.bed
+This is not needed so the files were not merged.

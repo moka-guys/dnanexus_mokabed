@@ -1,0 +1,42 @@
+This was created using the app project-F40644806g5x3GfB43GqxfpK:applet-F4079gj06g5kZbyVFq8YX20V
+
+++ to_remove=data.bed
++++ sed s/data.bed//
++++ echo Pan1104data.bed
+++ pannum=Pan1104
+++ logfile=/home/dnanexus/out/RPKM_bedfile/Pan1104_RPKM_logfile.txt
+++ RPKM_bed=Pan1104_RPKM.bed
+++ mkdir -p /home/dnanexus/out/RPKM_bedfile/
+++ echo 'Creating bedfile for RPKM analysis for Pan1104'
+++ sed -i '/^#/ d' Pan1104data.bed
+++ echo 'Removing header line with command:'
+++ echo 'sed -i '\''/^#/ d'\'' Pan1104data.bed'
+++ awk '{ print $1"\t"$2"\t"$3"\t"$4 }' Pan1104data.bed
+++ echo 'Taking first four columns only:'
+++ echo 'awk '\''{ print $1\t$2\t$3\t$4 }'\'' Pan1104data.bed > Pan1104_RPKM.bed'
+++ cat Version2.txt
+++ echo 'Appending CNV control sites Version2.txt to bedfile:'
+++ echo 'cat Version2.txt >> Pan1104_RPKM.bed'
+++ mv Pan1104_RPKM.bed /home/dnanexus/out/RPKM_bedfile/Pan1104_RPKM.bed
+
+Control sites were packaged in the app and were not given a Pan number.
+1       55504551        55504750        NGS_MLPA_Con_Chr1
+2       113584155       113584334       NGS_MLPA_Con_Chr2
+5       13764066        13764265        NGS_MLPA_Con_DNAH5
+6       160578771       160578970       NGS_MLPA_Con_SLC22A1
+10      92646060        92646259        NGS_MLPA_Con_RPP30
+10      92634890        92635089        NGS_MLPA_Con_RPP30
+10      92665060        92665259        NGS_MLPA_Con_RPP30
+10      92660060        92660259        NGS_MLPA_Con_RPP30
+10      13142578        13142777        NGS_MLPA_Con_OPTN
+11      126243853       126244052       NGS_MLPA_Con_ST3GAL4
+14      104179706       104179905       NGS_MLPA_Con_XRCC3
+17      27072200        27072399        NGS_MLPA_Con_TRAF4
+19      10980494        10980693        NGS_MLPA_Con_Chr19
+20      10623690        10623889        NGS_MLPA_Con_JAG1
+X       54498800        54498999        NGS_MLPA_Con_FGD1
+X       129093300       129093499       NGS_MLPA_Con_ChrX
+X       115218018       115218461       NGS_MLPA_Con_ChrX
+X       48644400        48644599        NGS_MLPA_Con_ChrX
+X       110531000       110531199       NGS_MLPA_Con_RPP30
+X       22175900        22176099        NGS_MLPA_Con_PHEX

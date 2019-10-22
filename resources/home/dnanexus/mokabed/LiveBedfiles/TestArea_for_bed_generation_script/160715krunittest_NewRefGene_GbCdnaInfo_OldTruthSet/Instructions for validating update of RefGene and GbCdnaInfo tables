@@ -1,0 +1,67 @@
+Instructions for validating update of RefGene and GbCdnaInfo tables
+
+Run unittest comparing:
+- python script pointing to current RefGene (20 Nov 2014) and GbCdnaInfo (4 Jan 2016) tables
+- python script pointing to latest downloaded versions of RefGene and GbCdnaInfo (downloaded on 6 June 2016)
+
+
+
+
+
+Run unittest comparing:
+- python script OBed7_uses_mirrored_database_.py which points to current RefGene (20 Nov 2014) and GbCdnaInfo (4 Jan 2016) tables 
+	with
+- python script  OBed7_uses_mirrored_database_newtest.py which points to atest downloaded versions of RefGene and GbCdnInfo (downloaded on 6 June 2016)
+	
+	python unittest_OOBed7_uses_mirrored_database_.py --newscript OOBed7_uses_mirrored_database_newtest.py --livescript OOBed7_uses_mirrored_database_.py --output ./160715krunittest_OldRefGene_GbCdnaInfo
+
+
+-Results
+	Failed
+	Test10	Accession list - Whole exon boundaries - Start values - New RefGene
+	Test16	Accession list - Whole exon boundaries - Stop values- New RefGene
+	Test19	Gene symbol list - Coding exon boundaries - Chr values - New RefGene
+	Test20	Gene symbol list - Coding exon boundaries - Start values - New RefGene
+	Test21	Gene symbol list - Coding exon boundaries - Stop values - New RefGene
+	Test22	Gene symbol list - Whole exon boundaries - Chr values - New RefGene
+	Test23	Gene symbol list - Whole exon boundaries - Start values - New RefGene
+	Test24	Gene symbol list - Whole exon boundaries - Stop values - New RefGene
+
+
+
+Will need to generate new truth set for:
+	- Whole exon boundary bed file generated from an accession list - UCSCexons_manual.bed (bed file truth set corresponding to whole exon boundaries for list of accessions listed in Pan71_truthsubset.txt)
+	- Coding exon boundary bed file generated from gene symbol list - UCSCgenesymbols_exons_manual.bed (bed file corresponding to the merged whole exon boundaries for list of gene symbols listed in Pan81_subset_20genesymbols.txt)
+	- Whole exon boundary bed file generated from gene symbol list - UCSCgenesymbols_coding_manual.bed (bed file corresponding to the merged coding exon boundaries for list of gene symbols listed in Pan81_subset_20genesymbols.txt)
+
+Re-create truth sets for :
+- whole exon boundaries generated from gene symbol list
+- whole exon boundaries generated from accession list 
+
+- whole exon boundaries generated from gene symbol list 
+1) Run Bedvalidation.py with gene symbol list Pan81_subset_20genesymbols.txt. This script queries RefGene (06062016) using the truth set gene symbol list and outputs:
+       whole exon boundaries
+       coding exon boundaries
+2) Open tsv output showing whole exon boundaries in libre calc and add 15 bases to 5' end of first whole exon and 10 bases to 3' end of the last exon. No flanking bases are added to the middle exons. This bed file should be re-saved into the test area folder making sure to use tab as the space delimiter 
+
+- whole exon boundaries generated from accession list 
+- Run BedValidationAccessions.py with accession list Pan71_truthsubset.txt.
+This script queries RefGene (06062016) using the truth set NM accession list and outputs:
+       whole exon boundaries
+       coding exon boundaries
+
+The unittest is then re-run again based on these new truth sets
+
+	python unittest_OOBed7_uses_mirrored_database_.py --newscript OOBed7_uses_mirrored_database_newtest.py --livescript OOBed7_uses_mirrored_database_.py --output ./160715krunittest_NewRefGene_GbCdnaInfo
+
+
+-Results
+	Failed
+	Test9	Accession list - Whole exon boundaries - Start values - Old RefGene
+	Test15	Accession list - Whole exon boundaries - Stop values- Old RefGene
+	Test25	Gene symbol list - Coding exon boundaries - Chr values - Old RefGene
+	Test26	Gene symbol list - Coding exon boundaries - Start values - Old RefGene
+	Test27	Gene symbol list - Coding exon boundaries - Stop values - Old RefGene
+	Test28	Gene symbol list - Whole exon boundaries - Chr values - Old RefGene
+	Test29	Gene symbol list - Whole exon boundaries - Start values - Old RefGene
+	Test30	Gene symbol list - Whole exon boundaries - Stop values - Old RefGene

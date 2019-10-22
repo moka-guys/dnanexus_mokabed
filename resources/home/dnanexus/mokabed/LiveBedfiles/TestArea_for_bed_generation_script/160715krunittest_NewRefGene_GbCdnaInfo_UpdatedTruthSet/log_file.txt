@@ -1,0 +1,69 @@
+.....F..........FFFFF.F......F
+======================================================================
+FAIL: test_15_stop (__main__.Test)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "unittest_OOBed7_uses_mirrored_database_.py", line 324, in test_15_stop
+    self.assertEqual(self.oldbedexonstop, self.ucscexontruthstop, "Failed test - Stop sites not the same as ucsc truth set")
+AssertionError: Failed test - Stop sites not the same as ucsc truth set
+
+======================================================================
+FAIL: test_25_stop (__main__.Test)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "unittest_OOBed7_uses_mirrored_database_.py", line 364, in test_25_stop
+    self.assertEqual(self.oldbedgscodingchr, self.ucsctruthgscodingchr, "Failed test - Chr sites not the same as ucsc truth set")
+AssertionError: Failed test - Chr sites not the same as ucsc truth set
+
+======================================================================
+FAIL: test_26_stop (__main__.Test)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "unittest_OOBed7_uses_mirrored_database_.py", line 368, in test_26_stop
+    self.assertEqual(self.oldbedgscodingstart, self.ucsctruthgscodingstart, "Failed test - Start sites not the same as ucsc truth set")
+AssertionError: Failed test - Start sites not the same as ucsc truth set
+
+======================================================================
+FAIL: test_27_stop (__main__.Test)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "unittest_OOBed7_uses_mirrored_database_.py", line 372, in test_27_stop
+    self.assertEqual(self.oldbedgscodingstop, self.ucsctruthgscodingstop, "Failed test - Stop sites not the same as ucsc truth set")
+AssertionError: Failed test - Stop sites not the same as ucsc truth set
+
+======================================================================
+FAIL: test_28_stop (__main__.Test)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "unittest_OOBed7_uses_mirrored_database_.py", line 376, in test_28_stop
+    self.assertEqual(self.oldbedgswholeexonchr, self.ucsctruthgswholeexonchr, "Failed test - Chr sites not the same as ucsc truth set")
+AssertionError: Failed test - Chr sites not the same as ucsc truth set
+
+======================================================================
+FAIL: test_29_stop (__main__.Test)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "unittest_OOBed7_uses_mirrored_database_.py", line 380, in test_29_stop
+    self.assertEqual(self.oldbedgswholeexonstart, self.ucsctruthgswholeexonstart, "Failed test - Start sites not the same as ucsc truth set")
+AssertionError: Failed test - Start sites not the same as ucsc truth set
+
+======================================================================
+FAIL: test_30_stop (__main__.Test)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "unittest_OOBed7_uses_mirrored_database_.py", line 385, in test_30_stop
+    self.assertEqual(self.oldbedgswholeexonstop, self.ucsctruthgswholeexonstop, "Failed test - Stop sites not the same as ucsc truth set")
+AssertionError: Failed test - Stop sites not the same as ucsc truth set
+
+======================================================================
+FAIL: test_9_start (__main__.Test)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "unittest_OOBed7_uses_mirrored_database_.py", line 300, in test_9_start
+    self.assertEqual(self.oldbedexonstart, self.ucscexontruthstart, "Failed test - Start sites not the same as ucsc truth set")
+AssertionError: Failed test - Start sites not the same as ucsc truth set
+
+----------------------------------------------------------------------
+Ran 30 tests in 1.675s
+
+FAILED (failures=8)

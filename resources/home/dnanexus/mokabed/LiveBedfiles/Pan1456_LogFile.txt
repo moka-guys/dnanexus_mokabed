@@ -1,0 +1,49 @@
+Time Stamp:2017-12-05 15:09:05.866105
+Command arguments executed:
+RefSeq table format version generated as /home/dnanexus/out/Output_files/Pan1456dataRefSeqFormat.txt
+/home/dnanexus/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/OOBed7_uses_mirrored_database_.py --codingup 50 --codingdown 50 --useaccessions --transcripts /home/dnanexus/Pan1456.txt --minuschr --outputfile /home/dnanexus/out/Output_files/Pan1456data.bed --logfile /home/dnanexus/out/Output_files/Pan1456_LogFile.txt 
+
+ Python version: 2.7.12 |Anaconda 4.2.0 (64-bit)| (default, Jul  2 2016, 17:42:40) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-1)]
+
+ getopt module file path: /home/dnanexus/anaconda2/lib/python2.7/getopt.py
+
+ os module file path: /home/dnanexus/anaconda2/lib/python2.7/os.py
+
+ pd class file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/pandas/__init__.py
+
+ cruzdb module file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/cruzdb/__init__.py
+
+version as defined by git tag = v1.0-204-g5ab2be3
+
+===================manual modifications============
+ AJ 171205
+ DMD requires the 5' UTR to be included
+ Pan1456 contains all genes except DMD
+ There are two DMD transcripts, one for NM_004006  and one for NM000109.
+ These two transcripts are identical except for the 5' exon/UTR.
+
+Bedfiles have been generated for each set of transcripts and have been combined using the below commands:
+
+1. Pan1456data.bed
+All exons of Pan1456DMD_000109data.bed were removed except for the line of interest
+
+#add non-header lines from the two DMD bed files to Pan1456data.bed
+sed '/^#/ d' < Pan1456DMD_000109data.bed >> Pan1456data.bed
+sed '/^#/ d' < Pan1456DMD_004006data.bed >> Pan1456data.bed
+
+# add the header lines to a sorted bed file. 
+# Then sort the combined Pan1456data.bed on chr and then start in numerical order and append to the sorted.bed file
+# remove the unsorted, combined Pan1456data.bed
+# rename the sorted bedfile to pan1456data.bed
+sed '/^[^#]/ d' Pan1456data.bed > Pan1456data.sorted.bed; sed '/#/ d' Pan1456data.bed | sort -k1,1V -k2,2n >> Pan1456data.sorted.bed ; rm Pan1456data.bed; mv Pan1456data.sorted.bed Pan1456data.bed
+
+2 . Pan1456dataSambamba.bed
+# add non-header lines from Pan1456DMDdataSambamba.bed
+sed '/^#/ d' < Pan1456DMD_000109dataSambamba.bed >> Pan1456dataSambamba.bed
+sed '/^#/ d' < Pan1456DMD_004006dataSambamba.bed >> Pan1456dataSambamba.bed
+#sort the combined bedfile inplace 
+sort -k1,1V -k2,2n -o Pan1456dataSambamba.bed Pan1456dataSambamba.bed
+
+3. Pan1456dataRefSeqFormat.bed
+This is not needed so the files were not merged.

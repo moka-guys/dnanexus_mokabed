@@ -1,0 +1,2 @@
+RNAAccession	ApprovedSymbol
+NM_015884	MBTPS2

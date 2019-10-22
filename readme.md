@@ -1,9 +1,7 @@
-# dnanexus_mokabed - v1.2
+# dnanexus_mokabed - v1.3
 
 ## What does this app do?
-This app utilises the MokaBED code to generate BED files.
-
-The app clones the production branch of the mokabed code (https://github.com/woook/mokabed)
+This app utilises the MokaBED code [v1.2](https://github.com/mokaguys/mokabed)to generate BED files.
 
 The app requires a list of gene symbols or transcripts, a set of parameters which are used to query the UCSU databases (cruzdb_refGene.db and gbCdnaInfo.db) and outputs bedfiles in a range of formats (more below).
 

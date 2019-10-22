@@ -1,0 +1,15 @@
+Command arguments executed:
+/home/kevin/Documents/NGS_Pipeline/BedFiles/OOBed5.py --codingup 5 --codingdown 5 --logfile /home/kevin/Documents/NGS_Pipeline/BedFiles/WholeExomeAnalysis/Pan21_LogFile.txt --outputfile /home/kevin/Documents/NGS_Pipeline/BedFiles/WholeExomeAnalysis/Pan21data.bed --transcripts /home/kevin/Documents/NGS_Pipeline/BedFiles/Transcripts/Pantranscriptfiles/Pan21.txt 
+
+ Python version: 2.7.4 (default, Sep 26 2013, 03:20:26) 
+[GCC 4.7.3]
+
+ getopt module file path: /usr/lib/python2.7/getopt.pyc
+
+ os module file path: /usr/lib/python2.7/os.pyc
+
+ pd class file path: /usr/local/lib/python2.7/dist-packages/pandas-0.12.0-py2.7-linux-x86_64.egg/pandas/__init__.pyc
+
+ cruzdb module file path: /usr/local/lib/python2.7/dist-packages/cruzdb/__init__.pyc
+ 
+ added header to columns #Chr	Start	Stop	AccessionNo 17-10-14

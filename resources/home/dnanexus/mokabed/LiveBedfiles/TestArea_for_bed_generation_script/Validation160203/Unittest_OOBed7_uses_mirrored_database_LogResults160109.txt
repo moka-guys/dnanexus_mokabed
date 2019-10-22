@@ -1,0 +1,154 @@
+[('--codingup', '30'), ('--codingdown', '20'), ('--transcripts', '/home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/TestArea_for_bed_generation_script/Pan71_truthset.txt'), ('--logfile', '/home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/TestArea_for_bed_generation_script/Pan71test_new_Logfile.txt'), ('--useaccessions', ''), ('--outputfile', '/home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/TestArea_for_bed_generation_script/newoutput.bed')]
+NM_152490.4
+B3GALNT2
+NM_006876.2
+B3GNT1
+NM_005198.4
+CHKB
+NM_004370.5
+COL12A1
+NM_001845.5
+COL4A1
+NM_001846.2
+COL4A2
+NM_001848.2
+COL6A1
+NM_001849.3
+COL6A2
+NM_004369.3
+COL6A3
+NM_001165928.3
+DAG1
+NM_014908.3
+DOLK
+NM_003859.2
+DPM1
+NM_003863.3
+DPM2
+NM_153741.1
+DPM3
+NM_024301.4
+FKRP
+NM_001079802.1
+FKTN
+NM_013334.3
+GMPPB
+NM_001101426.3
+ISPD
+NM_002206.2
+ITGA7
+NM_002207.2
+ITGA9
+NM_000426.3
+LAMA2
+NM_004737.4
+LARGE
+NM_006077.3
+MICU1
+NM_000445.4
+PLEC
+NM_001243766.1
+POMGNT1
+NM_032806.5
+POMGNT2
+NM_032237.4
+POMK
+NM_007171.3
+POMT1
+NM_013382.5
+POMT2
+NM_001037633.1
+SIL1
+NM_014254.2
+TMEM5
+--- 0.837241888046 seconds ---
+[('--codingup', '30'), ('--codingdown', '20'), ('--transcripts', '/home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/TestArea_for_bed_generation_script/Pan71_truthset.txt'), ('--logfile', '/home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/TestArea_for_bed_generation_script/Pan71test_live_Logfile.txt'), ('--useaccessions', ''), ('--outputfile', '/home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/TestArea_for_bed_generation_script/liveoutput.bed')]
+this is bedfile <class 'pandas.core.frame.DataFrame'>
+Index: 594 entries, chr1 to chr12
+Data columns:
+Start        594  non-null values
+Stop         594  non-null values
+Accession    594  non-null values
+GeneName     594  non-null values
+dtypes: int64(2), object(2)
+[('--up', '15'), ('--codingup', '0'), ('--down', '10'), ('--codingdown', '0'), ('--transcripts', '/home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/TestArea_for_bed_generation_script/Pan71_truthsubset.txt'), ('--logfile', '/home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/TestArea_for_bed_generation_script/Pan71testexon_new_Logfile.txt'), ('--useaccessions', ''), ('--outputfile', '/home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/TestArea_for_bed_generation_script/newoutputexon.bed')]
+NM_152490.4
+B3GALNT2
+NM_006876.2
+B3GNT1
+NM_005198.4
+CHKB
+NM_004370.5
+COL12A1
+NM_001845.5
+COL4A1
+NM_001846.2
+COL4A2
+NM_001848.2
+COL6A1
+NM_001849.3
+COL6A2
+NM_004369.3
+COL6A3
+NM_001165928.3
+DAG1
+--- 0.297704935074 seconds ---
+[('--up', '15'), ('--codingup', '0'), ('--down', '10'), ('--codingdown', '0'), ('--transcripts', '/home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/TestArea_for_bed_generation_script/Pan71_truthsubset.txt'), ('--logfile', '/home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/TestArea_for_bed_generation_script/Pan71testexon_live_Logfile.txt'), ('--useaccessions', ''), ('--outputfile', '/home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/TestArea_for_bed_generation_script/liveoutputexon.bed')]
+this is bedfile <class 'pandas.core.frame.DataFrame'>
+Index: 304 entries, chr1 to chr3
+Data columns:
+Start        304  non-null values
+Stop         304  non-null values
+Accession    304  non-null values
+GeneName     304  non-null values
+dtypes: int64(2), object(2)
+[('--StartFlank', '50'), ('--codingup', '0'), ('--StopFlank', '100'), ('--codingdown', '0'), ('--transcripts', '/home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/TestArea_for_bed_generation_script/Pan71_truthsubset.txt'), ('--logfile', '/home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/TestArea_for_bed_generation_script/Pan71testUTR_new_Logfile.txt'), ('--useaccessions', ''), ('--outputfile', '/home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/TestArea_for_bed_generation_script/newoutputUTR.bed')]
+NM_152490.4
+B3GALNT2
+NM_006876.2
+B3GNT1
+NM_005198.4
+CHKB
+NM_004370.5
+COL12A1
+NM_001845.5
+COL4A1
+NM_001846.2
+COL4A2
+NM_001848.2
+COL6A1
+NM_001849.3
+COL6A2
+NM_004369.3
+COL6A3
+NM_001165928.3
+DAG1
+--- 0.295084953308 seconds ---
+[('--StartFlank', '50'), ('--codingup', '0'), ('--StopFlank', '100'), ('--codingdown', '0'), ('--transcripts', '/home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/TestArea_for_bed_generation_script/Pan71_truthsubset.txt'), ('--logfile', '/home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/TestArea_for_bed_generation_script/Pan71testUTR_live_Logfile.txt'), ('--useaccessions', ''), ('--outputfile', '/home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/TestArea_for_bed_generation_script/liveoutputUTR.bed')]
+this is bedfile <class 'pandas.core.frame.DataFrame'>
+Index: 296 entries, chr1 to chr3
+Data columns:
+Start        296  non-null values
+Stop         296  non-null values
+Accession    296  non-null values
+GeneName     296  non-null values
+dtypes: int64(2), object(2)
+[('--newscript', 'OOBed7_uses_mirrored_database_new.py'), ('--livescript', '/home/ryank/GithubRepoLive/mokapipe/LiveBedfiles/TestArea_for_bed_generation_script/OOBed7_uses_mirrored_database_.py')]
+In ucsc_exonic chr column --up/down arguments test compare new version with truth set
+In ucsc_utr start column --Start/Stop arguments test compare old version with truth set
+In ucsc_utr start column --Start/Stop arguments test compare new version with truth set
+In test_stop column --coding arguments test compare old version with truth set
+In test_stop column --coding arguments test compare new version with truth set
+In ucsc_exonic stop column --up/down arguments test compare old version with truth set
+In ucsc_exonic chr column --up/down arguments test compare new version with truth set
+In ucsc_utr stop column --Start/Stop arguments test compare old version with truth set
+In ucsc_utr stop column --Start/Stop arguments test compare new version with truth set
+In ucsc_chr column --coding arguments test compare old version with truth set
+In ucsc_chr column --coding arguments test compare new version with truth set
+In ucsc_exonic chr column --up/down arguments test compare old version with truth set
+In ucsc_exonic chr column --up/down arguments test compare new version with truth set
+In ucsc_utr chr column --Start/Stop arguments test compare old version with truth set
+In ucsc_utr chr column --Start/Stop arguments test compare new version with truth set
+In test_start column --coding arguments test compare old version with truth set
+In test_start column --coding arguments test compare new version with truth set
+In ucsc_exonic start column --up/down arguments test compare old version with truth set

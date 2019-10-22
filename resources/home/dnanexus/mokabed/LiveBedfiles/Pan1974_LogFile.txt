@@ -1,0 +1,39 @@
+Time Stamp:2018-04-19 10:21:25.512597
+Command arguments executed:
+RefSeq table format version generated as /home/dnanexus/out/Output_files/Pan1974dataRefSeqFormat.txt
+/home/dnanexus/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/OOBed7_uses_mirrored_database_.py --codingup 50 --codingdown 50 --useaccessions --transcripts /home/dnanexus/Pan1974.txt --minuschr --outputfile /home/dnanexus/out/Output_files/Pan1974data.bed --logfile /home/dnanexus/out/Output_files/Pan1974_LogFile.txt 
+
+ Python version: 2.7.12 |Anaconda 4.2.0 (64-bit)| (default, Jul  2 2016, 17:42:40) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-1)]
+
+ getopt module file path: /home/dnanexus/anaconda2/lib/python2.7/getopt.py
+
+ os module file path: /home/dnanexus/anaconda2/lib/python2.7/os.py
+
+ pd class file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/pandas/__init__.py
+
+ cruzdb module file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/cruzdb/__init__.py
+
+version as defined by git tag = v1.0-260-g32d2a72
+
+Manual modifications - add MTM1 5' UTR region. 
+This UTR is split over 2 regions. The first region was obtained with padding by running Mokabed for the MTM1 gene, specifying 50bp padding of the UTR.
+The second region is 10bp adjoining exon 1 (chrX:149,761,067-149,761,076)
+Therefore for each bedfile the addional exon must be added and the start position for exon1 changed by 10bp to accomodate the UTR (X:149761026 changed to X:149761016)
+
+1. Pan1974data.bed
+X	149761026	149761189	4534										MTM1;NM_000252.2 
+changed to
+X	149736996	149737162	4534										MTM1;NM_000252.2
+X	149761016	149761189	4534										MTM1;NM_000252.2
+
+2. Pan1974sambamba.bed
+X	149761026	149761189	X-149761026-149761189	0	+	MTM1;NM_000252.2	4534
+changed to
+X	149736996	149737162	X-149736996-149737162	0	+	MTM1;NM_000252.2	4534
+X	149761016	149761189	X-149761016-149761189	0	+	MTM1;NM_000252.2	4534
+
+3. Pan1974dataRefSeqFormat
+4534	MTM1;NM_000252.2	X	+	149761026	149840118	149761026	149840118	14	149761026,149764911,149767005,149783011,149787460,149807365,149809691,149814105,149818138,149826243,149828086,149828793,149831855,149839850	149761189,149765084,149767200,149783222,149787662,149807549,149809941,149814394,149818424,149826550,149828279,149829007,149832132,149840118	nan	MTM1	nan	nan	0,0,0,0,0,0,0,0,0,0,0,0,0,0
+changed to 
+4534	MTM1;NM_000252.2	X	+	149736996	149840118	149761016	149840118	15	149736996,149761016,149764911,149767005,149783011,149787460,149807365,149809691,149814105,149818138,149826243,149828086,149828793,149831855,149839850	149737162,149761189,149765084,149767200,149783222,149787662,149807549,149809941,149814394,149818424,149826550,149828279,149829007,149832132,149840118	nan	MTM1	nan	nan	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

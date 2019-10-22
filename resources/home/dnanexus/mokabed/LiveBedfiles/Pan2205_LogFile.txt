@@ -1,0 +1,18 @@
+Andy Bond - 22/06/18
+
+Pan2205dataSambamba.bed was manually created (i.e. not produced by Mokabed)
+It is created for the Oxford Nanopore HTT repeat counting workflow which requires a Sambamba bed file 
+that includes the HTT CAG repeat region with 500bp flanking sequence to calculate coverage across the region.
+
+The HTT CAG repeat sequence runs from hg19 chr4:3076604-3076666 (1-based). 
+This is taken from line 75 of the pa file in repeatHMM (the tool we use for repeat counting nanopore reads) here: https://github.com/WGLab/RepeatHMM/blob/master/bin/reference_sts/hg19/hg19.predefined.pa
+and was confirmed in UCSC genome browser.
+
+Therefore adding +-500bp flanking makes the coordinates to be:
+chr4:3076104-3077166
+
+And then converting to 0 based for bed file is:
+chr4    3076103    3077166
+
+Primary transcript and strand were identified through Ensembl: http://grch37.ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=ENSG00000197386;r=4:3076408-3245676
+Entrez ID was found on NCBI: https://www.ncbi.nlm.nih.gov/gene/3064

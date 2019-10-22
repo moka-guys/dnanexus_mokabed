@@ -1,0 +1,34 @@
+Time Stamp:2018-04-19 11:12:21.608953
+Command arguments executed:
+RefSeq table format version generated as /home/dnanexus/out/Output_files/Pan2022dataRefSeqFormat.txt
+/home/dnanexus/mokabed/LiveBedfiles/TestArea_for_bed_generation_script/OOBed7_uses_mirrored_database_.py --codingup 10 --codingdown 10 --useaccessions --transcripts /home/dnanexus/Pan2022.txt --minuschr --outputfile /home/dnanexus/out/Output_files/Pan2022data.bed --logfile /home/dnanexus/out/Output_files/Pan2022_LogFile.txt 
+
+ Python version: 2.7.12 |Anaconda 4.2.0 (64-bit)| (default, Jul  2 2016, 17:42:40) 
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-1)]
+
+ getopt module file path: /home/dnanexus/anaconda2/lib/python2.7/getopt.py
+
+ os module file path: /home/dnanexus/anaconda2/lib/python2.7/os.py
+
+ pd class file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/pandas/__init__.py
+
+ cruzdb module file path: /home/dnanexus/anaconda2/lib/python2.7/site-packages/cruzdb/__init__.py
+
+version as defined by git tag = v1.0-260-g32d2a72
+
+Manual modification
+
+Addition of single base ( COL6A1 chr21:47409881C>T)
+This base does NOT need to be padded
+
+1. Pan2022data.bed
+The line below was added into the Pan2022data.bed file, using another COL6A1 line as a template.
+21	47409880	47409881	1291										COL6A1;NM_001848.2
+
+2.Pan2022dataSambamba.bed
+The below line was added to the sambamba bed file
+21	47409880	47409881	21-47409880-47409881	0	+	COL6A1;NM_001848.2	1291
+
+3.Pan2022dataRefSeqFormat.txt
+The exon count was increased, the exon added into the the list of exonstart and exonstop and the exonframe added:
+1291	COL6A1;NM_001848.2	21	+	47401754	47423937	47401754	47423937	36	47401754,47402537,47404172,47406429,47406847,47407058,47407402,47407513,47408987,47409511,47409655,47409880,47410161,47410281,47410676,47410882,47411913,47412067,47412266,47412651,47414070,47417324,47417603,47418024,47418301,47418800,47419056,47419560,47420234,47420662,47421156,47421864,47422121,47422430,47423023,47423294	47401871,47402687,47404393,47406609,47406996,47407099,47407443,47407578,47409061,47409576,47409702,47409881,47410208,47410346,47410750,47410965,47411996,47412141,47412322,47412734,47414153,47417407,47417686,47418095,47418357,47418883,47419142,47419616,47420291,47420691,47421310,47421994,47422325,47422634,47423073,47423937	nan	COL6A1	nan	nan	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

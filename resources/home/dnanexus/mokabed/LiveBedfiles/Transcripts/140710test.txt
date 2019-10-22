@@ -1,0 +1,3 @@
+Transcripts	test
+NM_003482	oofof
+NM_021140	ororor
