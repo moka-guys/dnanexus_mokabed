@@ -59,16 +59,11 @@ bedfile_name="data.bed"
 logfile_name="_LogFile.txt"
 
 #set logfile
-mkdir -p /home/dnanexus/out/Output_files/
 outputfile=" --outputfile /home/dnanexus/out/Output_files/$pannumber$bedfile_name"
 #set output file
 logfile=" --logfile /home/dnanexus/out/Output_files/$pannumber$logfile_name"
 
-#add app version to logfile
-version=$(cd /home/dnanexus/mokabed; git describe --tag) 
-echo "app version as defined by git tag = ${version}" > /home/dnanexus/out/Output_files/$pannumber$logfile_name
-
-#mkdir -p /home/dnanexus/out/Output_files/
+mkdir -p /home/dnanexus/out/Output_files/
 
 echo $opts
 echo $logfile
@@ -83,6 +78,10 @@ echo $outputfile
 # Upload results
 #
 #mark-section "uploading results"
+
+#add app version to logfile
+version=$(cd /home/dnanexus/mokabed; git describe --tag) 
+echo "version as defined by git tag = ${version}" >> /home/dnanexus/out/Output_files/$pannumber$logfile_name
 
 dx-upload-all-outputs
 
