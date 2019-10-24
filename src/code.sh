@@ -65,7 +65,7 @@ logfile=" --logfile /home/dnanexus/out/Output_files/$pannumber$logfile_name"
 
 #add app version to logfile
 version=$(cd /home/dnanexus/mokabed; git describe --tag) 
-echo "app version as define by git tag = ${version}" > $logfile
+echo "app version as define by git tag = ${version}" > /home/dnanexus/out/Output_files/$pannumber$logfile_name
 
 mkdir -p /home/dnanexus/out/Output_files/
 
