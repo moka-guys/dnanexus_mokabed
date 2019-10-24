@@ -63,6 +63,10 @@ outputfile=" --outputfile /home/dnanexus/out/Output_files/$pannumber$bedfile_nam
 #set output file
 logfile=" --logfile /home/dnanexus/out/Output_files/$pannumber$logfile_name"
 
+#add app version to logfile
+version=$(cd /home/dnanexus/mokabed; git describe --tag) 
+echo "app version as define by git tag = ${version}" > $logfile
+
 mkdir -p /home/dnanexus/out/Output_files/
 
 echo $opts
