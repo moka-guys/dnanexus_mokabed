@@ -81,7 +81,7 @@ echo $outputfile
 
 #add app version to logfile
 version=$(cd /home/dnanexus/mokabed; git describe --tag) 
-echo "version as defined by git tag = ${version}" >> /home/dnanexus/out/Output_files/$pannumber$logfile_name
+echo ${version} >> /home/dnanexus/out/Output_files/$pannumber$logfile_name
 
 dx-upload-all-outputs
 
